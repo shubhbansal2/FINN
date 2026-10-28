@@ -1,0 +1,11 @@
+# Render blueprint (free web service). The database ships inside the image: the GitHub Actions
+# workflow refreshes data/finn.db and pushes it, which triggers a redeploy with fresh data.
+services:
+  - type: web
+    name: finn
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/meta
+    envVars:
+      - key: GEMINI_API_KEY   # free, from aistudio.google.com
+        sync: false
