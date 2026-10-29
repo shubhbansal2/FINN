@@ -9,3 +9,6 @@ data/cache/
 data/*.db-wal
 data/*.db-shm
 .claude/
+# Local working notes (kept out of the repo)
+PLAN.md
+WRITEUP.md

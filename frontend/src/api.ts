@@ -92,5 +92,4 @@ export const api = {
   research: (s: string, force = false) => req<Status>(`/api/research/${encodeURIComponent(s)}?force=${force}`, { method: "POST" }),
   status: (s: string) => req<Status>(`/api/research/${encodeURIComponent(s)}/status`),
   ask: (s: string, question: string) => req<Answer>(`/api/ask/${encodeURIComponent(s)}`, { method: "POST", body: JSON.stringify({ question }) }),
-  filing: (id: string) => req<Record<string, unknown>>(`/api/filing/${encodeURIComponent(id)}`),
 };

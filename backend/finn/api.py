@@ -1,5 +1,4 @@
 """HTTP API for the FINN app. Run: uvicorn finn.api:app --port 8000 (from backend/)."""
-import json
 import re
 from pathlib import Path
 
@@ -99,15 +98,6 @@ def put_prefs(p: Prefs):
         apply_llm_scores(conn)
         fired = alerts.evaluate(conn)   # new thresholds may trip new alerts
     return {"ok": True, "new_alerts": len(fired)}
-
-
-@app.get("/api/filing/{fid:path}")
-def get_filing(fid: str):
-    with session() as conn:
-        r = conn.execute("SELECT a.*, c.name FROM announcements a LEFT JOIN companies c USING (symbol) WHERE id=?", (fid,)).fetchone()
-        if not r:
-            raise HTTPException(404)
-        return dict(r) | {"enrichment": json.loads(r["enrichment"] or "{}")}
 
 
 @app.get("/api/search")
