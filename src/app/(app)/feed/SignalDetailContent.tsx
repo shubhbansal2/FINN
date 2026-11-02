@@ -9,6 +9,7 @@ import { Provenance } from '@/ui/Provenance';
 import { Timestamp } from '@/ui/Timestamp';
 
 import { FirstCutTable } from './FirstCut';
+import { PeopleList } from './People';
 import styles from './SignalDetailContent.module.css';
 
 export function kindLabel(s: Signal): string {
@@ -52,6 +53,14 @@ function Reported({ signal }: { signal: Signal }) {
             ) : (
               <span className={styles.warn}>No primary-source document is linked to this filing.</span>
             )}
+          </dd>
+        </div>
+      ) : null}
+      {signal.people?.length ? (
+        <div>
+          <dt>Who</dt>
+          <dd>
+            <PeopleList people={signal.people} filingUrl={filing?.url ?? null} companyName={signal.companyName} />
           </dd>
         </div>
       ) : null}
@@ -145,7 +154,11 @@ export function SignalDetailContent({ signal, nested = [] }: { signal: Signal; n
             <code key={r}>{r}</code>
           ))}
         </p>
-        <p className={styles.meta}>Rule-based ranking from the signal policy. No model wrote any text on this page; the headline is the filed subject.</p>
+        <p className={styles.meta}>
+          {signal.people?.some((p) => p.background.length)
+            ? 'Rule-based ranking from the signal policy. The people and their background were read from the filing by a model; each line is kept only if its quoted passage is in the filing.'
+            : 'Rule-based ranking from the signal policy. No model wrote any text on this page; the headline is the filed subject.'}
+        </p>
       </section>
 
       <section aria-label="Not known">

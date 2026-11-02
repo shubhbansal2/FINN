@@ -186,3 +186,72 @@
   min-width: 0;
   gap: var(--space-2);
 }
+
+/* Who changes in a management-change filing. */
+.people {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--color-rule);
+}
+.personHead {
+  margin: 0;
+  font-size: var(--text-body);
+}
+.personRole {
+  margin: 0;
+  color: var(--color-ink-2);
+}
+.changeIn,
+.changeOut {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+}
+.changeIn {
+  color: var(--color-accent);
+}
+.changeOut {
+  color: var(--color-ink-3);
+}
+.background {
+  margin: var(--space-1) 0 0;
+  padding-left: 1.1em;
+  list-style: disc;
+}
+.facts .background {
+  display: block;
+}
+.background li + li {
+  margin-top: var(--space-1);
+}
+.asFiled summary {
+  cursor: pointer;
+  color: var(--color-ink-3);
+  font-size: var(--text-meta);
+  min-height: 1.5rem;
+}
+.asFiled q {
+  font-family: var(--font-serif);
+}
+.facts .people {
+  gap: var(--space-4);
+  font-size: var(--text-small);
+}
+/* Inline page citation: vertical padding gives a ~24px target without stretching the line box. */
+.pageLink {
+  padding: 5px 2px;
+  color: var(--color-accent);
+  font-weight: 500;
+  white-space: nowrap;
+}

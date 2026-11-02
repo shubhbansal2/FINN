@@ -53,6 +53,28 @@ export type ResultsFirstCut = {
   url: string | null;
 };
 
+/** A background point about a person, restated from the filing with the verbatim passage that supports it. */
+export type PersonFact = { text: string; page: number | null; quote: string };
+
+/**
+ * One person whose position changes in a management-change filing. Every entry
+ * was checked in code: the announcing quote occurs in the filing and names the
+ * person, and each background point's quote occurs in the filing.
+ */
+export type PersonChange = {
+  name: string;
+  role: string;
+  change: 'appointed' | 'reappointed' | 'redesignated' | 'resigned' | 'retired' | 'ceased';
+  /** As printed in the filing, e.g. "12th November 2026". */
+  effective: string | null;
+  page: number | null;
+  quote: string;
+  background: PersonFact[];
+};
+
+/** Someone taking up a role, as opposed to leaving one. */
+export const isIncoming = (p: Pick<PersonChange, 'change'>) => p.change === 'appointed' || p.change === 'reappointed' || p.change === 'redesignated';
+
 /** The explanation every signal carries. Each field is built from the rule and data that produced it. */
 export type Explanation = {
   /** What happened, in one sentence, factual. */
@@ -93,6 +115,8 @@ export type Signal = {
   measure: { kind: 'change'; value: number } | { kind: 'multiple'; value: number } | null;
   /** Results signals: the headline numbers read from the filing, when FINN has parsed it. */
   firstCut: ResultsFirstCut | null;
+  /** Management-change signals: who changes and their background, read from the filing. */
+  people: PersonChange[] | null;
   dataMode: 'live' | 'fixture';
 };
 
@@ -117,6 +141,8 @@ export type AnnouncementInputRow = {
   attachmentText: string | null;
   /** Headline figures already extracted from this filing, if any. */
   firstCut: ResultsFirstCut | null;
+  /** People read from a management-change filing, if FINN has read it. */
+  people: PersonChange[] | null;
   dataMode: 'live' | 'fixture';
 };
 

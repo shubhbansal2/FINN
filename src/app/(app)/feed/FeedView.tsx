@@ -16,6 +16,7 @@ import { Timestamp } from '@/ui/Timestamp';
 
 import { activeFilterCount, applyFilters, DEFAULT_FILTERS, type FeedFilters } from './filters';
 import { firstCutSummary, headlineChange } from './FirstCut';
+import { peopleSummary } from './People';
 import styles from './FeedView.module.css';
 import { kindLabel, SignalDetailContent } from './SignalDetailContent';
 
@@ -63,7 +64,7 @@ function Row({ item, selected, onSelect }: { item: FeedItem; selected: boolean; 
       company={{ name: s.companyName, symbol: s.symbol }}
       category={kindLabel(s)}
       headline={s.headline}
-      summary={s.firstCut ? firstCutSummary(s.firstCut) : s.explanation.why[s.explanation.why.length - 1]}
+      summary={(s.firstCut ? firstCutSummary(s.firstCut) : null) ?? (s.people ? peopleSummary(s.people) : null) ?? s.explanation.why[s.explanation.why.length - 1]}
       occurredAtIso={s.occurredAt}
       timePrecision={s.tradeDate ? 'date' : 'datetime'}
       figure={<Measure signal={s} />}

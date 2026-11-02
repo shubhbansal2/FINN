@@ -93,6 +93,10 @@ FINN_DATA_MODE=live npm run finn -- ingest:results
 ```
 
 ```bash
+FINN_DATA_MODE=live npm run finn -- ingest:people
+```
+
+```bash
 FINN_DATA_MODE=live npm run finn -- ingest:documents --limit 25
 ```
 
@@ -117,6 +121,7 @@ The providers and what was verified against them are listed in [docs/PROVIDERS.m
 | End-of-day prices and volume | Weekdays at **10:00 IST** and **17:00 IST**, from Yahoo. The 17:00 run picks up that day's closing session. Never intraday. |
 | Exchange filings (latest ~5 per company) | The same runs: weekdays at 10:00 and 17:00 IST, discovered via screener.in. |
 | Results first cut (Revenue, EBITDA, PBT, PAT, QoQ and YoY on a results signal) | The same runs: new results filings from the last 60 days are downloaded and parsed right after the filings refresh. |
+| Who changes in a management-change filing, and their background | The same runs: new management-change filings are read once each, right after the results step. |
 | Filing documents for research | On demand, whenever someone runs research on a company: the latest results filing, call transcripts, annual report and presentation are downloaded then. |
 | Signals and alerts | Recomputed from the stored data each time Signals or Alert settings is opened, or when "Evaluate now" is pressed. |
 | Demo mode | Never. It replays data recorded on 1 Nov 2026 against a fixed demo clock. |
@@ -196,6 +201,7 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/DATA.md](docs/D
 - **Model-assisted modules:** implemented for Google Gemini (free tier) and Anthropic Claude behind one interface.
   - Gemini has been run against the real API, locally and on the live deployment, with every call succeeding.
   - Claude has not been run against the real API (no key was available); its request and response handling is unit-tested against recorded API shapes.
+  - On the Signals side, the model reads management-change filings for who changes and their background. Each line is kept only if its quote is in the filing.
   - The recorded demo reports use the deterministic fallbacks.
   - On Gemini's free tier, rate limits are per Google project, and Google may use the inputs (public filings and your question) to improve its products.
 - **Alerts:** evaluated when Signals or Alert settings loads, and on demand. The server refreshes data on a timer (see [When data updates](#when-data-updates)), but there is no push channel: alerts appear in the app, not as notifications.

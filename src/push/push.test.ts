@@ -66,6 +66,7 @@ function announcement(over: Partial<AnnouncementInputRow> = {}): AnnouncementInp
     duplicateOfDocument: null,
     attachmentText: null,
     firstCut: null,
+    people: null,
     dataMode: 'fixture',
     ...over,
   };

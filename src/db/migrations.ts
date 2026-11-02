@@ -308,4 +308,20 @@ export const MIGRATIONS: string[] = [
     updated_at TEXT NOT NULL
   );
   `,
+
+  /* 8 — who changes in a management-change filing, read from the filing and quote-checked (one row per version and extractor) */ `
+  CREATE TABLE filing_people (
+    version_id        TEXT NOT NULL REFERENCES document_version(id) ON DELETE CASCADE,
+    document_id       TEXT NOT NULL REFERENCES document(id) ON DELETE CASCADE,
+    extractor_version TEXT NOT NULL,
+    status            TEXT NOT NULL CHECK (status IN ('ok', 'none', 'model_unavailable', 'model_failed')),
+    people            TEXT NOT NULL,                     -- JSON PersonChange[]; only quote-verified entries
+    rejected          INTEGER NOT NULL DEFAULT 0 CHECK (rejected >= 0),
+    model             TEXT,
+    note              TEXT,
+    created_at        TEXT NOT NULL,
+    PRIMARY KEY (version_id, extractor_version)
+  );
+  CREATE INDEX filing_people_document ON filing_people(document_id);
+  `,
 ];

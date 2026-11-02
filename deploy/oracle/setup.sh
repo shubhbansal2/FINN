@@ -76,7 +76,7 @@ step "Data ($MODE mode)"
 if [ "$MODE" = fixture ]; then
   as_finn "npm run setup:demo"
 else
-  as_finn "npm run finn -- universe:sync && npm run finn -- ingest:prices && npm run finn -- ingest:filings && npm run finn -- ingest:results"
+  as_finn "npm run finn -- universe:sync && npm run finn -- ingest:prices && npm run finn -- ingest:filings && npm run finn -- ingest:results && npm run finn -- ingest:people"
 fi
 
 step "Services"

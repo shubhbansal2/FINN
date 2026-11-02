@@ -173,6 +173,7 @@ export function combineSignals(signals: Signal[], policy: SignalPolicy): Signal[
           stale: components.every((c) => c.stale),
           // A combination that includes a results filing keeps its headline numbers.
           firstCut: components.find((c) => c.firstCut)?.firstCut ?? null,
+          people: components.find((c) => c.people)?.people ?? null,
           dataMode: first.dataMode,
         });
       }

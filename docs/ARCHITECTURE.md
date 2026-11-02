@@ -83,6 +83,7 @@ The sections below are the original design. Where implementation changed a decis
       - SQLite lives on the boot volume.
       - A systemd timer refreshes prices and filings on weekdays at 10:00 and 17:00 IST, in place of the worker in §1.2.
     - **Results first cut on the push side:** `ingest:results` parses new results filings with the research parser (shared via `storeResultsFacts`). A results signal then carries Revenue, EBITDA, PBT and PAT with QoQ and YoY, built only from that filing's facts (`src/push/first-cut.ts`).
+    - **Management-change bios on the push side:** `ingest:people` has the extraction model read who changes, and their background, from the filing's own Reg. 30 disclosure. Code keeps only entries whose quotes occur in the filing and name the person (`src/push/people.ts`). They are stored per version in `filing_people` (migration 8). LinkedIn is a search link only, never fetched.
 
 ## 1. System boundaries
 

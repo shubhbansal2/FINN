@@ -33,6 +33,21 @@ The Brief and Alerts screens are driven by deterministic, testable rules in `src
 - **On screen:** the row shows revenue YoY (or PAT YoY) and a one-line summary. The detail shows the full table, linked to the statement's page.
 - **Demo mode:** shows no first cut, because results PDFs are not downloaded in demo mode. The detail says the figures are not extracted.
 
+**Management change: who, and who they are.** A management-change signal names each person whose role changes, and gives the background the filing itself discloses.
+- **What it shows:**
+  - each person: appointed, re-appointed, re-designated, resigning, retiring or ceasing; their role; the effective date;
+  - for incoming people, up to three background points: education, earlier roles, experience. Reg. 30 disclosures carry a "brief profile" for appointments.
+- **How it is read:** the cheap extraction model (Gemini flash-lite) reads the pages that mention an appointment or a cessation. Code then keeps only what it can verify:
+  - The announcing sentence must occur in the filing, and must name the person, or the person must be named in the text just before it ("…her appointment…").
+  - Each background point must quote the filing verbatim, and every figure in it must appear in that quote. Anything else is dropped and counted.
+  - Typographic quotes and line-break hyphens are normalised; changed wording is not.
+- **Where it comes from:** `ingest:people` reads management-change filings from the last 60 days, once per version, in the weekday refresh. A run where the model was unavailable or failed is retried next time. Without a model, the signal says FINN has not read the filing; nothing is invented.
+- **LinkedIn:** a *search* link is offered for incoming people. FINN never fetches LinkedIn, because scraping it breaks its terms; the profile shown is the company's own disclosure.
+- **On screen:**
+  - the row summarises who changes ("Appointed: Bahram Vakil, Chairman · …");
+  - the detail lists each person with page links and the sentence "As filed";
+  - the detail notes that a model read the filing and that each line was quote-checked.
+
 **Every signal keeps both timestamps:**
 - **Occurred:** when the event happened (filing publication time, or session close).
 - **Stored by FINN:** when FINN ingested the data.

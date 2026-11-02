@@ -4,7 +4,7 @@ import { z } from 'zod';
 
 import { CATEGORIES, CATEGORY_LABEL, type Category } from '@/domain/taxonomy';
 
-import { lower, TIERS, type AnnouncementInputRow, type EvidenceRef, type Signal, type Tier } from './types';
+import { isIncoming, lower, TIERS, type AnnouncementInputRow, type EvidenceRef, type Signal, type Tier } from './types';
 
 const TierSchema = z.enum(TIERS);
 
@@ -140,6 +140,11 @@ export function rankAnnouncement(a: AnnouncementInputRow, policy: SignalPolicy, 
   }
   if (!a.attachmentText) unknowns.push('FINN ranked this from the filed subject only; the attachment has not been read.');
   if (category === 'results' && !a.firstCut && TIERS.indexOf(tier) <= 1) unknowns.push('No headline figures from this filing have been read and checked yet.');
+  if (category === 'management_change' && TIERS.indexOf(tier) <= 1) {
+    if (!a.people) unknowns.push('FINN has not yet read who changes in this filing.');
+    else if (a.people.length === 0) unknowns.push('FINN could not identify, from the filing text, who changes.');
+    else if (a.people.some((p) => isIncoming(p) && p.background.length === 0)) unknowns.push('The filing gives no background for some incoming people.');
+  }
   if (a.firstCut) {
     const left = a.firstCut.lines.filter((l) => l.current === null).map((l) => l.label);
     if (left.length) unknowns.push(`${left.join(', ')} for the quarter ${left.length === 1 ? 'is' : 'are'} not shown: ${a.firstCut.lines.find((l) => l.current === null)?.note ?? 'not available'}.`);
@@ -173,6 +178,7 @@ export function rankAnnouncement(a: AnnouncementInputRow, policy: SignalPolicy, 
     duplicates: [],
     stale,
     firstCut: a.firstCut,
+    people: a.people,
     dataMode: a.dataMode,
   };
 }

@@ -7,6 +7,7 @@ import { Provenance } from '@/ui/Provenance';
 import { SignalRow } from '@/ui/SignalRow';
 
 import { firstCutSummary } from './feed/FirstCut';
+import { peopleSummary } from './feed/People';
 import { kindLabel, SignalDetailContent } from './feed/SignalDetailContent';
 import styles from './SignalDetail.module.css';
 
@@ -20,7 +21,7 @@ export function SignalItem({ signal, nested = [], alerted = false }: { signal: S
         company={{ name: signal.companyName, symbol: signal.symbol }}
         category={kindLabel(signal)}
         headline={signal.headline}
-        summary={signal.firstCut ? firstCutSummary(signal.firstCut) : signal.explanation.why[signal.explanation.why.length - 1]}
+        summary={(signal.firstCut ? firstCutSummary(signal.firstCut) : null) ?? (signal.people ? peopleSummary(signal.people) : null) ?? signal.explanation.why[signal.explanation.why.length - 1]}
         occurredAtIso={signal.occurredAt}
         timePrecision={signal.tradeDate ? 'date' : 'datetime'}
         onSelect={() => setOpen((o) => !o)}

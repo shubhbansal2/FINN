@@ -4,6 +4,8 @@ import type { Db } from '@/db/connection';
 import { ensureWatchlist, factsForDocument, getBars, listCompanies, listListings, pagesOfVersion, latestVersion } from '@/db/repositories';
 import { safeDocumentUrl } from '@/ui/evidence';
 
+import { peopleForDocument } from '@/ingest/people';
+
 import { buildFirstCut } from './first-cut';
 import { DEFAULT_RULES, RuleInputSchema, type AlertCandidate, type AlertRule, type RuleInput } from './rules';
 import type { AnnouncementInputRow, BarSeries, Signal } from './types';
@@ -190,6 +192,7 @@ export function loadSignalInputs(db: Db, opts: { since: string; until: string; d
         r.doc_id && r.category === 'results' && !r.duplicate_of
           ? buildFirstCut(factsForDocument(db, r.doc_id), (page) => (documentUrl ? safeDocumentUrl(documentUrl, page ?? undefined) : null))
           : null;
+      const people = r.doc_id && r.category === 'management_change' ? peopleForDocument(db, r.doc_id) : null;
       return {
         id: r.id,
         documentId: r.doc_id,
@@ -207,6 +210,7 @@ export function loadSignalInputs(db: Db, opts: { since: string; until: string; d
         duplicateOfDocument: r.duplicate_of,
         attachmentText: text,
         firstCut,
+        people,
         dataMode: opts.dataMode,
       };
     });

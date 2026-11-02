@@ -98,6 +98,7 @@ export function evaluatePriceMove(series: BarSeries, index: number, params: Pric
       duplicates: [],
       stale: false,
       firstCut: null,
+      people: null,
       dataMode: series.dataMode,
     },
   };
@@ -160,6 +161,7 @@ export function evaluateVolumeSpike(series: BarSeries, index: number, params: Vo
       duplicates: [],
       stale: false,
       firstCut: null,
+      people: null,
       dataMode: series.dataMode,
     },
   };
