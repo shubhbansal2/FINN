@@ -123,10 +123,10 @@ The universe lives in [`config/universe.json`](../config/universe.json): 18 port
 | Announcement history | Only the ~5 most recent per company (screener page limit). No honest full-history source found yet. |
 | BSE / NSE direct announcement APIs | Not implemented: they require browser impersonation (see PROVIDERS.md). |
 | Model-assisted classification | Not wired. Titles with no rule match stay `unclassified/no_match` (15 of 105 live titles on 2026-11-01). |
-| Financial-fact extraction from results PDFs | Schema, validation, storage and comparison logic exist and are tested. **No extractor fills them yet** (milestone M6). Real results PDFs carry noisy OCR text (see PROVIDERS.md). |
+| Financial-fact extraction from results PDFs | A deterministic Reg. 33 parser (`src/research/results-parser.ts`) fills them during research, and checks the arithmetic. It reads the latest results filing only, and the balance sheet and cash-flow statement are not parsed (see RESEARCH.md). |
 | OCR | Not supported. Image-only PDFs are reported as `no_text_layer`. |
 | Document fetch in fixture mode | Not supported. Fixture mode covers prices and filings only. |
 | Transcript dating | screener labels transcripts by call month ("Jul 2026"); no fiscal quarter is inferred. |
 | Exchange holiday calendar | Not included; see freshness note above. |
-| Scheduling | Commands are run by hand or by an external scheduler; no worker process yet. |
+| Scheduling | Locally, commands are run by hand. On the Oracle deployment, a systemd timer runs `ingest:prices` and `ingest:filings` on weekdays at 10:00 and 17:00 IST. There is no worker process. |
 | Fixture licensing | `fixtures/` contains raw Yahoo responses. Check the provider's terms before publishing the repository with them. |

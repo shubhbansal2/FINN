@@ -1,5 +1,7 @@
 # Demo walkthrough
 
+To see FINN on current data instead, open the live deployment at https://129-154-248-25.sslip.io (live mode, refreshed on weekdays; see the README's "When data updates").
+
 A repeatable demonstration of FINN's two workflows in demo mode. No network access, no API key and no manual database edits are needed. The demo clock is fixed at 1 Nov 2026, 16:00 IST, so every run shows the same signals.
 
 ## Setup (once)

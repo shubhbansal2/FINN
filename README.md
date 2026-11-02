@@ -106,6 +106,18 @@ FINN_DATA_MODE=live npm run finn -- reextract
 
 The providers and what was verified against them are listed in [docs/PROVIDERS.md](docs/PROVIDERS.md). FINN sends an honest user agent and never imitates a browser.
 
+### When data updates
+
+| Data | When it updates (live deployment) |
+|---|---|
+| End-of-day prices and volume | Weekdays at **10:00 IST** and **17:00 IST**, from Yahoo. The 17:00 run picks up that day's closing session. Never intraday. |
+| Exchange filings (latest ~5 per company) | The same runs: weekdays at 10:00 and 17:00 IST, discovered via screener.in. |
+| Filing documents for research | On demand, whenever someone runs research on a company: the latest results filing, call transcripts, annual report and presentation are downloaded then. |
+| Signals and alerts | Recomputed from the stored data each time Signals or Alert settings is opened, or when "Evaluate now" is pressed. |
+| Demo mode | Never. It replays data recorded on 1 Nov 2026 against a fixed demo clock. |
+
+The schedule comes from `deploy/oracle/finn-refresh.timer` (04:30 and 11:30 UTC, Monday to Friday). If the server is off at those times, the missed run happens at the next boot. Exchange holidays are not modelled, so on a holiday the prices are shown as stale.
+
 ## Tests and checks
 
 ```bash
@@ -176,8 +188,12 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/DATA.md](docs/D
 - **Prices:** end-of-day only, from an unofficial Yahoo endpoint with no SLA. Never real-time.
 - **Announcements:** only the most recent ~5 per company, discovered via screener.in. The BSE and NSE APIs require browser impersonation, which FINN does not do.
 - **Results figures:** from the latest results filing only, typically 5–6 periods. The balance sheet and cash-flow statement are not parsed, so free cash flow, debt and debt-to-equity are shown as unavailable with the reason.
-- **Model-assisted modules:** implemented for Google Gemini (free tier) and Anthropic Claude behind one interface. Neither was exercised against the real API (no key was available); the request and response handling is unit-tested against recorded API shapes. The recorded demo reports use the deterministic fallbacks. On Gemini's free tier, rate limits are per Google project and Google may use the inputs (public filings and your question) to improve its products.
-- **Alerts:** evaluated on page load and on demand only. There is no background scheduler and no push channel.
+- **Model-assisted modules:** implemented for Google Gemini (free tier) and Anthropic Claude behind one interface.
+  - Gemini has been run against the real API, locally and on the live deployment, with every call succeeding.
+  - Claude has not been run against the real API (no key was available); its request and response handling is unit-tested against recorded API shapes.
+  - The recorded demo reports use the deterministic fallbacks.
+  - On Gemini's free tier, rate limits are per Google project, and Google may use the inputs (public filings and your question) to improve its products.
+- **Alerts:** evaluated when Signals or Alert settings loads, and on demand. The server refreshes data on a timer (see [When data updates](#when-data-updates)), but there is no push channel: alerts appear in the app, not as notifications.
 - **Single user:** the watchlist, alert rules and preferences are shared by everyone using a server. There are no accounts and no per-user isolation.
 - **No OCR and no exchange holiday calendar.**
 - **Dependency advisories (`npm audit --omit=dev`, 2 Nov 2026):** three remain, each needing a major upgrade:

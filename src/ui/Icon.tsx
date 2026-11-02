@@ -26,6 +26,8 @@ const PATHS = {
   minus: 'M5 10h10',
   list: 'M7.5 5h9M7.5 10h9M7.5 15h9M3.5 5h1M3.5 10h1M3.5 15h1',
   command: 'M3.5 6.5l3 3.5-3 3.5M9.5 14h7',
+  moon: 'M16.5 12.2A7 7 0 0 1 7.8 3.5a7 7 0 1 0 8.7 8.7Z',
+  sun: 'M10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM10 2.5V4M10 16v1.5M2.5 10H4M16 10h1.5M4.7 4.7l1.06 1.06M14.24 14.24l1.06 1.06M4.7 15.3l1.06-1.06M14.24 5.76l1.06-1.06',
 } as const;
 
 export type IconName = keyof typeof PATHS;

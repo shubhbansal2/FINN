@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
 import { applyTheme, readTheme, THEME_BOOT_SCRIPT, THEME_STORAGE_KEY } from './theme';
-import { ThemeSwitch, useTheme } from './ThemeSwitch';
+import { NightModeToggle, ThemeSwitch, useTheme } from './ThemeSwitch';
 
 function Harness() {
   const [theme, setTheme] = useTheme();
@@ -41,6 +41,50 @@ describe('theme switch', () => {
     render(<Harness />);
     expect(screen.getByRole('radio', { name: /^Dark/ })).toHaveAttribute('aria-checked', 'true');
     expect(root().getAttribute('data-theme')).toBe('dark');
+  });
+});
+
+function NightHarness() {
+  const [theme, setTheme] = useTheme();
+  return <NightModeToggle theme={theme} onChange={setTheme} />;
+}
+
+/** A matchMedia stub reporting the device's colour-scheme preference. */
+function preferDark(dark: boolean) {
+  vi.stubGlobal('matchMedia', (query: string) => ({
+    matches: dark && query.includes('dark'),
+    media: query,
+    addEventListener: () => undefined,
+    removeEventListener: () => undefined,
+  }));
+}
+
+describe('night mode toggle', () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it('turns night mode on and off, and remembers it', () => {
+    preferDark(false);
+    render(<NightHarness />);
+    const toggle = screen.getByRole('button', { name: 'Night mode' });
+    expect(toggle).toHaveAttribute('aria-pressed', 'false');
+
+    fireEvent.click(toggle);
+    expect(toggle).toHaveAttribute('aria-pressed', 'true');
+    expect(root().getAttribute('data-theme')).toBe('dark');
+    expect(window.localStorage.getItem(THEME_STORAGE_KEY)).toBe('dark');
+
+    fireEvent.click(toggle);
+    expect(toggle).toHaveAttribute('aria-pressed', 'false');
+    expect(root().getAttribute('data-theme')).toBe('light');
+  });
+
+  it('starts from what the device shows, so one tap on a dark phone goes light', () => {
+    preferDark(true);
+    render(<NightHarness />);
+    const toggle = screen.getByRole('button', { name: 'Night mode' });
+    expect(toggle).toHaveAttribute('aria-pressed', 'true');
+    fireEvent.click(toggle);
+    expect(root().getAttribute('data-theme')).toBe('light');
   });
 });
 

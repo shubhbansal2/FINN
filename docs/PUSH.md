@@ -5,7 +5,7 @@ The Brief and Alerts screens are driven by deterministic, testable rules in `src
 ## What it does, and what it does not do
 
 - **Evaluated on demand.** Rules run when the Brief or Alerts screen loads, when "Evaluate now" is pressed, or via `npm run finn -- alerts:evaluate`.
-- **No background watching.** FINN does not watch markets continuously, run a scheduler, or send push notifications.
+- **No background watching.** FINN does not watch markets continuously or send push notifications. On the live deployment, a timer refreshes prices and filings on weekdays at 10:00 and 17:00 IST (see the README's "When data updates"). The rules then run against that data the next time a screen loads.
 - **In-app delivery only.** An alert sits in the Alerts inbox as *new* until it is marked *seen*.
 - **End-of-day data only.** Price and volume signals use completed sessions; the intraday path is never known.
 
@@ -124,7 +124,7 @@ Each signal carries:
 - **Duplicate detection is partial in demo mode.** Byte-identical attachments are only known after download. In demo mode Reliance's "Unaudited Financial Results" and "Board Meeting Outcome…" appear separately, although the live database knows they are the same PDF.
 - **Exchange holidays** are not modelled (freshness, session mapping and gaps).
 - **Coverage of filings** is limited to the ~5 most recent per company (see [DATA.md](DATA.md)).
-- **Single user, no scheduler, no push channel.**
+- **Single user, no push channel.** Data refresh is scheduled on the deployment, but alert evaluation is not.
 - **Rule order in the Alerts screen** is by creation time; seeded rules share a timestamp.
 
 ## Commands

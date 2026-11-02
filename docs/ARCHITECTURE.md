@@ -1,6 +1,6 @@
 # FINN — Technical Architecture
 
-Status: design, pre-implementation. Last updated 2026-11-01.
+Status: implemented and deployed (live mode, https://129-154-248-25.sslip.io). Sections 0–6 are the original design from 2026-11-01. The numbered "Revisions" list below records where implementation changed it, and wins where they differ. Last updated 2026-11-03.
 
 FINN is a mobile-first investment intelligence app with two modes:
 
@@ -70,6 +70,18 @@ The sections below are the original design. Where implementation changed a decis
    - **One company identifier:** the canonical id (`nse:reliance`) is used across signals, watchlist and research (`/research?company=…`). The resolver accepts it directly.
    - **Evidence identity:** fact evidence ids include the period. Before this, two columns on one page shared a citation. Passages are windowed around their quotes.
    - **End-to-end tests:** Playwright runs against a production build in demo mode (`npm run test:e2e`).
+10. **Model provider, interface and deployment (2026-11-03).**
+    - **Gemini:** the free Google Gemini API is the default provider (`FINN_LLM_PROVIDER`), alongside Anthropic Claude behind the same `LlmClient`.
+      - Extraction uses `gemini-3.5-flash-lite` and synthesis `gemini-3.6-flash`.
+      - An overloaded synthesis model falls back to the extraction model. A report built with any failed or fallback call is not reused from the cache.
+    - **Interface:**
+      - typefaces: Libre Caslon Text (headings), Libre Franklin (text) and Roboto Mono, with Public Sans digits for tabular figures;
+      - a signal-bars wordmark;
+      - a light, dark or system theme switch, stored per browser.
+    - **Deployment:** one Oracle Cloud Always Free Arm VM (`deploy/oracle/`).
+      - `next start` runs behind Caddy, which provides automatic HTTPS.
+      - SQLite lives on the boot volume.
+      - A systemd timer refreshes prices and filings on weekdays at 10:00 and 17:00 IST, in place of the worker in §1.2.
 
 ## 1. System boundaries
 

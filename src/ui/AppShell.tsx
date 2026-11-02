@@ -7,7 +7,7 @@ import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react
 import { CommandPalette, type Command } from './CommandPalette';
 import { Icon, type IconName } from './Icon';
 import { THEMES } from './theme';
-import { ThemeSwitch, useTheme } from './ThemeSwitch';
+import { NightModeToggle, ThemeSwitch, useTheme } from './ThemeSwitch';
 import styles from './AppShell.module.css';
 
 /** `short` is the bottom-tab label on phones, where four tabs share the width. */
@@ -116,9 +116,12 @@ export function AppShell({ children, commands = [], status, companies = [] }: Ap
 
       <header className={styles.masthead}>
         <Wordmark />
-        <button type="button" className={styles.searchIcon} onClick={() => setPaletteOpen(true)} aria-label="Search and navigate">
-          <Icon name="search" />
-        </button>
+        <div className={styles.mastheadActions}>
+          <NightModeToggle theme={theme} onChange={setTheme} className={styles.iconButton} />
+          <button type="button" className={styles.iconButton} onClick={() => setPaletteOpen(true)} aria-label="Search and navigate">
+            <Icon name="search" />
+          </button>
+        </div>
       </header>
 
       <nav className={styles.rail} aria-label="Primary">
