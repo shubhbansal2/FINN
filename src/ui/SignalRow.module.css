@@ -1,0 +1,154 @@
+.row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr) auto;
+  column-gap: var(--space-2);
+  padding: var(--space-3) var(--space-2) var(--space-3) 0;
+  border-bottom: 1px solid var(--color-rule);
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.row:hover {
+  background: var(--color-hover);
+}
+
+/* Selected: the row the detail pane is showing. Accent rule + tint, not a box. */
+.selected,
+.selected:hover {
+  background: var(--color-accent-soft);
+}
+.selected::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  bottom: -1px;
+  width: 3px;
+  background: var(--color-accent);
+}
+
+.gutter {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 3px;
+}
+
+.main {
+  min-width: 0;
+}
+
+.kicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--space-3);
+  row-gap: 0;
+  margin-bottom: 2px;
+}
+
+.category {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: var(--text-headline);
+  font-weight: var(--weight-serif);
+  line-height: var(--leading-snug);
+  color: var(--color-ink);
+  text-wrap: pretty;
+}
+
+/* Importance by size, as in a newspaper: Caslon has no medium weight, and bold is too heavy for long filing titles. */
+.high .headline {
+  font-size: 1.1875rem;
+}
+
+.routine .headline {
+  font-size: var(--text-body);
+  font-weight: 400;
+  color: var(--color-ink-2);
+}
+
+/* Stretched primary target: the whole row is clickable via the headline. */
+.target {
+  all: unset;
+  cursor: pointer;
+  border-radius: var(--radius-1);
+}
+.target::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.target:focus-visible {
+  outline: none;
+}
+.target:focus-visible::after {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -2px;
+}
+.row:hover .target {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.row:active {
+  background: var(--color-pressed);
+}
+
+.unread .gutter::after {
+  content: '';
+  position: absolute;
+  left: 0.75rem;
+  bottom: var(--space-3);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.summary {
+  margin-top: var(--space-1);
+  font-size: var(--text-small);
+  line-height: var(--leading-body);
+  color: var(--color-ink-2);
+  max-width: var(--reading-max);
+}
+
+.meta {
+  position: relative;
+  z-index: 1; /* above the stretched target so citations are their own targets */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.figure {
+  position: relative;
+  z-index: 1;
+  align-self: start;
+  padding-top: 2px;
+  text-align: right;
+}
+
+@media (max-width: 719px) {
+  .row {
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+  }
+  /* On compact screens the figure moves below the text, aligned with it. */
+  .figure {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+    padding-top: var(--space-1);
+  }
+}

@@ -1,0 +1,602 @@
+{
+ "capturedAt": "2026-11-01T10:25:24.869Z",
+ "source": "screener",
+ "pageUrl": "https://www.screener.in/company/MARUTI/consolidated/",
+ "announcements": [
+  {
+   "exchange": "BSE",
+   "exchangeRef": "b7585ba4-523e-4c05-b037-263a3e803229",
+   "title": "Maruti Suzuki Production Volume: October 2026 1 Nov",
+   "publishedAt": "2026-11-01T09:14:08.000Z",
+   "publishedAtRaw": "2026-11-01T14:44:08+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b7585ba4-523e-4c05-b037-263a3e803229.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "817afcae-2ee4-486a-a3c0-fdbfd7a392e9",
+   "title": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "publishedAt": "2026-11-01T08:14:54.000Z",
+   "publishedAtRaw": "2026-11-01T13:44:54+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=817afcae-2ee4-486a-a3c0-fdbfd7a392e9.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "95d1017a-3e9d-46db-ba54-ca6ae2c6dfbe",
+   "title": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "publishedAt": "2026-10-29T05:19:58.000Z",
+   "publishedAtRaw": "2026-10-29T10:49:58+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=95d1017a-3e9d-46db-ba54-ca6ae2c6dfbe.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "fb1e1ced-406b-42d5-96b7-8fda705bdb16",
+   "title": "Announcement under Regulation 30 (LODR)-Newspaper Publication 28 Oct",
+   "publishedAt": "2026-10-28T05:08:37.000Z",
+   "publishedAtRaw": "2026-10-28T10:38:37+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1e1ced-406b-42d5-96b7-8fda705bdb16.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "f59fa177-7b03-4b3d-96d2-aeff1847bcb4",
+   "title": "Audio Recording",
+   "publishedAt": "2026-10-27T15:00:33.000Z",
+   "publishedAtRaw": "2026-10-27T20:30:33+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f59fa177-7b03-4b3d-96d2-aeff1847bcb4.pdf"
+  }
+ ],
+ "documents": [
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2026",
+   "periodLabel": "FY26",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/09d38ee6-9c30-4892-b483-8d7c34697a7a.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2025",
+   "periodLabel": "FY25",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/b6b3feef-628a-443c-9e63-665a5e057547.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2024",
+   "periodLabel": "FY24",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/4b14c577-1d8d-4eb0-a79e-f94640af8a67.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2023",
+   "periodLabel": "FY23",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/68f18376-59dd-4bc2-9aee-48e50ec97f27.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2022",
+   "periodLabel": "FY22",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/74208532500.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2021",
+   "periodLabel": "FY21",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/69235532500.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2020",
+   "periodLabel": "FY20",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/5325000320.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2019",
+   "periodLabel": "FY19",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/5325000319.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2018",
+   "periodLabel": "FY18",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/5325000318.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2017",
+   "periodLabel": "FY17",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/5325000317.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2016",
+   "periodLabel": "FY16",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/5325000316.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2015",
+   "periodLabel": "FY15",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/5325000315.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2014",
+   "periodLabel": "FY14",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/5325000314.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2013",
+   "periodLabel": "FY13",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_898_MARUTI_2012_2013_07082013140623.zip"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2013",
+   "periodLabel": "FY13",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532500/5325000313.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2026",
+   "periodLabel": "Jul 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4b7f0db8-b33e-4a14-bb96-542978860d78.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2026",
+   "periodLabel": "Apr 2026",
+   "publishedAt": null,
+   "url": "https://az-ci-afde-prd-arena-03-efddeyfchzf9akbb.z01.azurefd.net/msilintiwebpdfcopyfromdefault/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_26.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2026",
+   "periodLabel": "Apr 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b8ced1ab-d385-4f8c-bcc9-90a186b40275.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Mar 2026",
+   "periodLabel": "Mar 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5e535086-f03f-40be-97bd-e966c116c483.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2026",
+   "periodLabel": "Jan 2026",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q3_FY_26.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2026",
+   "periodLabel": "Jan 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7d203cd4-51c6-4795-a58f-b784adfca9a0.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2025",
+   "periodLabel": "Oct 2025",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY_26.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2025",
+   "periodLabel": "Oct 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=de8ce513-a808-453e-9b3b-94328ebe6e0c.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2025",
+   "periodLabel": "Aug 2025",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q1_FY_26.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2025",
+   "periodLabel": "Aug 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fb1d3824-d661-4143-b061-9964bf79d1b3.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_25.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fe4b9735-c370-47bc-b884-b16ba0b45689.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2025",
+   "periodLabel": "Jan 2025",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q3_FY_25.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2025",
+   "periodLabel": "Jan 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=61a166ec-37a8-42f6-b5d3-5168529c73a3.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2024",
+   "periodLabel": "Oct 2024",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY_25.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2024",
+   "periodLabel": "Oct 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=04f99f6b-4fc0-4493-88df-33c93345272f.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2024",
+   "periodLabel": "Jul 2024",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q1_FY_25.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2024",
+   "periodLabel": "Jul 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=759f552a-69ee-4a40-92b6-2bcb6f2690b1.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2024",
+   "periodLabel": "Apr 2024",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q4_FY_24.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2024",
+   "periodLabel": "Apr 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cc92b5fa-9912-4dd5-8649-5a7767b7714b.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2024",
+   "periodLabel": "Jan 2024",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q3_FY_24.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2024",
+   "periodLabel": "Jan 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9e9acec2-5971-42ff-952b-bf5002f0d612.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY24.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=381628ec-6f81-4bb9-a800-fa59cb7f5fbd.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=25fd3811-3e9d-44b1-b62c-44c8e000ea59.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Presentation_Acquisition_of_SMG.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2023",
+   "periodLabel": "Jul 2023",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q1_FY24.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2023",
+   "periodLabel": "Jul 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a1a98a12-592a-4d04-9a62-8448987b030c.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q4_FY23_New.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a90ec056-59e5-4f04-b3dc-49a3807d238b.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q3_FY_23.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7d583d26-07f3-4eb5-9cd5-c77db2ee22d5.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2022",
+   "periodLabel": "Nov 2022",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY_23.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2022",
+   "periodLabel": "Nov 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0d23816e-08c1-46e5-9b1d-401c456bc690.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2022",
+   "periodLabel": "Jul 2022",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q1_FY23.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2022",
+   "periodLabel": "Jan 2022",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q3_FY22.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2021",
+   "periodLabel": "Aug 2021",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/MSIL_Final_transcript_2021.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2021",
+   "periodLabel": "Jul 2021",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q1_FY'22.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Mar 2021",
+   "periodLabel": "Mar 2021",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript-earnings-call-Maruti-Suzuki-Q4-FY-21.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2021",
+   "periodLabel": "Jan 2021",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q3_FY'21.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2021",
+   "periodLabel": "Jan 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7e0eac5e-4341-46c8-9402-4fbe608acabb.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2020",
+   "periodLabel": "Oct 2020",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call_Maruti_Suzuki_Q2_FY'21.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2020",
+   "periodLabel": "Jul 2020",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q1FY'21.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2020",
+   "periodLabel": "May 2020",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcript_earnings_call-Maruti_Suzuki_Q4F_20_and_full_year_FY20.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2019",
+   "periodLabel": "Oct 2019",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti%20Suzuki_Q2FY20_and_H1FY20_Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2019",
+   "periodLabel": "Jul 2019",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q1FY20_Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2019",
+   "periodLabel": "Apr 2019",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q4FY19_Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2019",
+   "periodLabel": "Jan 2019",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q3FY19_Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2018",
+   "periodLabel": "Oct 2018",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Q2FY19_and_H1FY19_Investor_Conference_Call_Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2018",
+   "periodLabel": "Jul 2018",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q1FY19_Investor_Concall_Transcript.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2018",
+   "periodLabel": "Jul 2018",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=358b1f48-a0ff-4ee1-9ae4-617f2205db1e.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2018",
+   "periodLabel": "Jan 2018",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Transcript-for-Q3FY18-Concall.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2017",
+   "periodLabel": "Jul 2017",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q2FY18_Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2017",
+   "periodLabel": "Apr 2017",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q4FY17-Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2017",
+   "periodLabel": "Jan 2017",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Maruti_Suzuki_Q3FY17_Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2016",
+   "periodLabel": "Jul 2016",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcription_of_Maruti_Suzuki-Q1_FY_17.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2016",
+   "periodLabel": "Apr 2016",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcription_of_Maruti_Suzuki-26th_April_2016.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2016",
+   "periodLabel": "Jan 2016",
+   "publishedAt": null,
+   "url": "https://marutistoragenew.blob.core.windows.net/msilintiwebpdf/Transcription_of_Maruti-28th_Jan_2016_final.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (19 Nov 2025 from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/MarutiSuzukiIndiaLimited_November%2019_%202025_RR_383293.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (9 Jan 2025 from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/MarutiSuzukiIndiaLimited_January%2009_%202025_RR_359879.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (5 Dec 2023 from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/MarutiSuzukiIndiaLimited_December%2005,%202023_RR_331868.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (11 Aug 2023 from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/MarutiSuzukiIndiaLimited_August%2011,%202023_RR_325632.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (30 Mar 2023 from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/MarutiSuzukiIndiaLimited_March%2030,%202023_RR_315935.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (15 Sep 2022 from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/MarutiSuzukiIndiaLimited_September%2015,%202022_RR_301571.html"
+  }
+ ]
+}

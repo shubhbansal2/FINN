@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- FINN icon: the app's high-priority mark, three rising bars at 1/2, 3/4 and full height, on the accent navy. -->
+  <rect width="64" height="64" rx="12" fill="#1f3a68"/>
+  <rect x="14" y="32" width="9" height="17" fill="#ffffff"/>
+  <rect x="27.5" y="23.5" width="9" height="25.5" fill="#ffffff"/>
+  <rect x="41" y="15" width="9" height="34" fill="#ffffff"/>
+</svg>

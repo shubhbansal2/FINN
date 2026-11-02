@@ -1,0 +1,93 @@
+/*
+ * Metrics sit in a strip separated by vertical hairlines rather than in boxes.
+ * Compact: two per row. Medium and up: as many as fit, minimum 9rem each.
+ */
+.group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid var(--color-rule);
+}
+
+@media (min-width: 720px) {
+  .group {
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  }
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4) var(--space-3) 0;
+  border-bottom: 1px solid var(--color-rule);
+  min-width: 0;
+}
+
+.group > .root + .root {
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--color-rule);
+}
+
+/* On the two-column compact grid, the first item of each row loses its left rule. */
+@media (max-width: 719px) {
+  .group > .root:nth-child(odd) {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: var(--text-meta);
+  font-weight: 500;
+  color: var(--color-ink-2);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+}
+
+.value {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+/* A figure never breaks from its unit ("₹3,32,861 Cr"); on narrow phones it scales down a little instead. */
+.lg .value {
+  font-size: clamp(1.25rem, 6vw, var(--value-lg));
+  white-space: nowrap;
+}
+.md .value {
+  font-size: var(--value-md);
+}
+
+.missing {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  color: var(--color-ink-3);
+}
+.missingReason {
+  font-size: var(--text-meta);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.comparisons {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-3);
+}
+
+.source {
+  margin-top: 2px;
+}

@@ -1,0 +1,238 @@
+/*
+ * FINN design tokens — "Ledger" direction.
+ *
+ * Editorial paper-and-ink: warm paper ground, near-black ink, hairline rules.
+ * Hierarchy comes from type, spacing and rules, not from boxes or shadows.
+ * Colour is reserved for state (direction, priority-adjacent signals, data
+ * health) and is never the only carrier of meaning.
+ *
+ * Breakpoints (CSS custom properties cannot be used in media queries, so these
+ * are the canonical values used throughout the module CSS):
+ *   compact   < 720px   single column, bottom navigation
+ *   medium    720–1079  single column, side rail navigation
+ *   wide      ≥ 1080px  side rail + list/detail split
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Ground and surfaces */
+  --color-paper: #f6f4ee;          /* page background */
+  --color-surface: #fbfaf7;        /* drawers, dialogs, popovers */
+  --color-sunken: #eeebe3;         /* table heads, skeletons, inputs */
+  --color-hover: rgb(22 22 26 / 0.045);
+  --color-pressed: rgb(22 22 26 / 0.09);
+  --color-scrim: rgb(18 18 20 / 0.42);
+
+  /* Ink */
+  --color-ink: #16161a;            /* primary text            16.4:1 on paper */
+  --color-ink-2: #48474c;          /* secondary text           8.4:1 */
+  --color-ink-3: #6b6962;          /* metadata, timestamps     5.0:1 */
+  --color-ink-disabled: #9d9a92;
+
+  /* Rules */
+  --color-rule: #dcd8cd;           /* hairline dividers */
+  --color-rule-strong: #16161a;    /* editorial heavy rule above sections */
+  --color-rule-input: #878379;     /* input and control borders: 3.4:1 on paper, 3.2:1 on sunken */
+
+  /* Primary action — ink blue */
+  --color-accent: #1f3a68;
+  --color-accent-hover: #172c50;
+  --color-accent-pressed: #10203b;
+  --color-on-accent: #ffffff;
+  --color-accent-soft: #e2e7f0;    /* selected rows, selected segments */
+
+  /* Financial direction (always paired with a sign and arrow glyph) */
+  --color-positive: #1b6a3a;
+  --color-positive-soft: #e1ede4;
+  --color-negative: #a3261c;
+  --color-negative-soft: #f4e2de;
+  --color-neutral: var(--color-ink-2);
+
+  /* Signals */
+  --color-signal-high: var(--color-ink);   /* high priority = heaviest ink, not a hue */
+  --color-signal-info: #2a5aa8;
+  --color-signal-info-soft: #e3eaf6;
+
+  /* Data health */
+  --color-warning: #85570a;
+  --color-warning-soft: #f3e8cf;
+  --color-error: #9b1c1c;
+  --color-error-soft: #f5dfdc;
+  --color-stale: #85570a;
+  --color-stale-soft: #f3e8cf;
+  --color-demo: #55468a;           /* recorded fixture / demo data */
+  --color-demo-soft: #e8e4f3;
+
+  --color-mark: #f1dc8f;           /* highlighted quote in evidence */
+  --color-focus: #1f5fd1;
+
+  /* Typography */
+  /* "Financial press": Caslon headlines, Franklin text and figures, Roboto Mono for source metadata.
+     Libre Caslon Text has only 400 and 700, so serif headlines use --weight-serif instead of 600. */
+  --font-serif: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+  /* Libre Franklin has no tabular figures; 'FINN Figures' (globals.css) supplies digits 0–9 from
+     Public Sans, which is derived from Franklin and has them, so figures line up in columns. */
+  --font-sans: 'FINN Figures', 'Libre Franklin Variable', 'Libre Franklin', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Roboto Mono Variable', 'Roboto Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  --weight-serif: 400;
+  --weight-serif-strong: 700;
+
+  /* Type scale (rem; 1rem = 16px) */
+  --text-display: 1.75rem;   /* product identity, page titles */
+  --text-title: 1.375rem;    /* drawer / dialog titles, company page title */
+  --text-headline: 1.0625rem;/* signal headlines (serif) */
+  --text-body: 0.9375rem;    /* body, company names */
+  --text-small: 0.8125rem;   /* supporting explanations */
+  --text-meta: 0.75rem;      /* timestamps, source metadata (mono) */
+  --text-kicker: 0.6875rem;  /* section headings, uppercase */
+
+  --value-lg: 1.625rem;      /* headline financial figure */
+  --value-md: 1.0625rem;
+  --value-sm: 0.875rem;
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-body: 1.5;
+
+  --tracking-kicker: 0.08em;
+  --tracking-ticker: 0.02em;
+
+  /* Space (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 3rem;
+
+  /* Layout */
+  --gutter: 1rem;                  /* compact; widened below */
+  --rail-width: 13.5rem;
+  --content-max: 76rem;
+  --reading-max: 42rem;
+  --bottom-nav-height: 3.5rem;
+  --touch-target: 2.75rem;         /* 44px minimum */
+
+  /* Shape — deliberately minimal rounding */
+  --radius-1: 2px;
+  --radius-2: 4px;
+
+  --shadow-overlay: 0 1px 2px rgb(0 0 0 / 0.06), 0 12px 32px rgb(0 0 0 / 0.14);
+
+  /* Motion — only to communicate state change */
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+
+  --z-nav: 20;
+  --z-overlay: 40;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --gutter: 1.5rem;
+    --text-display: 2rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  :root {
+    --gutter: 2rem;
+  }
+}
+
+/*
+ * Dark theme. Plain CSS cannot share a block between a media query and an
+ * attribute selector, so the values appear twice: once for the OS preference
+ * (unless the user forced light) and once for an explicit data-theme="dark".
+ * Keep the two blocks identical.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --color-paper: #121315;
+    --color-surface: #1a1b1e;
+    --color-sunken: #1f2023;
+    --color-hover: rgb(236 234 228 / 0.05);
+    --color-pressed: rgb(236 234 228 / 0.1);
+    --color-scrim: rgb(0 0 0 / 0.6);
+    --color-ink: #ecebe6;
+    --color-ink-2: #b6b3ab;
+    --color-ink-3: #8f8c85;
+    --color-ink-disabled: #5d5b57;
+    --color-rule: #2d2e32;
+    --color-rule-strong: #ecebe6;
+    --color-rule-input: #6e6f75;
+    --color-accent: #a9c0ec;
+    --color-accent-hover: #c0d1f2;
+    --color-accent-pressed: #d4e0f6;
+    --color-on-accent: #0e1a30;
+    --color-accent-soft: #1f2a3d;
+    --color-positive: #74c693;
+    --color-positive-soft: #18291f;
+    --color-negative: #f08c80;
+    --color-negative-soft: #331b18;
+    --color-signal-info: #8fb3f0;
+    --color-signal-info-soft: #1a2436;
+    --color-warning: #e1b65e;
+    --color-warning-soft: #2e2615;
+    --color-error: #f08c80;
+    --color-error-soft: #331b18;
+    --color-stale: #e1b65e;
+    --color-stale-soft: #2e2615;
+    --color-demo: #bcaef0;
+    --color-demo-soft: #252038;
+    --color-mark: #5a4b16;
+    --color-focus: #8ab4ff;
+    --shadow-overlay: 0 1px 2px rgb(0 0 0 / 0.4), 0 16px 40px rgb(0 0 0 / 0.5);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-paper: #121315;
+  --color-surface: #1a1b1e;
+  --color-sunken: #1f2023;
+  --color-hover: rgb(236 234 228 / 0.05);
+  --color-pressed: rgb(236 234 228 / 0.1);
+  --color-scrim: rgb(0 0 0 / 0.6);
+  --color-ink: #ecebe6;
+  --color-ink-2: #b6b3ab;
+  --color-ink-3: #8f8c85;
+  --color-ink-disabled: #5d5b57;
+  --color-rule: #2d2e32;
+  --color-rule-strong: #ecebe6;
+  --color-rule-input: #6e6f75;
+  --color-accent: #a9c0ec;
+  --color-accent-hover: #c0d1f2;
+  --color-accent-pressed: #d4e0f6;
+  --color-on-accent: #0e1a30;
+  --color-accent-soft: #1f2a3d;
+  --color-positive: #74c693;
+  --color-positive-soft: #18291f;
+  --color-negative: #f08c80;
+  --color-negative-soft: #331b18;
+  --color-signal-info: #8fb3f0;
+  --color-signal-info-soft: #1a2436;
+  --color-warning: #e1b65e;
+  --color-warning-soft: #2e2615;
+  --color-error: #f08c80;
+  --color-error-soft: #331b18;
+  --color-stale: #e1b65e;
+  --color-stale-soft: #2e2615;
+  --color-demo: #bcaef0;
+  --color-demo-soft: #252038;
+  --color-mark: #5a4b16;
+  --color-focus: #8ab4ff;
+  --shadow-overlay: 0 1px 2px rgb(0 0 0 / 0.4), 0 16px 40px rgb(0 0 0 / 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}

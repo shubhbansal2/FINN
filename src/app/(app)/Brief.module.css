@@ -1,0 +1,114 @@
+.statusRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+.source {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px var(--space-2);
+  min-width: 0;
+  font-size: var(--text-small);
+}
+
+.sourceState {
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 5px;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-1);
+}
+
+.current .sourceState {
+  color: var(--color-positive);
+}
+.stale .sourceState,
+.partial .sourceState {
+  color: var(--color-warning);
+  border-style: dashed;
+}
+.recorded .sourceState {
+  color: var(--color-demo);
+}
+.unavailable .sourceState {
+  color: var(--color-error);
+}
+
+.sourceLabel {
+  font-weight: 500;
+}
+
+.sourceAsOf,
+.evaluated {
+  overflow-wrap: anywhere;
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+}
+
+.count {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.widen {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.statusCompact {
+  display: none;
+  margin-bottom: var(--space-2);
+}
+.statusCompact summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  min-height: var(--touch-target);
+  cursor: pointer;
+  list-style: none;
+}
+.statusCompact summary::-webkit-details-marker {
+  display: none;
+}
+.compactLine {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-2);
+}
+.compactMore {
+  font-size: var(--text-small);
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.statusCompact[open] .compactMore {
+  display: none;
+}
+
+@media (max-width: 719px) {
+  .statusWide {
+    display: none;
+  }
+  .statusCompact {
+    display: block;
+  }
+}

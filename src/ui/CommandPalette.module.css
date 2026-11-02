@@ -1,0 +1,77 @@
+.field {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-4);
+  border-bottom: 1px solid var(--color-rule);
+  color: var(--color-ink-3);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 3.25rem;
+  border: 0;
+  background: transparent;
+  font-size: var(--text-body);
+  color: var(--color-ink);
+}
+.input::placeholder {
+  color: var(--color-ink-3);
+}
+/* The palette's own frame shows focus; the input needs no second ring. */
+.input:focus-visible {
+  outline: none;
+}
+
+.kbd {
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  padding: 2px 5px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-1);
+  color: var(--color-ink-3);
+}
+
+.list {
+  overflow-y: auto;
+  padding: var(--space-2) 0 var(--space-3);
+}
+
+.group {
+  padding: var(--space-2) var(--space-4) var(--space-1);
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--touch-target);
+  padding: 0 var(--space-4);
+  font-size: var(--text-small);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.option[aria-selected='true'] {
+  background: var(--color-accent-soft);
+  box-shadow: inset 3px 0 0 var(--color-accent);
+}
+
+.hint {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+}
+
+.empty {
+  padding: var(--space-4);
+  font-size: var(--text-small);
+  color: var(--color-ink-2);
+}

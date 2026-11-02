@@ -1,0 +1,94 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  max-width: 100%;
+}
+
+.label {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+  white-space: nowrap;
+}
+
+/* Underline segments: selection reads like a tab, not a pill. */
+.group {
+  display: inline-flex;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--color-rule);
+}
+.group::-webkit-scrollbar {
+  display: none;
+}
+
+.option {
+  position: relative;
+  flex: none;
+  min-height: var(--touch-target);
+  min-width: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 0;
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  font-weight: 500;
+  color: var(--color-ink-2);
+  transition: color var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out);
+}
+
+.option::after {
+  content: '';
+  position: absolute;
+  left: var(--space-2);
+  right: var(--space-2);
+  bottom: -1px;
+  height: 2px;
+  background: transparent;
+}
+
+.option:hover:not(:disabled) {
+  color: var(--color-ink);
+  background: var(--color-hover);
+}
+
+.option:active:not(:disabled) {
+  background: var(--color-pressed);
+}
+
+.option[aria-checked='true'] {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.option[aria-checked='true']::after {
+  background: var(--color-ink);
+}
+
+.option:disabled {
+  color: var(--color-ink-disabled);
+}
+
+.option:focus-visible {
+  outline-offset: -2px;
+}
+
+/* Stacked: label above, options share the full width. */
+.stacked {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-1);
+}
+.stacked .group {
+  display: flex;
+  width: 100%;
+}
+.stacked .option {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0 var(--space-1);
+}

@@ -1,0 +1,294 @@
+{
+ "capturedAt": "2026-11-01T10:25:37.759Z",
+ "source": "screener",
+ "pageUrl": "https://www.screener.in/company/TRENT/consolidated/",
+ "announcements": [
+  {
+   "exchange": "BSE",
+   "exchangeRef": "5634f899-a008-45ab-b930-2b74cf08e566",
+   "title": "Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "publishedAt": "2026-10-29T11:09:36.000Z",
+   "publishedAtRaw": "2026-10-29T16:39:36+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5634f899-a008-45ab-b930-2b74cf08e566.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "6d04e12f-221f-4d62-925d-0792202a19e7",
+   "title": "Announcement under Regulation 30 (LODR)-Retirement",
+   "publishedAt": "2026-10-29T11:06:32.000Z",
+   "publishedAtRaw": "2026-10-29T16:36:32+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6d04e12f-221f-4d62-925d-0792202a19e7.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "b891b5ce-4d60-44f6-a01f-1bd507d5de0f",
+   "title": "Announcement under Regulation 30 (LODR)-Change in Directorate",
+   "publishedAt": "2026-10-29T11:04:37.000Z",
+   "publishedAtRaw": "2026-10-29T16:34:37+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b891b5ce-4d60-44f6-a01f-1bd507d5de0f.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "984d68e3-738c-43cf-afd1-756b33f60610",
+   "title": "Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "publishedAt": "2026-10-29T10:51:57.000Z",
+   "publishedAtRaw": "2026-10-29T16:21:57+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=984d68e3-738c-43cf-afd1-756b33f60610.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "b962e91a-b409-4f5f-a22f-3275c992153a",
+   "title": "Board Meeting Outcome for Outcome Of Board Meeting Held Today I.E. 29Th October 2026",
+   "publishedAt": "2026-10-29T10:41:11.000Z",
+   "publishedAtRaw": "2026-10-29T16:11:11+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b962e91a-b409-4f5f-a22f-3275c992153a.pdf"
+  }
+ ],
+ "documents": [
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2026",
+   "periodLabel": "FY26",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c3f6fa4a-3c51-453e-b634-3c3ef98f7361.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2025",
+   "periodLabel": "FY25",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/305e1656-360b-4f28-b00d-fd6b152723b5.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2024",
+   "periodLabel": "FY24",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/c7330ad5-ba82-4673-baaa-b39af9c47c87.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2023",
+   "periodLabel": "FY23",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/58357a1d-01e7-410e-a079-834f7aefce44.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2022",
+   "periodLabel": "FY22",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/72987500251.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2021",
+   "periodLabel": "FY21",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/68577500251.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2020",
+   "periodLabel": "FY20",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510320.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2019",
+   "periodLabel": "FY19",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510319.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2018",
+   "periodLabel": "FY18",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510318.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2017",
+   "periodLabel": "FY17",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510317.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2016",
+   "periodLabel": "FY16",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510316.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2015",
+   "periodLabel": "FY15",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510315.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2014",
+   "periodLabel": "FY14",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510314.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2013",
+   "periodLabel": "FY13",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510313.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2012",
+   "periodLabel": "FY12",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500251/5002510312.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2026",
+   "periodLabel": "Aug 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ffb34801-a67e-4184-897a-06bf9e8bec64.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2026",
+   "periodLabel": "Apr 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e08ff77d-7f68-46d2-acc6-ed26ee5c4974.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2026",
+   "periodLabel": "Feb 2026",
+   "publishedAt": null,
+   "url": "https://docs.trent-tata.com/Investor_Presentation_Q3FY26.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2025",
+   "periodLabel": "Nov 2025",
+   "publishedAt": null,
+   "url": "https://docs.trent-tata.com/Investor_Presentation_Q2_FY26.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2025",
+   "periodLabel": "Aug 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8b445c87-9c3c-4747-af2e-afde246c803c.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jun 2025",
+   "periodLabel": "Jun 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b25ff32f-40f3-4190-8525-3f53102a4938.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2025",
+   "periodLabel": "Apr 2025",
+   "publishedAt": null,
+   "url": "https://docs.trent-tata.com/Trent_Limited_Q4FY25_Investor_Deck_V3.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2025",
+   "periodLabel": "Feb 2025",
+   "publishedAt": null,
+   "url": "https://docs.trent-tata.com/Investor_presentation_Q3_FY_2025.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2024",
+   "periodLabel": "Nov 2024",
+   "publishedAt": null,
+   "url": "https://docs.trent-tata.com/TrentLimited/Financial%20Results/2024-25/Q2/Investor%20Presentation%20Q2%20FY%202025.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2024",
+   "periodLabel": "Aug 2024",
+   "publishedAt": null,
+   "url": "https://docs.trent-tata.com/TrentLimited/Financial%20Results/2024-25/Q1/Investors%20Presentation%20Q1%20FY%202024.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2024",
+   "periodLabel": "May 2024",
+   "publishedAt": null,
+   "url": "https://docs.trentlimited.com/TrentLimited/Financial%20Results/2023-24/Q4/Investor%20Presentation%20Q4%20FY%202024.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=732f88cb-4f90-48de-a13b-61b2a0792b49.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2023",
+   "periodLabel": "Nov 2023",
+   "publishedAt": null,
+   "url": "https://docs.trentlimited.com/investor/Investor_Presentation_for_the_quarter_ended_30th_September_2023.pdf?v=1699357435"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=af345fa3-580c-4e65-b9c2-b5914abf576a.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (12 May from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202605120534_Trent_Limited.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (7 May from icra)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.icra.in/Rationale/ShowRationaleReport/?Id=142890"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (21 Nov 2025 from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202511121132_Trent_Limited.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (8 May 2025 from icra)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.icra.in/Rationale/ShowRationaleReport/?Id=134956"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (22 Nov 2024 from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202411131145_Trent_Limited.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (10 May 2024 from icra)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.icra.in/Rationale/ShowRationaleReport/?Id=127410"
+  }
+ ]
+}

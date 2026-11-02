@@ -1,0 +1,55 @@
+.cite {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  /* 24px minimum target (WCAG 2.5.8): citations are how figures get verified, often on a phone. */
+  min-height: 24px;
+  padding: 1px 6px 1px 4px;
+  border: 0;
+  border-bottom: 1px solid var(--color-rule-input);
+  border-radius: var(--radius-1) var(--radius-1) 0 0;
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  line-height: 1.5;
+  color: var(--color-ink-2);
+  vertical-align: baseline;
+  text-align: left;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.cite > span:not(:global(.visually-hidden)) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cite:hover {
+  background: var(--color-hover);
+  color: var(--color-ink);
+  border-bottom-color: var(--color-ink-2);
+}
+
+.cite:active,
+.cite[aria-expanded='true'] {
+  background: var(--color-accent-soft);
+  color: var(--color-ink);
+  border-bottom-color: var(--color-accent);
+}
+
+.unverified {
+  color: var(--color-warning);
+  border-bottom-style: dashed;
+  border-bottom-color: var(--color-warning);
+}
+
+/* Enlarge the hit area on touch without changing the inline footprint. */
+@media (pointer: coarse) {
+  .cite::after {
+    content: '';
+    position: absolute;
+    inset: -10px -4px;
+  }
+}

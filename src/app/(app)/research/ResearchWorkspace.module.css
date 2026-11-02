@@ -1,0 +1,231 @@
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: end;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+@media (min-width: 720px) {
+  .form {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .options {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+.primary {
+  min-width: 0;
+}
+
+.search {
+  min-height: 3rem;
+  font-size: var(--text-headline);
+}
+
+.options summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-size: var(--text-small);
+  color: var(--color-ink-2);
+  cursor: pointer;
+}
+
+.optionNote {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-small);
+  color: var(--color-ink-3);
+  max-width: var(--reading-max);
+}
+
+.optionFields {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 720px) {
+  .optionFields {
+    grid-template-columns: minmax(12rem, 2fr) minmax(8rem, 0.8fr);
+  }
+}
+
+.narrow {
+  min-width: 0;
+}
+
+.resolving {
+  font-size: var(--text-small);
+  color: var(--color-ink-2);
+}
+
+/* Persistent, quiet way back to the search: below the compact masthead, top of page when wide. */
+.returnBar {
+  position: sticky;
+  top: 3.25rem;
+  z-index: calc(var(--z-nav) - 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin: calc(-1 * var(--space-3)) calc(-1 * var(--gutter)) 0;
+  padding: var(--space-1) var(--gutter);
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+@media (min-width: 720px) {
+  .returnBar {
+    top: 0;
+  }
+}
+
+.current {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.currentSymbol {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  font-weight: 600;
+}
+
+.currentName {
+  font-size: var(--text-small);
+  color: var(--color-ink-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.label {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.input {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-rule-input);
+  border-radius: var(--radius-2);
+  background: var(--color-surface);
+  font-size: var(--text-body);
+  color: var(--color-ink);
+}
+.input::placeholder {
+  color: var(--color-ink-3);
+}
+.input:hover {
+  border-color: var(--color-ink-2);
+}
+.input:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 0;
+  border-color: var(--color-focus);
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.candidates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-rule);
+}
+
+.historyItem {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 2px var(--space-3);
+  align-items: baseline;
+  width: 100%;
+  min-height: var(--touch-target);
+  padding: var(--space-2) 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-rule);
+  background: transparent;
+  text-align: left;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+.historyItem:hover {
+  background: var(--color-hover);
+}
+.historyItem:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -2px;
+}
+@media (min-width: 720px) {
+  .historyItem {
+    grid-template-columns: 6.5rem minmax(0, 1fr) auto;
+  }
+}
+
+.historySymbol {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  font-weight: 600;
+}
+
+.historyName {
+  font-size: var(--text-body);
+}
+
+.historyMeta {
+  grid-column: 2;
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+}
+@media (min-width: 720px) {
+  .historyMeta {
+    grid-column: 3;
+  }
+}

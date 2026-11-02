@@ -1,0 +1,532 @@
+{
+ "capturedAt": "2026-11-01T10:25:10.966Z",
+ "source": "screener",
+ "pageUrl": "https://www.screener.in/company/CDSL/consolidated/",
+ "announcements": [
+  {
+   "exchange": "NSE",
+   "exchangeRef": "CDSL_01112026143902_Newspaper_31102026_Final_Signed.pdf",
+   "title": "Copy of Newspaper Publication 1 Nov",
+   "publishedAt": "2026-11-01T09:10:47.000Z",
+   "publishedAtRaw": "2026-11-01T14:40:47+05:30",
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_01112026143902_Newspaper_31102026_Final_Signed.pdf"
+  },
+  {
+   "exchange": "NSE",
+   "exchangeRef": "CDSL_31102026155542_CDSL_InvestorPresentation_Signed.pdf",
+   "title": "Analysts/Institutional Investor Meet/Con. Call Updates",
+   "publishedAt": "2026-10-31T10:26:44.000Z",
+   "publishedAtRaw": "2026-10-31T15:56:44+05:30",
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_31102026155542_CDSL_InvestorPresentation_Signed.pdf"
+  },
+  {
+   "exchange": "NSE",
+   "exchangeRef": "CDSL_31102026142410_Press_release_Signed.pdf",
+   "title": "Press Release",
+   "publishedAt": "2026-10-31T08:57:13.000Z",
+   "publishedAtRaw": "2026-10-31T14:27:13+05:30",
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_31102026142410_Press_release_Signed.pdf"
+  },
+  {
+   "exchange": "NSE",
+   "exchangeRef": "CDSL_31102026141138_OutcomeBM31102026_Signed.pdf",
+   "title": "Outcome of Board Meeting",
+   "publishedAt": "2026-10-31T08:46:32.000Z",
+   "publishedAtRaw": "2026-10-31T14:16:32+05:30",
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_31102026141138_OutcomeBM31102026_Signed.pdf"
+  },
+  {
+   "exchange": "NSE",
+   "exchangeRef": "CDSL_30102026191314_IntimationofPenalty30102026_sd.pdf",
+   "title": "General Updates",
+   "publishedAt": "2026-10-30T13:43:48.000Z",
+   "publishedAtRaw": "2026-10-30T19:13:48+05:30",
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_30102026191314_IntimationofPenalty30102026_sd.pdf"
+  }
+ ],
+ "documents": [
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2026",
+   "periodLabel": "FY26",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_29665_CDSL_2025_2026_A_15773086_08072026190152.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2025",
+   "periodLabel": "FY25",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_27085_CDSL_2024_2025_A_23072025183612.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2024",
+   "periodLabel": "FY24",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_24667_CDSL_2023_2024_2607202411473.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2023",
+   "periodLabel": "FY23",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_22694_CDSL_2022_2023_08082023182850.zip"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2022",
+   "periodLabel": "FY22",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_21450_CDSL_2021_2022_06092022122308.zip"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2022",
+   "periodLabel": "FY22",
+   "publishedAt": null,
+   "url": "https://www.cdslindia.com/Downloads/InvestorRels/AnnualReports/87993%20CDSL%20Annual%20Report.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2021",
+   "periodLabel": "FY21",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_19875_CDSL_2020_2021_17122021111107.zip"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2020",
+   "periodLabel": "FY20",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_16813_CDSL_2019_2020_21082020122548.zip"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2019",
+   "periodLabel": "FY19",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_16128_CDSL_2018_2019_07102019144023_07102019150001.zip"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2018",
+   "periodLabel": "FY18",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_13202_CDSL_2017_2018_24082018182202.zip"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2026",
+   "periodLabel": "Oct 2026",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_31102026155542_CDSL_InvestorPresentation_Signed.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2026",
+   "periodLabel": "Aug 2026",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_07082026155803_NSEintimationtranscript.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2026",
+   "periodLabel": "Aug 2026",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_01082026134647_NSEIntimation_InvestorPresentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_07052026193244_NSEintimationtranscript_Sign.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_02052026161257_NSEIntimation_InvestorPresentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2026",
+   "periodLabel": "Feb 2026",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_06022026152040_NSEintimationtranscriptSigned.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2026",
+   "periodLabel": "Feb 2026",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_31012026152749_InvestorpresentationSD_02012026.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2025",
+   "periodLabel": "Nov 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_06112025192633_NSEintimationtranscript_03112025_Signed.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2025",
+   "periodLabel": "Nov 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_01112025150330_InvestorPresentationFinal_Signed.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2025",
+   "periodLabel": "Aug 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_01082025164114_NSEIntimationConcallTranscript.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2025",
+   "periodLabel": "Aug 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_26072025144746_IntimationInvestorPresentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_08052025203322_NSEintimationtranscript_05052025.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_03052025153948_Investor_Presentation_03052024.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2025",
+   "periodLabel": "Jan 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_30012025185400_NSEintimationtranscript27012025.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2025",
+   "periodLabel": "Jan 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_25012025150650_NSEinvestor_presentationQ3.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2024",
+   "periodLabel": "Nov 2024",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_04112024150440_NSEintimationtranscript04112024.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2024",
+   "periodLabel": "Nov 2024",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_26102024150243_InvestorPresentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2024",
+   "periodLabel": "Aug 2024",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_09082024160726_NSEintimationtranscript09082024.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2024",
+   "periodLabel": "Aug 2024",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_03082024152118_NSEInvestorPresentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2024",
+   "periodLabel": "May 2024",
+   "publishedAt": null,
+   "url": "http://nsearchives.nseindia.com/corporate/CDSL_09052024183430_Q4TranscriptMerged.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2024",
+   "periodLabel": "May 2024",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_04052024153310_CDSLInvestorPresentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_13022024160147_Transcriptconcall13022024.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_13022024160147_Transcriptconcall13022024.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://www.cdslindia.com/downloads/InvestorRels/Financial/Cdsl%20Q3FY24%20Earming%20Call.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_03022024150023_FinalInvestorPresentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2023",
+   "periodLabel": "Nov 2023",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_07112023131132_NSEIntimationTranscript01112023.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2023",
+   "periodLabel": "Nov 2023",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_28102023150618_InvestorPresentationQ2.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/CDSL_28102023150618_InvestorPresentationQ2.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://www.cdslindia.com/downloads/IPO/GeneralMeeting/NSEIntimationTranscript05082023.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_05082023181245_InvestorPresentation.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://www.cdslindia.com/downloads/InvestorRels/Financial/InvestorPresentation05082023.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_09052023182054_Q4Transcript09052023_final.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://www.cdslindia.com/downloads/InvestorRels/Financial/00%20Q4Fy2223%20Cdsl%20InvestorCall_PPT.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_02052023181650_Q4Presentation_03052023.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_10022023173157_Q3Transcript10022023_Final.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://www.cdslindia.com/downloads/InvestorRels/Financial/00%20Q3Fy2223%20Cdsl%20InvestorCall_PPT.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_02022023194624_Q3Presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2022",
+   "periodLabel": "Nov 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_03112022200442_Q2Transcript28052022.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2022",
+   "periodLabel": "Nov 2022",
+   "publishedAt": null,
+   "url": "https://www.cdslindia.com/downloads/InvestorRels/Financial/02%20Q2Fy2223%20CDSL%20InvestorCall_PPT.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2022",
+   "periodLabel": "Oct 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_27102022205139_presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2022",
+   "periodLabel": "Aug 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_03082022195633_TranscriptFinal.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2022",
+   "periodLabel": "Aug 2022",
+   "publishedAt": null,
+   "url": "https://www.cdslindia.com/downloads/InvestorRels/Financial/008%20CDSL%20Investor%20Presentation_vf%20.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2022",
+   "periodLabel": "Aug 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_01082022114809_InvestorPresentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jun 2022",
+   "periodLabel": "Jun 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_27062022180409_TranscriptJune212022.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jun 2022",
+   "periodLabel": "Jun 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_06062022194904_TranscriptJune12022.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2022",
+   "periodLabel": "May 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_27052022205349_TranscriptMay242022signed.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2022",
+   "periodLabel": "May 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_06052022180537_Q4Transcript06052022.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2022",
+   "periodLabel": "May 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_02052022101107_Q4PresentationtoNSE.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2022",
+   "periodLabel": "Feb 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_14022022142223_Q3Transcript09022022.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2022",
+   "periodLabel": "Feb 2022",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_09022022090920_Q3PresentationtoNSE.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Dec 2021",
+   "periodLabel": "Dec 2021",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_28122021182021_Transcriptfor23Dec2021Elara.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Dec 2021",
+   "periodLabel": "Dec 2021",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_27122021180352_Transcriptfor22Dec2021Manulife.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Dec 2021",
+   "periodLabel": "Dec 2021",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_24122021170304_Transcriptfor21Dec2021.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Dec 2021",
+   "periodLabel": "Dec 2021",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_14122021162209_Transcriptfor10Dec2021.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2021",
+   "periodLabel": "Nov 2021",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_10112021114751_Q2TranscripttoNSE.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2021",
+   "periodLabel": "Nov 2021",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_03112021090639_Q2PresentationtoNSE.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2020",
+   "periodLabel": "Oct 2020",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_27102020094649_LtrQ2InvestorPresentation.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2020",
+   "periodLabel": "Jul 2020",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_28072020094624_Q1InvestorPresentation.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2020",
+   "periodLabel": "May 2020",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/corporate/CDSL_20052020095801_FY20investpresentNSE.pdf"
+  }
+ ]
+}

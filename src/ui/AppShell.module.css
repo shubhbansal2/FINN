@@ -1,0 +1,278 @@
+.shell {
+  min-height: 100dvh;
+}
+
+.skip {
+  position: absolute;
+  left: var(--space-2);
+  top: -3rem;
+  z-index: calc(var(--z-overlay) + 1);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: var(--text-small);
+}
+.skip:focus {
+  top: var(--space-2);
+}
+
+/* Logo: three rising bars (the app's high-priority mark, same 1/2 : 3/4 : 1 steps) beside the name in heavy Franklin. */
+.wordmark {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 1.375rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.logoBars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 0.75em;
+  /* Sit the bars on the cap baseline, not the descender line. */
+  margin-bottom: 0.08em;
+}
+.logoBars > span {
+  width: 0.24em;
+  background: currentColor;
+}
+.logoBars > span:nth-child(1) {
+  height: 50%;
+}
+.logoBars > span:nth-child(2) {
+  height: 75%;
+}
+.logoBars > span:nth-child(3) {
+  height: 100%;
+}
+.wordmark:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* ---------- Compact: masthead + bottom tab bar ---------- */
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.25rem;
+  padding: 0 var(--space-2) 0 var(--gutter);
+  padding-top: env(safe-area-inset-top);
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.searchIcon {
+  display: grid;
+  place-items: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  border: 0;
+  border-radius: var(--radius-2);
+  background: transparent;
+  color: var(--color-ink-2);
+}
+.searchIcon:hover {
+  background: var(--color-hover);
+  color: var(--color-ink);
+}
+.searchIcon:active {
+  background: var(--color-pressed);
+}
+
+.main {
+  padding: var(--space-5) var(--gutter) calc(var(--bottom-nav-height) + var(--space-7) + env(safe-area-inset-bottom));
+  max-width: var(--content-max);
+}
+.main:focus {
+  outline: none;
+}
+
+.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-nav);
+  background: var(--color-paper);
+  border-top: 1px solid var(--color-rule-strong);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tabList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: var(--bottom-nav-height);
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 100%;
+  font-size: var(--text-kicker);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-ink-3);
+  text-decoration: none;
+}
+.tab:active {
+  background: var(--color-pressed);
+}
+.tab[aria-current='page'] {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.tab[aria-current='page']::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 30%;
+  right: 30%;
+  height: 3px;
+  background: var(--color-ink);
+}
+.tab:focus-visible {
+  outline-offset: -3px;
+}
+
+.rail {
+  display: none;
+}
+
+/* ---------- Medium and wide: left rail ---------- */
+
+@media (min-width: 720px) {
+  .masthead,
+  .tabbar {
+    display: none;
+  }
+
+  .shell {
+    display: grid;
+    grid-template-columns: var(--rail-width) minmax(0, 1fr);
+  }
+
+  .rail {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    height: 100dvh;
+    padding: var(--space-6) var(--space-4) var(--space-5);
+    border-right: 1px solid var(--color-rule);
+  }
+
+  .rail .wordmark {
+    align-self: flex-start;
+    margin-left: var(--space-2);
+  }
+
+  .main {
+    padding: var(--space-7) var(--gutter) var(--space-8);
+  }
+}
+
+.searchField {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  min-height: 2.25rem;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-rule-input);
+  border-radius: var(--radius-2);
+  background: transparent;
+  font-size: var(--text-small);
+  color: var(--color-ink-3);
+  text-align: left;
+}
+.searchField > span {
+  flex: 1;
+}
+.searchField:hover {
+  border-color: var(--color-ink-2);
+  color: var(--color-ink-2);
+}
+.searchField:active {
+  background: var(--color-pressed);
+}
+
+.kbd {
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  padding: 1px 4px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-1);
+}
+
+.railList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.railLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 2.5rem;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-2);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-ink-2);
+  text-decoration: none;
+}
+.railLink:hover {
+  background: var(--color-hover);
+  color: var(--color-ink);
+}
+.railLink:active {
+  background: var(--color-pressed);
+}
+.railLink[aria-current='page'] {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.railLink[aria-current='page']::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-4));
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: var(--color-ink);
+}
+
+.railFooter {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0 var(--space-2);
+}
+
+.railStatus {
+  padding: var(--space-3) 0 0;
+  border-top: 1px solid var(--color-rule);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+  line-height: 1.6;
+}

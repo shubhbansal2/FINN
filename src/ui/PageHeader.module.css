@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.text {
+  min-width: 0;
+  max-width: var(--reading-max);
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+  margin-bottom: var(--space-1);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-display);
+  font-weight: var(--weight-serif);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.015em;
+}
+
+.description {
+  margin-top: var(--space-2);
+  font-size: var(--text-small);
+  color: var(--color-ink-2);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  max-width: 100%;
+}

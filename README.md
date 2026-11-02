@@ -1,108 +1,184 @@
-# FINN: Financial Investment Agent
+# FINN
 
-A mobile-first agent for a public-markets investor, built for the ENAM AI Engineer Build Challenge.
+A mobile-first investment intelligence prototype for an Indian equity portfolio, built for the ENAM AI Engineer Build Challenge.
 
-**The point of view:** an investor's day starts with an inbox, not a dashboard. FINN reads every
-exchange filing across the portfolio, ranks the handful that matter, collapses the rest, and lets you
-clear the brief like email. When you want to dig in, it holds management to their word: every piece
-of guidance from the last four earnings calls, checked against what was actually reported.
+- **Signals (push):** a ranked digest of watchlist filings, end-of-day price moves and volume spikes, with alert rules.
+- **Research (pull):** company research built only from primary documents, with a financial table, a guidance-versus-actuals scorecard and a passage behind every figure and quote.
 
-| | |
-|---|---|
-| **Brief** (push) | Filings in a window you choose (24h / 3d / week / month), grouped into events, ranked by an explainable score; results arrive as a Revenue / EBITDA / PBT / PAT card with QoQ and YoY; routine paperwork collapsed into one line. Swipe to clear. "Listen" reads the brief aloud. |
-| **Alerts** (push) | Your thresholds: volume vs N-day average, daily price move, filing categories. Re-scored instantly when you change them; phone notifications via the PWA. |
-| **Research** (pull) | Any NSE ticker. Numbers in seconds (snapshot, trajectory, balance sheet, cash quality), then: promised vs delivered, story vs numbers, bull/bear, business from the annual report, and a Q&A box, all grounded in transcripts and the annual report, with every quote verified. |
+FINN is a prototype. It has not been deployed to a public URL, it has no user accounts, and its data sources are limited (see [Known limitations](#known-limitations)).
 
-## Architecture
+## Requirements
 
-```
-GitHub Actions (cron) ── ingest ──> data/finn.db (SQLite, committed) ──> Docker on Render
-   yfinance EOD · NSE filings (BSE fallback) · screener.in tables + AR/transcript links
-                                         │
-FastAPI ── /api/* ─────────────────────── ┤
-React PWA (Vite) ── served by FastAPI ────┘
-```
+- Node.js **20.12 or later** (developed on 20.15.0) and npm 10.
+- A C/C++ toolchain is **not** normally needed: `better-sqlite3` ships prebuilt binaries for current Node versions on Windows, macOS and Linux.
+- About 500 MB of disk for dependencies and the build. Live mode stores downloaded filings under `FINN_DATA_DIR`.
 
-```
-backend/finn/
-  ingest/      prices.py · announcements.py · fundamentals.py      (plumbing)
-  push/        classify.py   rules first; only ambiguous filings go to a model
-               pipeline.py   scoring with human-readable reasons + windowed digest
-               results.py    results card from parsed tables, or read off the filing
-               enrich.py     cheap-model summaries; exec background from the filing's profile
-               alerts.py     threshold alerts, idempotent
-  pull/        numbers.py    deterministic research cards + observations
-               guidance.py   guidance extraction, quote verification, scorecard
-               analysis.py   business snapshot (AR) + story-vs-numbers judgement
-               ask.py        grounded Q&A over the last two transcripts
-  llm.py       providers (Gemini free / Claude), routing, pacing, response cache, usage ledger
-  api.py       FastAPI
-frontend/src/  Brief · EventCard · Company · Screens (Portfolio, Research, Alerts)
-```
-
-## Key decisions
-
-- **Numbers never come from a model.** Financials are parsed from screener.in's tables; every
-  observation ("margins compressing 3 pts", "turned 115% of profit into cash") is computed. The
-  one exception, a results filing read before screener updates, computes EBITDA itself and checks
-  each extracted figure against the numbers printed on the cited page; under 80% verified, the card
-  is marked unverified.
-- **Rules before models.** 87% of filings are classified by rules; only the ambiguous ones (and the
-  important ones whose exchange text says nothing, e.g. "change in Management") get a model call,
-  on the first four pages only.
-- **Free by default, routed by task.** On Gemini's free tier (plain REST, no SDK):
-  `gemini-3.5-flash-lite` for bulk extraction (filings, transcripts, annual-report pages, Q&A) and
-  `gemini-3.6-flash` only for the single judgement call per company. Free-tier models get
-  overloaded at peak times, so each has an automatic fallback (`gemini-3.1-flash-lite`,
-  `gemini-3-flash-preview`); the ledger records which model actually served each call. Calls are
-  paced for per-minute limits, 429s are retried after Google's stated delay, and a used-up daily
-  quota stops the run cleanly: everything finished is cached and the next run resumes. Gemini was
-  chosen over Groq/OpenRouter free tiers because one transcript (~25k tokens) exceeds their
-  per-minute token caps. Set `ANTHROPIC_API_KEY` instead to run on Claude (Haiku 5.5 / Opus 5.5);
-  override models with `FINN_CHEAP_MODEL` / `FINN_STRONG_MODEL`. Google may use free-tier prompts to
-  improve its products; FINN only sends public filings and transcripts.
-- **Executive background from the filing, not the web.** SEBI requires an appointment filing to
-  include the appointee's brief profile, so the cheap model reads it from there (primary source,
-  free, nothing to hallucinate from search results); a LinkedIn search link is one tap away.
-  (Web-search grounding isn't available on Gemini's free tier.)
-- **Pay once.** Every LLM response is cached by a hash of (model, prompt, schema); research is
-  keyed by the hash of its source documents, so a company is only re-analysed when a new transcript
-  or annual report appears. Transcripts sit behind a prompt-cache breakpoint, so follow-up questions
-  re-read them at cache prices.
-- **Grounding is enforced, not requested.** Extracted quotes are matched verbatim against the
-  source text; unmatched ones are dropped (and counted). The judgement model sees only those
-  verified quotes plus computed figures: no raw web, no outside knowledge.
-- **No vector database.** A transcript fits in context; annual reports are page-ranked by keyword.
-
-## Run locally
+## Quick start (demo mode, offline)
 
 ```bash
-cd backend
-pip install -r requirements.txt
-python -m finn.cli all            # ingest portfolio + research set, score, alert
-cd ../frontend && npm install && npm run build
-cd .. && python -m uvicorn finn.api:app --app-dir backend --port 8000
+npm ci
 ```
 
-Open http://localhost:8000 (use the phone viewport in dev tools, or your phone on the same network).
-Set `GEMINI_API_KEY` (free, no card: create one at https://aistudio.google.com/apikey) to enable
-summaries, bios, results-from-filing, research analysis and Q&A; everything else works without it.
-Your exact free-tier limits per model are shown in AI Studio.
+```bash
+npm run setup:demo
+```
 
-Other jobs: `python -m finn.cli research TRENT`, `python -m finn.cli costs`.
+```bash
+npm run dev
+```
 
-## Deploy
+Open http://localhost:3000. Demo mode is the default when no `.env` exists. `setup:demo` creates `data/finn-fixture.sqlite`, applies the migrations, loads the company universe, and ingests the recorded price and filing fixtures. It makes no network calls.
 
-`render.yaml` + `Dockerfile` give a single free web service. `.github/workflows/refresh.yml`
-refreshes the data on a schedule and commits `data/finn.db`, which redeploys the service.
-Add `GEMINI_API_KEY` as a repository secret and as a Render environment variable.
+## Configuration
 
-## Data sources
+Copy the template and edit it. Never commit `.env`.
 
-| Source | Used for |
-|---|---|
-| Yahoo Finance (`yfinance`) | End-of-day OHLCV; only completed sessions count for alerts |
-| NSE corporate-announcements API, BSE API fallback | Filings |
-| screener.in | Standardised statements; links to annual reports and transcripts |
-| Company PDFs (exchange archives / IR sites) | Transcripts, annual reports, results filings |
-| Appointment filings (SEBI-mandated profile) | Background of newly appointed executives |
+```bash
+cp .env.example .env
+```
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `FINN_DATA_MODE` | `fixture` | `fixture` = recorded demo data; `live` = real providers. Each mode has its own database file. |
+| `FINN_DATA_DIR` | `data` | SQLite database and downloaded documents. Use a persistent disk, not a cloud-synced folder. |
+| `FINN_DEMO_NOW` | `2026-11-01T10:30:00.000Z` | Demo mode only: the fixed "now" signal windows are measured from. Shown on screen as the demo clock. |
+| `FINN_LLM_PROVIDER` | `auto` | `gemini`, `anthropic`, or `auto` (Anthropic if its key is set, else Gemini). |
+| `GEMINI_API_KEY` | empty | Optional. Free Google AI Studio key; enables model-assisted research modules. Read on the server only. |
+| `FINN_GEMINI_MODEL_EXTRACTION`, `FINN_GEMINI_MODEL_SYNTHESIS` | `gemini-3.5-flash-lite`, `gemini-3.6-flash` | Optional Gemini model overrides. `gemini-3.8-flash` is newer but returned 503 / no response when tested on 2 Nov 2026. |
+| `ANTHROPIC_API_KEY` | empty | Optional, paid. Uses Claude for the same modules. |
+| `FINN_MODEL_EXTRACTION`, `FINN_MODEL_SYNTHESIS` | `claude-haiku-5-5`, `claude-opus-5-5` | Optional Claude model overrides. |
+| `FINN_ENABLE_DEV_ROUTES` | `false` | Exposes `/dev/design-system` in production builds. |
+
+No variable is exposed to the browser: there are no `NEXT_PUBLIC_` variables, and the model client lives in server-only modules.
+
+## Database and migrations
+
+SQLite via `better-sqlite3`. Migrations are ordered SQL in `src/db/migrations.ts`, tracked with `PRAGMA user_version`. They are applied automatically whenever the app or the CLI opens the database. To apply them explicitly:
+
+```bash
+npm run finn -- migrate
+```
+
+The watchlist is seeded once from the portfolio in `config/universe.json`. After that, the stored watchlist is authoritative, including when it is empty.
+
+## Data modes
+
+| Mode | What you see | How it is labelled |
+|---|---|---|
+| **Demo** (`fixture`) | Real provider responses recorded on 1 Nov 2026, replayed with a fixed demo clock. Research for RELIANCE, LT and KAYNES is served from reports recorded from live runs (`fixtures/research/`). Other companies say "No recorded report". | A "Demo data" tag on every page and signal, the demo clock on Signals, "Recorded" instead of a freshness state, a "Recorded demo report" banner on research. Separate database file. |
+| **Live** (`live`) | Yahoo end-of-day prices, screener.in-discovered exchange filings, BSE/company PDFs downloaded and parsed on demand. Any NSE symbol can be researched after it is verified against two sources. | Per-source freshness ("Current", "Stale", "Partial", "Unavailable") with the session or fetch time. |
+| **Partial data** | Some sources or documents are missing: for example no results filing, a transcript that failed to download, a company with no price history. | Research shows "Partial research: no …" and replaces each empty section with a one-line reason. Signals show a banner per degraded source and name the affected companies. Missing values are shown as "—" with their reason, never as zero. |
+| **Provider failure** | A provider is down or refuses requests. | The failed source is reported, and everything else still renders. Research lists each source with its state ("Download failed", "No readable text"). The feed keeps the other source's signals. Failed model calls fall back to quoted passages or computed observations, and the report says so. |
+
+Demo data is never substituted in live mode. Fixture adapters and recorded reports are used only when `FINN_DATA_MODE=fixture`.
+
+## Live data
+
+```bash
+FINN_DATA_MODE=live npm run finn -- universe:sync
+```
+
+```bash
+FINN_DATA_MODE=live npm run finn -- ingest:prices
+```
+
+```bash
+FINN_DATA_MODE=live npm run finn -- ingest:filings
+```
+
+```bash
+FINN_DATA_MODE=live npm run finn -- ingest:documents --limit 25
+```
+
+Then run the app with `FINN_DATA_MODE=live` in `.env`. Research downloads what it needs on demand. To record a live research run as a demo report:
+
+```bash
+FINN_DATA_MODE=live npm run finn -- research --symbols RELIANCE --record
+```
+
+After upgrading the PDF library or changing the extractor, re-extract stored documents from their saved files (no network):
+
+```bash
+FINN_DATA_MODE=live npm run finn -- reextract
+```
+
+The providers and what was verified against them are listed in [docs/PROVIDERS.md](docs/PROVIDERS.md). FINN sends an honest user agent and never imitates a browser.
+
+## Tests and checks
+
+```bash
+npm run typecheck
+```
+
+```bash
+npm run lint
+```
+
+```bash
+npm test
+```
+
+```bash
+npm run test:e2e
+```
+
+- `npm test` runs the Vitest unit and integration tests: financial arithmetic with hand-worked expectations, parsers, ranking, rules, migrations, UI components, and integrity checks over the recorded research reports.
+- `npm run test:e2e` runs Playwright against a **production build** in demo mode. It uses its own data directory (`.e2e-data`) and build directory (`.next-e2e`), so it never touches your database. One test removes a company's price history on purpose, to check behaviour when a source is unavailable. The first run needs `npx playwright install chromium`.
+
+## Production build and start
+
+```bash
+npm run build
+```
+
+```bash
+npm start -- -p 3000
+```
+
+`npm start` serves the built app. `FINN_DATA_MODE` and the other variables are read at request time, so set them in the process environment or in `.env` next to the app.
+
+## Deployment
+
+**Recommended shape:** one long-running Node.js process on a host with a persistent disk, behind an HTTPS reverse proxy. Examples are a small VM, or Render or Fly.io with a mounted volume. This shape follows from the architecture:
+
+- **SQLite file:** the database must live on a persistent, non-network disk.
+- **In-process research jobs:** these run inside the server process. They are lost if it restarts, and they do not span instances.
+- **Native module:** `better-sqlite3` cannot run on serverless platforms such as Vercel functions.
+
+Steps on the host:
+
+1. Install Node 20.12+.
+2. Copy the repository and run `npm ci`.
+3. Set the environment (above). Point `FINN_DATA_DIR` at the persistent disk.
+4. Load data: `npm run setup:demo` for demo mode, or the live ingestion commands.
+5. Build and start: `npm run build`, then `npm start -- -p $PORT`.
+6. Put HTTPS in front with a reverse proxy or the platform's router, and run a single instance.
+
+**Not done:** FINN has not been deployed. No hosting credentials were available while it was being built, and no container image was built or tested (Docker was not installed). A production build was verified locally (`next build`, then `next start`), including on a 375px mobile viewport. That is the extent of what can be claimed.
+
+## Architecture in brief
+
+- **Next.js App Router, server-rendered:** pages read SQLite directly on the server. Mutations go through small JSON API routes that validate input with zod, cap body sizes and return typed errors.
+- **Separate layers:** domain types and calculations (`src/domain`, `src/research/facts-view.ts`), providers (`src/data`), persistence (`src/db`), the engines (`src/push`, `src/research`), and UI (`src/ui`, `src/app`). Financial arithmetic exists in one place and names its formula.
+- **Deterministic first:**
+  - Ranking, anomaly detection, results parsing (with arithmetic cross-checks) and guidance scoring are rule-based and tested.
+  - The model is optional. Its output is schema-validated, and every claim must cite evidence that exists. Quotes must appear verbatim in their passage.
+- **Provenance everywhere:** every figure carries the document, page, printed value and unit. Derived figures name their formula. Missing data carries a reason. Demo data is labelled at the source and on screen.
+
+More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/DATA.md](docs/DATA.md), [docs/PUSH.md](docs/PUSH.md), [docs/RESEARCH.md](docs/RESEARCH.md), [docs/PROVIDERS.md](docs/PROVIDERS.md), and the walkthrough in [docs/DEMO.md](docs/DEMO.md).
+
+## Known limitations
+
+- **Prices:** end-of-day only, from an unofficial Yahoo endpoint with no SLA. Never real-time.
+- **Announcements:** only the most recent ~5 per company, discovered via screener.in. The BSE and NSE APIs require browser impersonation, which FINN does not do.
+- **Results figures:** from the latest results filing only, typically 5–6 periods. The balance sheet and cash-flow statement are not parsed, so free cash flow, debt and debt-to-equity are shown as unavailable with the reason.
+- **Model-assisted modules:** implemented for Google Gemini (free tier) and Anthropic Claude behind one interface. Neither was exercised against the real API (no key was available); the request and response handling is unit-tested against recorded API shapes. The recorded demo reports use the deterministic fallbacks. On Gemini's free tier, rate limits are per Google project and Google may use the inputs (public filings and your question) to improve its products.
+- **Alerts:** evaluated on page load and on demand only. There is no background scheduler and no push channel.
+- **Single user:** the watchlist, alert rules and preferences are shared by everyone using a server. There are no accounts and no per-user isolation.
+- **No OCR and no exchange holiday calendar.**
+- **Dependency advisories (`npm audit --omit=dev`, 2 Nov 2026):** three remain, each needing a major upgrade:
+  - `zod` (memory use on oversized collections): mitigated, because API bodies are size-capped (1–16 KB) before validation.
+  - `postcss` via `next`: build-time CSS processing, with no untrusted CSS involved.
+  - `next` itself (moderate).
+
+  Upgrading `unpdf` to 1.8.1 removed the other seven, including a critical one in `tar`. The re-extraction gave the same figures, and one more of them now passes the arithmetic checks.

@@ -1,14 +1,24 @@
-__pycache__/
-*.pyc
-.venv/
-.env
 node_modules/
-frontend/dist/
 .next/
-data/cache/
-data/*.db-wal
-data/*.db-shm
+.next-e2e/
+.e2e-data/
+test-results/
+playwright-report/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# local data and secrets
+.env
+.env.*
+!.env.example
+data/
+
+# OS / editor / local tool config
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 .claude/
-# Local working notes (kept out of the repo)
-PLAN.md
-WRITEUP.md
+npm-debug.log*

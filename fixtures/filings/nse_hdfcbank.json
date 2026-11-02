@@ -1,0 +1,518 @@
+{
+ "capturedAt": "2026-11-01T10:25:15.438Z",
+ "source": "screener",
+ "pageUrl": "https://www.screener.in/company/HDFCBANK/consolidated/",
+ "announcements": [
+  {
+   "exchange": "BSE",
+   "exchangeRef": "b36ff756-1cf7-44a3-9b2c-4583e7e0e792",
+   "title": "Announcement under Regulation 30 (LODR)-Change in Management",
+   "publishedAt": "2026-10-31T16:44:41.000Z",
+   "publishedAtRaw": "2026-10-31T22:14:41+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b36ff756-1cf7-44a3-9b2c-4583e7e0e792.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "38dab330-ca6e-4311-9679-7b47cebb7993",
+   "title": "Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS",
+   "publishedAt": "2026-10-30T07:54:55.000Z",
+   "publishedAtRaw": "2026-10-30T13:24:55+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=38dab330-ca6e-4311-9679-7b47cebb7993.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "e5b2d06f-fea8-4dea-aa03-84674215a0fd",
+   "title": "Disclosure Under Regulation 30 And Other Applicable Regulations Of The SEBI (LODR) Regulations, 2015 - Change In Managing Director And Chief Executive Officer Of The Bank",
+   "publishedAt": "2026-10-27T02:36:22.000Z",
+   "publishedAtRaw": "2026-10-27T08:06:22+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e5b2d06f-fea8-4dea-aa03-84674215a0fd.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "9e0bab4c-fcd5-45ce-8a91-a3dcf5dac9e9",
+   "title": "Grant Of Stock Options Under Employee Stock Option Scheme",
+   "publishedAt": "2026-10-24T16:54:00.000Z",
+   "publishedAtRaw": "2026-10-24T22:24:00+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9e0bab4c-fcd5-45ce-8a91-a3dcf5dac9e9.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "d7e45614-ae12-4bb9-b92d-623b3a63f166",
+   "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
+   "publishedAt": "2026-10-23T17:20:38.000Z",
+   "publishedAtRaw": "2026-10-23T22:50:38+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d7e45614-ae12-4bb9-b92d-623b3a63f166.pdf"
+  }
+ ],
+ "documents": [
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2026",
+   "periodLabel": "FY26",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/7d621500-082a-4342-b98d-ba677d3890c5.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2025",
+   "periodLabel": "FY25",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/411e22d2-0720-4cec-b659-9ccd639f0f1a.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2024",
+   "periodLabel": "FY24",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/2160dea5-d49e-4409-83a4-c2b111a3bd12.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2023",
+   "periodLabel": "FY23",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/0fb0e6bd-7110-44c3-a750-76933ddf105c.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2022",
+   "periodLabel": "FY22",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/73256500180.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2021",
+   "periodLabel": "FY21",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/68609500180.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2020",
+   "periodLabel": "FY20",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800320.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2019",
+   "periodLabel": "FY19",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800319.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2018",
+   "periodLabel": "FY18",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800318.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2017",
+   "periodLabel": "FY17",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800317.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2016",
+   "periodLabel": "FY16",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800316.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2015",
+   "periodLabel": "FY15",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800315.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2014",
+   "periodLabel": "FY14",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800314.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2013",
+   "periodLabel": "FY13",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800313.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2012",
+   "periodLabel": "FY12",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/500180/5001800312.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2026",
+   "periodLabel": "Oct 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d7e45614-ae12-4bb9-b92d-623b3a63f166.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2026",
+   "periodLabel": "Oct 2026",
+   "publishedAt": null,
+   "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/about-us/financial-results/2026-2027/quarter-2/q2fy27-earnings-presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2026",
+   "periodLabel": "Jul 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=509cc499-6cb1-4d9f-8de9-9c7de6c70eef.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2026",
+   "periodLabel": "Jul 2026",
+   "publishedAt": null,
+   "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/about-us/financial-results/2026-2027/quarter-1/q1fy27-earnings-presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2026",
+   "periodLabel": "Apr 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a77abbbb-954a-4221-8240-67bf0da6ba1c.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2026",
+   "periodLabel": "Apr 2026",
+   "publishedAt": null,
+   "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/about-us/financial-results/2025-2026/quarter-4/q4fy26-earnings-presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Mar 2026",
+   "periodLabel": "Mar 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=56739132-e21e-4503-aeb6-85f4f53c1244.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2026",
+   "periodLabel": "Jan 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6e45f8a0-0fe6-40a3-8e5a-51c53713e6f0.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2026",
+   "periodLabel": "Jan 2026",
+   "publishedAt": null,
+   "url": "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/pdf/financial-results/2025-2026/quarter-3/Q3FY26-earnings-presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2025",
+   "periodLabel": "Oct 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=145964f9-580c-4d3f-b239-759f7b6a7a28.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2025",
+   "periodLabel": "Oct 2025",
+   "publishedAt": null,
+   "url": "http://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2025/oct/Q2FY26-Earnings-Presentation.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2025",
+   "periodLabel": "Oct 2025",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2025/oct/Q2FY26-Earnings-Presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2025",
+   "periodLabel": "Jul 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d1268138-e288-4335-9764-7a944dfa3570.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2025",
+   "periodLabel": "Jul 2025",
+   "publishedAt": null,
+   "url": "http://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2025/jul/Q1FY26-Earnings-Presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2025",
+   "periodLabel": "Apr 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ff4ae1b4-cf07-4f6d-b097-3bd8139fb570.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2025",
+   "periodLabel": "Apr 2025",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/HDFCBANK_19042025160318_SEpresentation19042025.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2025",
+   "periodLabel": "Jan 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a7e4ad26-5c9e-4ffe-a610-28241b35c3b0.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2025",
+   "periodLabel": "Jan 2025",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2024/dec/22/Q3FY25-Earnings-Presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2024",
+   "periodLabel": "Oct 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c7affe75-673f-4507-b421-a7d5bab9d3e6.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2024",
+   "periodLabel": "Oct 2024",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2024/oct/Q2FY25-Earnings-Presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2024",
+   "periodLabel": "Jul 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=94d03650-9410-4870-b9ba-d4c553d2740b.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2024",
+   "periodLabel": "Jul 2024",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/About%20Investor%20Relations/pdf/2024/july/Q1FY25_Earnings_Presentation.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2024",
+   "periodLabel": "Jul 2024",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/About%20Investor%20Relations/pdf/2024/july/Q1FY25_Earnings_Presentation.pdfhttps://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/About%20Investor%20Relations/pdf/2024/july/Q1FY25_Earnings_Presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2024",
+   "periodLabel": "Apr 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=880ee466-e764-4e05-9ef3-3d9bb8e485f4.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2024",
+   "periodLabel": "Apr 2024",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2024/20April/Q4FY24-Earnings-Presentation.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Mar 2024",
+   "periodLabel": "Mar 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=12bab14e-f504-46e9-90cd-0881a76dd4a6.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d34bd589-124e-40f2-80b5-82f360a98639.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=163829d1-3b5f-41f7-bd9e-9f3509869245.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2024",
+   "periodLabel": "Jan 2024",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2024/23/Earnings-Call-Transcript-Jan16-2024.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2024",
+   "periodLabel": "Jan 2024",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2024/16/Q3FY24_Earnings_Presentation.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/Financial%20Information/PDF/HDFC-Bank-Day/1.%20HDFCB_Day_30Oct23_vF.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d420b35c-488c-4ea9-84ca-6183de7e29f4.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7931b031-359d-4da8-8425-b4f26c2d2547.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2023/oct/HDFC-EarningsCall-Oct16-2023_CallTranscript.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2023/oct/Q2FY24%20Earnings%20Presentation.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Sep 2023",
+   "periodLabel": "Sep 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d28f086c-3d7a-4a6d-a138-a0c2123a963a.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2023",
+   "periodLabel": "Jul 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=989cf3a5-9a81-458e-b0ec-7ea60cc482a7.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2023",
+   "periodLabel": "Jul 2023",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2023/july/HDFCB_Q1FY24_Earnings_Presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2023",
+   "periodLabel": "Apr 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=57e720ab-83b3-4b34-bb81-0c364e88c938.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2023",
+   "periodLabel": "Apr 2023",
+   "publishedAt": null,
+   "url": "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=/Footer/About%20Us/Investor%20Relation/Detail%20PAges/financial%20results/PDFs/2023/Q4FY23-Earnings-Presentation.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2023",
+   "periodLabel": "Jan 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=42e79ecc-a641-4f9d-8fdc-a4dde6cefb16.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2022",
+   "periodLabel": "Jul 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e9327050-8f62-42f3-a539-bd91f156647d.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2022",
+   "periodLabel": "Apr 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f5ad442e-6916-47c7-ac65-c42c31df289f.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2022",
+   "periodLabel": "Apr 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=25b7a31b-fd86-456f-8a27-51b4119fe7ce.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2022",
+   "periodLabel": "Apr 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=27bf8aa3-9098-4724-9192-7f384e76f3c2.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2018",
+   "periodLabel": "May 2018",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b3087c6b-5b89-43bd-bea9-4250ab026f85.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (23 Oct from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202610121018_HDFC_Bank_Limited.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (27 Aug from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202608140858_HDFC_Bank_Limited.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (19 Aug from fitch)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.indiaratings.co.in/pressrelease/84898"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (23 Jun from icra)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.icra.in/Rationale/ShowRationaleReport/?Id=143772"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (23 Jun from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/HDFCBankLimited_June%2023_%202026_RR_398560.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (8 Apr from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202604140433_HDFC_Bank_Limited.pdf"
+  }
+ ]
+}

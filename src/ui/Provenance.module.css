@@ -1,0 +1,44 @@
+/* Small caps label with a 1px outline: reads as an annotation, not a button. */
+.root {
+  display: inline-flex;
+  align-items: center;
+  height: 1.125rem;
+  padding: 0 5px;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.live {
+  color: var(--color-ink-3);
+}
+.cached {
+  color: var(--color-ink-3);
+}
+.derived {
+  color: var(--color-ink-2);
+  border-style: dashed;
+}
+.stale {
+  color: var(--color-stale);
+  background: var(--color-stale-soft);
+}
+.demo {
+  color: var(--color-demo);
+  background: var(--color-demo-soft);
+}
+.unverified {
+  color: var(--color-warning);
+  border-style: dashed;
+}
+.inference {
+  color: var(--color-signal-info);
+  border-style: dotted;
+}

@@ -1,0 +1,511 @@
+{
+ "capturedAt": "2026-11-01T10:25:07.584Z",
+ "source": "screener",
+ "pageUrl": "https://www.screener.in/company/ASTRAL/consolidated/",
+ "announcements": [
+  {
+   "exchange": "BSE",
+   "exchangeRef": "2684ff83-e0e0-41ce-bcd0-935a714cf850",
+   "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "publishedAt": "2026-10-31T10:06:58.000Z",
+   "publishedAtRaw": "2026-10-31T15:36:58+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2684ff83-e0e0-41ce-bcd0-935a714cf850.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "1f1205bc-a6f9-4dc6-85af-eed6f74e9dc5",
+   "title": "Board Meeting Intimation for To Consider And Approve The Unaudited Financial Results (Standalone And Consolidated) Of The Company For The Second Quarter And Half Year Ended 30Th September, 2026 And Declaration Of Interim Dividend For The Financial Year 2026-27, If Any;",
+   "publishedAt": "2026-10-29T12:50:26.000Z",
+   "publishedAtRaw": "2026-10-29T18:20:26+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1f1205bc-a6f9-4dc6-85af-eed6f74e9dc5.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "6a62a756-a3d5-4aa1-8cdd-69092e0d54ba",
+   "title": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "publishedAt": "2026-10-12T07:07:54.000Z",
+   "publishedAtRaw": "2026-10-12T12:37:54+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6a62a756-a3d5-4aa1-8cdd-69092e0d54ba.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "fe23f2ff-7e7d-4b9d-b3fb-2138f3fb2e66",
+   "title": "Closure of Trading Window",
+   "publishedAt": "2026-09-24T12:36:13.000Z",
+   "publishedAtRaw": "2026-09-24T18:06:13+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=fe23f2ff-7e7d-4b9d-b3fb-2138f3fb2e66.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "43145b9e-c1dd-4af0-870c-504589044d46",
+   "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "publishedAt": "2026-09-24T10:35:32.000Z",
+   "publishedAtRaw": "2026-09-24T16:05:32+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=43145b9e-c1dd-4af0-870c-504589044d46.pdf"
+  }
+ ],
+ "documents": [
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2026",
+   "periodLabel": "FY26",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/5772a6ee-bd33-47d5-bbd1-85b269bd26c3.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2025",
+   "periodLabel": "FY25",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/78a2a99f-5d2e-4692-b054-43192a2fc329.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2024",
+   "periodLabel": "FY24",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/455e935e-98ba-4ef9-bd54-c293a46bab7c.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2023",
+   "periodLabel": "FY23",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/aa9741a9-f026-474d-9169-5be6f7a1a073.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2022",
+   "periodLabel": "FY22",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/74164532830.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2021",
+   "periodLabel": "FY21",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/69371532830.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2020",
+   "periodLabel": "FY20",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/5328300320.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2019",
+   "periodLabel": "FY19",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/5328300319.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2018",
+   "periodLabel": "FY18",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/5328300318.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2017",
+   "periodLabel": "FY17",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/5328300317.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2016",
+   "periodLabel": "FY16",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/5328300316.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2015",
+   "periodLabel": "FY15",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/5328300315.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2014",
+   "periodLabel": "FY14",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/5328300314.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2013",
+   "periodLabel": "FY13",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/532830/5328300313.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2013",
+   "periodLabel": "FY13",
+   "publishedAt": null,
+   "url": "https://archives.nseindia.com/annual_reports/AR_388_ASTRAL_2012_2013_08072013113936.zip"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2026",
+   "periodLabel": "Aug 2026",
+   "publishedAt": null,
+   "url": "https://www.astralltd.com/wp-content/uploads/2026/08/Equirus-Astral-Aug12-2026-1.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://www.astralltd.com/wp-content/uploads/2026/05/Analysts-Meet-2026-Transcript.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://www.astralltd.com/wp-content/uploads/2026/05/Investor-Presentation-May-2026.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2026",
+   "periodLabel": "Feb 2026",
+   "publishedAt": null,
+   "url": "https://nsearchives.nseindia.com/corporate/ASTRAL_05022026201047_Earning_Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2025",
+   "periodLabel": "Nov 2025",
+   "publishedAt": null,
+   "url": "https://www.astralltd.com/wp-content/uploads/2025/11/Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2025",
+   "periodLabel": "Aug 2025",
+   "publishedAt": null,
+   "url": "https://www.astralltd.com/wp-content/uploads/2025/08/Transcript-of-Earning-Call-held-on-12th-August-2025.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://www.astralltd.com/wp-content/uploads/2025/05/Analyst-Meet-2025-Transcript.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://www.astralltd.com/wp-content/uploads/2025/05/Astral-Analysts-Meet-PPT-R-1.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2025",
+   "periodLabel": "Jan 2025",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2025/02/Transcript-of-Earning-Call-held-on-30th-January-2025.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2024",
+   "periodLabel": "Nov 2024",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2024/11/Transcript-of-Earning-Call-7th-November-2024.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2024",
+   "periodLabel": "Aug 2024",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2024/08/HDFCSec-AstralLtd-Aug09-2024.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2024",
+   "periodLabel": "May 2024",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2024/05/Transcript-of-Analyst-Meet-21.05.2024.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2024",
+   "periodLabel": "May 2024",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2024/Astral%20Pipes_%20PPWithout%20Video%20for%20TIL.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2024/02/Transcript-of-earning-Call-30-01-2024.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2023",
+   "periodLabel": "Oct 2023",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2023/10/Transcript-of-earning-Call-19-10-2023.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2023/08/Transcript-of-Earning-Call-11.08.2023.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2023/05/Astral-Analyst-meet-FINAL.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://astralltd.com/wp-content/uploads/2023/05/Astral_2023.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1676291321_transcript_-_earning_call_08.02.2023.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2022",
+   "periodLabel": "Nov 2022",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1668486940_transcript_-_earning_call__-_11.11.2022.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2022",
+   "periodLabel": "Aug 2022",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1660714645_ambitcap-astralltd-aug12-2022.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2022",
+   "periodLabel": "May 2022",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1654423055_astral_analysts_meet_may_2022.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2022",
+   "periodLabel": "May 2022",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1653916490_astral_investor_(1"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2022",
+   "periodLabel": "May 2022",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1653916490_astral_investor_(1).pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2022",
+   "periodLabel": "Feb 2022",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1644328430_ambitcap-astral-feb04-2022_final.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2021",
+   "periodLabel": "Nov 2021",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1636972102_sparkcap-astraltd-11.11.2021.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2021",
+   "periodLabel": "Aug 2021",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1628945427_transcript_%E2%80%93_earnings_call-_09.08.2021.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2021",
+   "periodLabel": "May 2021",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1621867401_transcript_%E2%80%93_earnings_call-_19.05.2021.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2021",
+   "periodLabel": "May 2021",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1621433301_investor_ppt_may_2021-_final.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2021",
+   "periodLabel": "Feb 2021",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1612859071_transcript_%E2%80%93_earnings_call-_03.02.2021.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2020",
+   "periodLabel": "Nov 2020",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1605162154_transcript_%E2%80%93_earnings_call-_06.11.2020.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2020",
+   "periodLabel": "Aug 2020",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1597047178_transcript_%E2%80%93_earnings_call-_05.08.2020.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2020",
+   "periodLabel": "Feb 2020",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1582000578_transcript_-_earnings_call-_12.02.2020.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2019",
+   "periodLabel": "Oct 2019",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1572504507_transcript_-_earnings_call-_25.10.2019.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2019",
+   "periodLabel": "Feb 2019",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1555064378_457_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2018",
+   "periodLabel": "Nov 2018",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1555064263_438_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2018",
+   "periodLabel": "Aug 2018",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538746499_375_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jul 2018",
+   "periodLabel": "Jul 2018",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538746515_364_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2018",
+   "periodLabel": "Feb 2018",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538989229_337_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2017",
+   "periodLabel": "Nov 2017",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538989336_324_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2017",
+   "periodLabel": "Aug 2017",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538989415_295_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2017",
+   "periodLabel": "Feb 2017",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538989616_230_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2016",
+   "periodLabel": "Nov 2016",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538989687_204_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2016",
+   "periodLabel": "Aug 2016",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538989726_183_l.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2016",
+   "periodLabel": "Feb 2016",
+   "publishedAt": null,
+   "url": "https://www.astralpipes.com/uploads/investor_broucher/1538989828_151_l.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (7 Jul from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202607120709_Astral_Limited.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (6 Jul from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/AstralLimited_July%2006_%202026_RR_399443.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (15 Jun from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/AstralLimited_June%2015_%202026_RR_398439.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (7 Jul 2025 from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202507130700_Astral_Limited.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (17 Mar 2025 from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/AstralLimited_March%2017_%202025_RR_365080.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (3 Oct 2024 from care)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.careratings.com/upload/CompanyFiles/PR/202410141022_Astral_Limited.pdf"
+  }
+ ]
+}

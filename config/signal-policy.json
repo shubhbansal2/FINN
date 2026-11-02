@@ -1,0 +1,58 @@
+{
+  "$comment": "FINN signal-ranking policy. Editable; validated on load (src/push/policy.ts). Tiers order the Brief: high > medium > low > routine. There is no numeric impact score: every tier comes from a named rule, shown to the user. Categories follow the ENAM reference glossary. Content rules match the filed announcement subject (and the attachment text only when FINN has downloaded it); the first matching rule for a category wins.",
+  "categoryTiers": {
+    "results": "high",
+    "ma": "high",
+    "management_change": "medium",
+    "litigation": "medium",
+    "fund_raise": "medium",
+    "credit_rating": "medium",
+    "pledging": "medium",
+    "capex": "medium",
+    "bonus_split": "medium",
+    "insider_trading": "low",
+    "dividend": "low",
+    "earnings_call": "low",
+    "investor_meetings": "low",
+    "press_release": "low",
+    "postal_ballot": "routine",
+    "agm_egm": "routine",
+    "unclassified": "routine"
+  },
+  "contentRules": [
+    { "id": "results.intimation", "category": "results", "pattern": "intimation|notice of (the )?board meeting|to consider|will be held|is scheduled", "tier": "low", "reason": "Notice of an upcoming results meeting, not the results themselves." },
+    { "id": "results.newspaper", "category": "results", "pattern": "newspaper", "tier": "routine", "reason": "Newspaper copy of results that were filed separately." },
+    { "id": "results.presentation", "category": "results", "pattern": "presentation", "tier": "medium", "reason": "Results presentation; the results filing itself is ranked on its own." },
+    { "id": "management.top", "category": "management_change", "pattern": "\\b(ceo|chief executive|managing director|cfo|chief financial|chairman|chairperson|whole[- ]time director|executive director)\\b", "tier": "high", "reason": "Change involving top management (CEO, MD, CFO, chair or executive director)." },
+    { "id": "management.minor", "category": "management_change", "pattern": "independent director|company secretary|compliance officer|nominee director|senior management personnel", "tier": "low", "reason": "Change below top management." },
+    { "id": "rating.negative", "category": "credit_rating", "pattern": "downgrad|negative|watch|suspend|withdraw", "tier": "high", "reason": "Rating action that reads as negative (downgrade, negative outlook or watch)." },
+    { "id": "rating.reaffirmed", "category": "credit_rating", "pattern": "reaffirm|affirm", "tier": "low", "reason": "Rating reaffirmed: no change." },
+    { "id": "fundraise.equity", "category": "fund_raise", "pattern": "\\b(qip|qualified institutions?|rights issue|preferential|buy[- ]?back|open offer)\\b", "tier": "high", "reason": "Equity raise or buyback, which changes the share count or returns capital." },
+    { "id": "fundraise.debt", "category": "fund_raise", "pattern": "commercial paper|\\bncds?\\b|debentures?|bonds?", "tier": "low", "reason": "Routine debt instrument." },
+    { "id": "ma.subsidiary", "category": "ma", "pattern": "incorporation of|step[- ]down subsidiary|struck off|strike off", "tier": "low", "reason": "Incorporation or closure of a subsidiary: usually administrative." },
+    { "id": "litigation.severe", "category": "litigation", "pattern": "insolvency|\\bnclt\\b|\\bcirp\\b|sebi order|penalty|suspension", "tier": "high", "reason": "Insolvency, regulatory order or penalty." },
+    { "id": "pledging.release", "category": "pledging", "pattern": "release|revocation", "tier": "low", "reason": "Release of pledged shares." }
+  ],
+  "ambiguousTier": "low",
+  "missingEvidencePenalty": true,
+  "staleAfterHours": 72,
+  "duplicateWindowHours": 12,
+  "prices": {
+    "series": "adjusted_close",
+    "movePct": 5,
+    "highMoveMultiple": 2,
+    "maxSessionGapDays": 5,
+    "corporateActionGapPct": 1
+  },
+  "volume": {
+    "multiple": 2,
+    "highMultiple": 4,
+    "lookbackSessions": 20,
+    "minHistorySessions": 15,
+    "minVolumeShares": 0
+  },
+  "combinations": [
+    { "id": "price_and_volume", "requires": ["price_move", "volume_spike"], "sessionWindow": 0, "tier": "high", "reason": "Unusual price move and unusual volume in the same session." },
+    { "id": "filing_and_move", "requires": ["announcement", "price_move"], "sessionWindow": 1, "minAnnouncementTier": "medium", "tier": "high", "reason": "A material filing and an unusual price move within one session of each other. FINN has not established that the filing caused the move." }
+  ]
+}

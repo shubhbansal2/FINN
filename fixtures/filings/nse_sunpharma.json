@@ -1,0 +1,518 @@
+{
+ "capturedAt": "2026-11-01T10:25:34.316Z",
+ "source": "screener",
+ "pageUrl": "https://www.screener.in/company/SUNPHARMA/consolidated/",
+ "announcements": [
+  {
+   "exchange": "BSE",
+   "exchangeRef": "e87d46d8-c447-4fc2-9b82-a95a8a922b0f",
+   "title": "Completion And Results Of Postal Ballot Dated 01 October 2026",
+   "publishedAt": "2026-10-31T14:44:03.000Z",
+   "publishedAtRaw": "2026-10-31T20:14:03+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e87d46d8-c447-4fc2-9b82-a95a8a922b0f.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "9ce2ef60-0b4f-44dc-a3a0-435c1066af80",
+   "title": "Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "publishedAt": "2026-10-31T13:05:16.000Z",
+   "publishedAtRaw": "2026-10-31T18:35:16+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9ce2ef60-0b4f-44dc-a3a0-435c1066af80.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "5e1a8352-6166-444c-848a-29299a80a8d1",
+   "title": "Q2FY27 -Investor Call Audio Recording",
+   "publishedAt": "2026-10-30T14:48:47.000Z",
+   "publishedAtRaw": "2026-10-30T20:18:47+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5e1a8352-6166-444c-848a-29299a80a8d1.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "8c1e7a04-f30c-4229-8189-88b576aab720",
+   "title": "Appointment Of Statutory Auditors Pursuant To Mandatory Auditor Rotation",
+   "publishedAt": "2026-10-30T09:47:46.000Z",
+   "publishedAtRaw": "2026-10-30T15:17:46+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8c1e7a04-f30c-4229-8189-88b576aab720.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "658231ad-7203-4355-be99-2a162b722c0c",
+   "title": "Unaudited Financial Results For The Quarter And Half Year Ended 30 September 2026",
+   "publishedAt": "2026-10-30T08:44:55.000Z",
+   "publishedAtRaw": "2026-10-30T14:14:55+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=658231ad-7203-4355-be99-2a162b722c0c.pdf"
+  }
+ ],
+ "documents": [
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2026",
+   "periodLabel": "FY26",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/cb65dea5-416a-4f98-95e2-0b58761b7442.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2025",
+   "periodLabel": "FY25",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/511405ab-48e8-4d89-84af-aaa2e083e816.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2024",
+   "periodLabel": "FY24",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/a1e3c7fc-c47e-4ce8-ad92-b4affd2a9cf8.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2023",
+   "periodLabel": "FY23",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/981e6db0-ea49-40ad-b906-7f924d264765.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2022",
+   "periodLabel": "FY22",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/74133524715.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2021",
+   "periodLabel": "FY21",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/69342524715.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2020",
+   "periodLabel": "FY20",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150320.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2019",
+   "periodLabel": "FY19",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150319.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2018",
+   "periodLabel": "FY18",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150318.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2017",
+   "periodLabel": "FY17",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150317.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2016",
+   "periodLabel": "FY16",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150316.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2015",
+   "periodLabel": "FY15",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150315.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2014",
+   "periodLabel": "FY14",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150314.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2013",
+   "periodLabel": "FY13",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150313.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2012",
+   "periodLabel": "FY12",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/524715/5247150312.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Sep 2026",
+   "periodLabel": "Sep 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c37365ed-4a1a-42a6-9eb7-3f6d922f67a4.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2026",
+   "periodLabel": "Aug 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=34be7c92-1d9f-4010-ba30-2344c959bc5e.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2026",
+   "periodLabel": "Aug 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e6f00b4f-5f46-44d8-a2d2-db50b7cc28ff.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=287022b2-8de5-487d-8d0d-77b819ee3eb4.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=293c1789-7308-4864-982a-192b016de087.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=6fb0611b-17c4-4e4b-8730-63f76028c1a1.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2026",
+   "periodLabel": "Feb 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1082d0ab-d6fb-40f5-873e-d7301397cd05.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2026",
+   "periodLabel": "Feb 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8ef19f3e-b9ef-4842-9ad9-d0b0120afe72.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Dec 2025",
+   "periodLabel": "Dec 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e01bfcbf-aaae-4101-a746-c13ec04f062e.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2025",
+   "periodLabel": "Nov 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=97dcb020-6882-4de1-8e04-97d06256d293.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Sep 2025",
+   "periodLabel": "Sep 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e9f2ef68-3852-4c76-b699-37803a05f264.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Sep 2025",
+   "periodLabel": "Sep 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=53bd47d5-f08c-4abf-89dc-c111d452ca8e.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jul 2025",
+   "periodLabel": "Jul 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=811dac05-9dcf-4c75-8db4-54806ab875d4.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3466942d-443e-4c97-8148-54b3f242e619.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Mar 2025",
+   "periodLabel": "Mar 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c64727af-4734-40b3-9dd8-dab45dd96e83.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Mar 2025",
+   "periodLabel": "Mar 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=34807459-abf9-47bd-ae8e-0c309ade4bfc.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2024",
+   "periodLabel": "Nov 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=3bef8197-b43b-4a13-8773-13ec2f811511.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2024",
+   "periodLabel": "Nov 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=589346d5-d3f2-4e8b-b7fc-6eb84985195c.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Oct 2024",
+   "periodLabel": "Oct 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0605915b-66be-46c5-b33f-ee6c256091a8.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Sep 2024",
+   "periodLabel": "Sep 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d1a69652-c883-440b-9e3f-81881aaf438e.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2024",
+   "periodLabel": "Aug 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9bca3c3b-b79b-4111-af68-679a2038beae.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2024",
+   "periodLabel": "Aug 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c61aaa1c-2fbc-4700-a3aa-ae2a122aca3d.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2024",
+   "periodLabel": "May 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ee40a7ec-017e-41e7-9f33-2453153e8620.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Mar 2024",
+   "periodLabel": "Mar 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=ff736ef8-33c8-4fe9-a862-2cf0b401de14.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d1a8ff3-6340-4b43-b2fa-35c24c711620.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jan 2024",
+   "periodLabel": "Jan 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=22f3cd0c-85d8-4c55-9983-e0c8b5d3a9fd.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2023",
+   "periodLabel": "Nov 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=788eb9c4-2be4-4e46-a1bc-045cc355fed6.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Sep 2023",
+   "periodLabel": "Sep 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f5893923-3593-415f-a2b6-0e52610a6264.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c02c76d9-0d38-41a3-8a4c-ae60c04d7c6b.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=186c7eb4-fbec-475c-b752-496a796a1850.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=146e73bc-f72d-4970-8bf4-85e4a62ab2f7.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2023",
+   "periodLabel": "Apr 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8698f2bc-87dd-4f1d-89c3-9e9e378d051d.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e485b9cb-e649-4a5b-a99b-bdf8198f3bf1.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a746248f-0105-4089-98c4-ba102ee0cc86.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2022",
+   "periodLabel": "Nov 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5ce16a4d-da5c-414e-ae88-048e3e9386e0.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Sep 2022",
+   "periodLabel": "Sep 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1917fd81-3d5b-4335-86c8-e03a677b571c.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2022",
+   "periodLabel": "Aug 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4d6dc697-3de4-4ebd-98c7-bb4a1eae4f4c.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jun 2022",
+   "periodLabel": "Jun 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=29210495-3f9c-418e-ae83-9e7328b8e485.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Mar 2022",
+   "periodLabel": "Mar 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=339a0c90-0174-4550-afb8-583c664106d2.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2022",
+   "periodLabel": "Feb 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=c96f5127-18f1-4664-8ac5-5cca09a0d4be.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2021",
+   "periodLabel": "Nov 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7a4d3ebd-410c-47fc-964a-76d80ffb8f53.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2021",
+   "periodLabel": "Aug 2021",
+   "publishedAt": null,
+   "url": "https://sunpharma.com/wp-content/uploads/2021/08/FY22-Q1-Earnings-Call-Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2021",
+   "periodLabel": "Aug 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=11d850b2-ea51-4b85-b41a-6fbe75675d86.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jun 2021",
+   "periodLabel": "Jun 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d619b226-40c2-4d83-b719-81a9d1ced632.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jan 2021",
+   "periodLabel": "Jan 2021",
+   "publishedAt": null,
+   "url": "https://sunpharma.com/wp-content/uploads/2021/02/FY21-Q3-Earnings-Call-Transcript.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Oct 2020",
+   "periodLabel": "Oct 2020",
+   "publishedAt": null,
+   "url": "https://sunpharma.com/wp-content/uploads/2021/01/FY20-21-Q2-Earnings-Call-Transcript.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (13 Oct from icra)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.icra.in/Rationale/ShowRationaleReport/?Id=146271"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (13 Oct from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/SunPharmaceuticalIndustriesLimited_October%2013_%202026_RR_405525.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (4 Aug from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/SunPharmaceuticalIndustriesLimited_August%2004_%202026_RR_401035.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (6 May from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/SunPharmaceuticalIndustriesLimited_May%2006_%202026_RR_394483.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (5 May from icra)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.icra.in/Rationale/ShowRationaleReport/?Id=142860"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (17 Mar from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/SunPharmaceuticalIndustriesLimited_March%2017_%202026_RR_390385.html"
+  }
+ ]
+}

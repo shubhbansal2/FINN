@@ -1,0 +1,141 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: 0 var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-small);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.sm {
+  min-height: 2rem;
+  padding: 0 var(--space-3);
+  font-size: var(--text-meta);
+}
+
+/* Small buttons keep a 44px hit area on touch devices without growing visually. */
+@media (pointer: coarse) {
+  .sm {
+    position: relative;
+  }
+  .sm::after {
+    content: '';
+    position: absolute;
+    inset: -6px 0;
+  }
+}
+
+.primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+.primary:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+.primary:active:not(:disabled) {
+  background: var(--color-accent-pressed);
+}
+
+.secondary {
+  background: transparent;
+  border-color: var(--color-rule-input);
+  color: var(--color-ink);
+}
+.secondary:hover:not(:disabled) {
+  background: var(--color-hover);
+  border-color: var(--color-ink-2);
+}
+.secondary:active:not(:disabled) {
+  background: var(--color-pressed);
+}
+
+.quiet {
+  background: transparent;
+  color: var(--color-ink-2);
+  padding-inline: var(--space-2);
+}
+.quiet:hover:not(:disabled) {
+  background: var(--color-hover);
+  color: var(--color-ink);
+}
+.quiet:active:not(:disabled) {
+  background: var(--color-pressed);
+}
+
+.danger {
+  background: var(--color-error);
+  color: var(--color-paper);
+}
+.danger:hover:not(:disabled) {
+  filter: brightness(0.92);
+}
+.danger:active:not(:disabled) {
+  filter: brightness(0.84);
+}
+
+.button:disabled {
+  color: var(--color-ink-disabled);
+  background: transparent;
+  border-color: var(--color-rule);
+}
+.primary:disabled,
+.danger:disabled {
+  background: var(--color-sunken);
+  border-color: transparent;
+}
+
+/* Loading keeps the variant's colours; only the cursor and spinner change. */
+.loading:disabled {
+  cursor: progress;
+}
+.primary.loading:disabled {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+.danger.loading:disabled {
+  background: var(--color-error);
+  color: var(--color-paper);
+}
+.secondary.loading:disabled {
+  color: var(--color-ink);
+  border-color: var(--color-rule-input);
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Without motion the spinner would freeze mid-turn; show a static ring segment instead. */
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: none;
+    border-right-color: currentColor;
+    border-style: dotted;
+  }
+}
+
+.label {
+  display: inline-flex;
+}

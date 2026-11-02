@@ -1,0 +1,651 @@
+{
+ "capturedAt": "2026-11-01T10:25:03.431Z",
+ "source": "screener",
+ "pageUrl": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+ "announcements": [
+  {
+   "exchange": "BSE",
+   "exchangeRef": "e83c07ec-d2db-4eca-a7a3-6edc212250ec",
+   "title": "Intimation Of Schedule Of Analyst/ Institutional Investors Meeting",
+   "publishedAt": "2026-10-16T08:59:15.000Z",
+   "publishedAtRaw": "2026-10-16T14:29:15+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=e83c07ec-d2db-4eca-a7a3-6edc212250ec.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "19e0aa13-f32d-42d8-9b34-86b69b05674f",
+   "title": "Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation 15 Oct",
+   "publishedAt": "2026-10-15T11:53:16.000Z",
+   "publishedAtRaw": "2026-10-15T17:23:16+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=19e0aa13-f32d-42d8-9b34-86b69b05674f.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "89dac88a-96d8-4774-9d80-b5f7ac177208",
+   "title": "Board Meeting Intimation for Notice Of The Board Meeting",
+   "publishedAt": "2026-10-12T06:51:44.000Z",
+   "publishedAtRaw": "2026-10-12T12:21:44+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=89dac88a-96d8-4774-9d80-b5f7ac177208.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "f6473ff1-6657-4d1a-8165-86e7d08e4ff1",
+   "title": "Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "publishedAt": "2026-10-07T05:58:23.000Z",
+   "publishedAtRaw": "2026-10-07T11:28:23+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f6473ff1-6657-4d1a-8165-86e7d08e4ff1.pdf"
+  },
+  {
+   "exchange": "BSE",
+   "exchangeRef": "8548b320-9aac-40c1-a625-fbf1576242be",
+   "title": "Closure of Trading Window 25 Sep",
+   "publishedAt": "2026-09-25T10:13:47.000Z",
+   "publishedAtRaw": "2026-09-25T15:43:47+05:30",
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8548b320-9aac-40c1-a625-fbf1576242be.pdf"
+  }
+ ],
+ "documents": [
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2026",
+   "periodLabel": "FY26",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/f9b40997-8116-48ba-949a-ca2e7775e3c2.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2025",
+   "periodLabel": "FY25",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/330724b4-fb72-4577-beb0-598b4672f77a.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2024",
+   "periodLabel": "FY24",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/93fc23fd-104c-47e7-bfc9-cf91d3d41e33.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2023",
+   "periodLabel": "FY23",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/xml-data/corpfiling/AttachHis/30d2900c-1d8f-4110-abf9-5e477e6ace9e.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2022",
+   "periodLabel": "FY22",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/74069508869.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2021",
+   "periodLabel": "FY21",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/69378508869.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2020",
+   "periodLabel": "FY20",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/65485508869.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2019",
+   "periodLabel": "FY19",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/5088690319.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2018",
+   "periodLabel": "FY18",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/HIS_ANN_RPT/HISTANNR/2018/APOLLO_HOSPITALS_ENTERPRISE_LTD-508869-MARCH-2018.PDF"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2017",
+   "periodLabel": "FY17",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/5088690317.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2016",
+   "periodLabel": "FY16",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/5088690316.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2015",
+   "periodLabel": "FY15",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/5088690315.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2014",
+   "periodLabel": "FY14",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/5088690314.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2013",
+   "periodLabel": "FY13",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/5088690313.pdf"
+  },
+  {
+   "kind": "annual_report",
+   "title": "Annual Report 2012",
+   "periodLabel": "FY12",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/bseplus/AnnualReport/508869/5088690312.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2026",
+   "periodLabel": "Aug 2026",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/sites/default/files/2026-08/transcript-of-apollo-hospitals---q1-fy27-earnings-call.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2026",
+   "periodLabel": "Aug 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=0a967b34-eaeb-44d0-82d8-5ff46e9b171f.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/sites/default/files/2026-05/transcript-of-apollo-hospitals---q4-fy26-earnings-call.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2026",
+   "periodLabel": "May 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7cfb1747-054b-47c2-8073-a98cba8daca0.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2026",
+   "periodLabel": "Feb 2026",
+   "publishedAt": null,
+   "url": "https://drupal-cdn-hfaeddcdbng5hfbg.a01.azurefd.net/sites/default/files/2026-02/transcript-of-ahel-q3fy26-concall_11feb2026.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2026",
+   "periodLabel": "Feb 2026",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2256258c-6663-42bc-866c-402f5dcc1cae.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2025",
+   "periodLabel": "Nov 2025",
+   "publishedAt": null,
+   "url": "https://drupal-cdn-hfaeddcdbng5hfbg.a01.azurefd.net/sites/default/files/2025-11/transcript-of-apollo-hospitals---q2-fy26-earnings-call---7-november-2025....pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2025",
+   "periodLabel": "Nov 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=4430a828-14c2-4c64-8cff-b68f1a2904f1.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2025",
+   "periodLabel": "Aug 2025",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/sites/default/files/2025-08/transcript-of-apollo-hospitals---q1-fy26-earnings-call---13-august-2025.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2025",
+   "periodLabel": "Aug 2025",
+   "publishedAt": null,
+   "url": "https://drupal-cdn-hfaeddcdbng5hfbg.a01.azurefd.net/sites/default/files/2025-08/ahel-q1fy26-earnings-update.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jun 2025",
+   "periodLabel": "Jun 2025",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/sites/default/files/2025-06/transcript-of-apollo-hospitals---q4-fy25-earnings-call---1-.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jun 2025",
+   "periodLabel": "Jun 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f30907dc-d76c-4a3b-bbf9-7a8b5121223c.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b850535c-b6c7-417c-9899-007a8bd0d2c8.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2025",
+   "periodLabel": "May 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=14a059cf-24b8-4d1a-a641-c917bfff7dda.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2025",
+   "periodLabel": "Feb 2025",
+   "publishedAt": null,
+   "url": "https://cdn.apollohospitals.com/apollohospitals/apollo_pdf/Transcript-of-Apollo-Hospitals-Q3-FY25.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2025",
+   "periodLabel": "Feb 2025",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=dce7bcc1-c27f-4f71-87bb-fd3e836c1c2e.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2024",
+   "periodLabel": "Nov 2024",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo-pdf/Transcript-of-Apollo-Hospitals-02-FY25.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2024",
+   "periodLabel": "Nov 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5c8e1593-fa2f-4a22-b0c9-c6c05d77e1f1.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2024",
+   "periodLabel": "Aug 2024",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-of-Apollo-Hospitals-Q1-FY25.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2024",
+   "periodLabel": "Aug 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=7080cbe6-f674-42ae-a86b-6ffb155e4b13.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2024",
+   "periodLabel": "May 2024",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-of-Apollo-Hospitals-Q4-FY24.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2024",
+   "periodLabel": "May 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=406daf7a-494f-4413-9bcd-c0bd50753640.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2024",
+   "periodLabel": "Apr 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2faa7e2f-97ab-40df-9cbe-a4e59085f27d.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-of-Apollo-Hospitals-Q3-FY24.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2024",
+   "periodLabel": "Feb 2024",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=1bfd4792-5f3f-4f7a-9258-8d9300dc4dd3.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2023",
+   "periodLabel": "Nov 2023",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-of-Apollo-Hospitals-Q2-FY24.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2023",
+   "periodLabel": "Nov 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=45b8350c-9cee-4c6a-890b-e0da6ec53028.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-of-apollo-hospitals-Q1-FY24.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2023",
+   "periodLabel": "Aug 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d8f2c8a7-22c8-4d1d-8f48-0a38125770aa.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://cdn.apollohospitals.com/dev-apollohospitals/2023/06/Transcript-of-Apollo-Hospitals-Q4-FY23-Earnings-Call-31-May-2023.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2023",
+   "periodLabel": "May 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=cf764741-a6db-4794-9622-ebad7e16a5ca.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-of-Apollo-Hospitals-Q3-FY23-Earnings-Call-15-February-2023.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Feb 2023",
+   "periodLabel": "Feb 2023",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=5edc0e33-1308-4f7b-bc05-269a780fab74.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2022",
+   "periodLabel": "Nov 2022",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-Q2-FY23.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2022",
+   "periodLabel": "Nov 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=004a0047-80ac-47ce-bf6b-755505b29c66.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2022",
+   "periodLabel": "Aug 2022",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-Q1-FY23.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2022",
+   "periodLabel": "Aug 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=2f745eba-9fb1-4a3e-93bd-fa217a6201ea.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2022",
+   "periodLabel": "May 2022",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=b25a9ffe-b4a6-4942-8238-6d7d4f501f5d.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2021",
+   "periodLabel": "Nov 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=345f32bf-f84d-4f53-babb-300fd5eadfd6.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2021",
+   "periodLabel": "Aug 2021",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript-of-Apollo-Hospitals-Q1-FY22-Earnings-Call-14-August-2021.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Aug 2021",
+   "periodLabel": "Aug 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a5debafc-5df9-4740-9757-c8a1682f565d.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jun 2021",
+   "periodLabel": "Jun 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9c09a339-82bb-4ba3-b498-fde0e74c335d.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jun 2021",
+   "periodLabel": "Jun 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=a6a64c84-3719-43d2-9ce5-3943605ff416.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jun 2021",
+   "periodLabel": "Jun 2021",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=994f71ca-1de4-430a-ac6e-1e0d90516364.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2020",
+   "periodLabel": "Nov 2020",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20_%20Q2%20FY21%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Sep 2020",
+   "periodLabel": "Sep 2020",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20_%20Q1%20FY21%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Jun 2020",
+   "periodLabel": "Jun 2020",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20_%20Q4%20FY20%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Jun 2020",
+   "periodLabel": "Jun 2020",
+   "publishedAt": null,
+   "url": "https://drupal-cdn-hfaeddcdbng5hfbg.a01.azurefd.net/sites/default/files/2025-02/ahel-q4fy20-earnings-update-new.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2020",
+   "periodLabel": "Feb 2020",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20_%20Q3%20FY20%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2019",
+   "periodLabel": "Nov 2019",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20_%20Q2%20FY20%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2019",
+   "periodLabel": "Aug 2019",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20_%20Q1%20FY20%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2019",
+   "periodLabel": "May 2019",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals_Q4FY19%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, May 2019",
+   "periodLabel": "May 2019",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=37d8afdf-3091-4aaf-9cc9-2c5acb0daf35.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2019",
+   "periodLabel": "Feb 2019",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals_Q3%20FY19%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2018",
+   "periodLabel": "Nov 2018",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals_Q2%20FY19%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2018",
+   "periodLabel": "Aug 2018",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals_Q1%20FY19%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, May 2018",
+   "periodLabel": "May 2018",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20Q4FY18%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2018",
+   "periodLabel": "Feb 2018",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20Q3FY18%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2017",
+   "periodLabel": "Nov 2017",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20Q2FY18%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Aug 2017",
+   "periodLabel": "Aug 2017",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20Q1FY18%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Apr 2017",
+   "periodLabel": "Apr 2017",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20_%20Q4%20FY17%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Apr 2017",
+   "periodLabel": "Apr 2017",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d78c6bd9-fc5c-486b-a929-dbdbfd8be3d5.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Nov 2016",
+   "periodLabel": "Nov 2016",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Transcript%20of%20Apollo%20Hospitals%20_%20Q2%20FY17%20Earnings%20Call.pdf"
+  },
+  {
+   "kind": "earnings_call_transcript",
+   "title": "Earnings call transcript, Feb 2016",
+   "periodLabel": "Feb 2016",
+   "publishedAt": null,
+   "url": "https://www.apollohospitals.com/apollo_pdf/Apollo%20Hospitals_Q3FY16%20Transcript.pdf"
+  },
+  {
+   "kind": "investor_presentation",
+   "title": "Investor presentation, Nov 2015",
+   "periodLabel": "Nov 2015",
+   "publishedAt": null,
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9705E29F_6A4D_42BD_AE38_2902C989C617_115116.pdf"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (19 Jun from icra)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.icra.in/Rationale/ShowRationaleReport/?Id=143693"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (29 May from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/ApolloHospitalsEnterpriseLimited_May%2029_%202026_RR_396532.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (18 May from icra)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.icra.in/Rationale/ShowRationaleReport/?Id=143077"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (23 Apr from fitch)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.indiaratings.co.in/pressrelease/82756"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (27 Jan from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/ApolloHospitalsEnterpriseLimited_January%2027_%202026_RR_385835.html"
+  },
+  {
+   "kind": "other",
+   "title": "Credit rating rationale (22 Sep 2025 from crisil)",
+   "periodLabel": null,
+   "publishedAt": null,
+   "url": "https://www.crisil.com/mnt/winshare/Ratings/RatingList/RatingDocs/ApolloHospitalsEnterpriseLimited_September%2022_%202025_RR_378588.html"
+  }
+ ]
+}

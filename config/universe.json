@@ -1,0 +1,28 @@
+{
+  "$comment": "Demo selections for FINN. Editable. The research engine is not restricted to these companies; any NSE symbol can be researched where data is available. bseCode is optional: some companies (e.g. CDSL) are NSE-only. The BSE trading symbol (Yahoo '<ticker>.BO') defaults to the NSE symbol; set bseTicker when it differs. Run `npm run finn -- universe:verify` to check every listing resolves at the price provider. irDomains is a curated list of company-owned investor-relations domains (documents there count as company-issued); entries were written from public knowledge and corrected against links observed on 2026-11-01. CDN and cloud-storage hosts are deliberately not listed because a URL cannot prove who controls them.",
+  "portfolio": [
+    { "name": "Reliance Industries", "nse": "RELIANCE", "bseCode": "500325", "sector": "Energy & conglomerate", "size": "large", "reportingProfile": "industrial", "irDomains": ["ril.com"] },
+    { "name": "HDFC Bank", "nse": "HDFCBANK", "bseCode": "500180", "sector": "Banking", "size": "large", "reportingProfile": "bank", "irDomains": ["hdfcbank.com", "hdfc.bank.in"] },
+    { "name": "Bajaj Finance", "nse": "BAJFINANCE", "bseCode": "500034", "sector": "Non-bank lending", "size": "large", "reportingProfile": "nbfc", "irDomains": ["bajajfinserv.in"] },
+    { "name": "Infosys", "nse": "INFY", "bseCode": "500209", "sector": "IT services", "size": "large", "reportingProfile": "industrial", "irDomains": ["infosys.com"] },
+    { "name": "Larsen & Toubro", "nse": "LT", "bseCode": "500510", "sector": "Engineering & construction", "size": "large", "reportingProfile": "industrial", "irDomains": ["larsentoubro.com"] },
+    { "name": "Sun Pharmaceutical Industries", "nse": "SUNPHARMA", "bseCode": "524715", "sector": "Pharmaceuticals", "size": "large", "reportingProfile": "industrial", "irDomains": ["sunpharma.com"] },
+    { "name": "Titan Company", "nse": "TITAN", "bseCode": "500114", "sector": "Consumer discretionary", "size": "large", "reportingProfile": "industrial", "irDomains": ["titancompany.in"] },
+    { "name": "Asian Paints", "nse": "ASIANPAINT", "bseCode": "500820", "sector": "Consumer materials", "size": "large", "reportingProfile": "industrial", "irDomains": ["asianpaints.com"] },
+    { "name": "Maruti Suzuki India", "nse": "MARUTI", "bseCode": "532500", "sector": "Automobiles", "size": "large", "reportingProfile": "industrial", "irDomains": ["marutisuzuki.com"] },
+    { "name": "Trent", "nse": "TRENT", "bseCode": "500251", "sector": "Retail", "size": "large", "reportingProfile": "industrial", "irDomains": ["trentlimited.com", "trent-tata.com"] },
+    { "name": "Hindustan Aeronautics", "nse": "HAL", "bseCode": "541154", "sector": "Defence (PSU)", "size": "large", "reportingProfile": "industrial", "irDomains": ["hal-india.co.in"] },
+    { "name": "Apollo Hospitals Enterprise", "nse": "APOLLOHOSP", "bseCode": "508869", "sector": "Healthcare services", "size": "large", "reportingProfile": "industrial", "irDomains": ["apollohospitals.com"] },
+    { "name": "Pidilite Industries", "nse": "PIDILITIND", "bseCode": "500331", "sector": "Specialty chemicals", "size": "large", "reportingProfile": "industrial", "irDomains": ["pidilite.com"] },
+    { "name": "Polycab India", "nse": "POLYCAB", "bseCode": "542652", "sector": "Electricals", "size": "mid", "reportingProfile": "industrial", "irDomains": ["polycab.com"] },
+    { "name": "Dixon Technologies", "nse": "DIXON", "bseCode": "540699", "sector": "Electronics manufacturing", "size": "mid", "reportingProfile": "industrial", "irDomains": ["dixoninfo.com"] },
+    { "name": "KPIT Technologies", "nse": "KPITTECH", "bseCode": "542651", "sector": "Automotive software", "size": "mid", "reportingProfile": "industrial", "irDomains": ["kpit.com"] },
+    { "name": "Deepak Nitrite", "nse": "DEEPAKNTR", "bseCode": "506401", "sector": "Chemicals", "size": "mid", "reportingProfile": "industrial", "irDomains": ["godeepak.com"] },
+    { "name": "Central Depository Services", "nse": "CDSL", "sector": "Capital-market infrastructure", "size": "mid", "reportingProfile": "industrial", "irDomains": ["cdslindia.com"] }
+  ],
+  "research": [
+    { "name": "Kaynes Technology India", "nse": "KAYNES", "bseCode": "543664", "sector": "Electronics manufacturing", "size": "mid", "reportingProfile": "industrial", "irDomains": ["kaynestechnology.co.in"] },
+    { "name": "Astral", "nse": "ASTRAL", "bseCode": "532830", "sector": "Building products", "size": "mid", "reportingProfile": "industrial", "irDomains": ["astralltd.com"] },
+    { "name": "Page Industries", "nse": "PAGEIND", "bseCode": "532827", "sector": "Apparel", "size": "mid", "reportingProfile": "industrial", "irDomains": ["pageind.com"] }
+  ]
+}

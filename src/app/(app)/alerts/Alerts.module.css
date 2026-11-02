@@ -1,0 +1,172 @@
+.workspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.hint {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+}
+
+.ruleTag {
+  margin-top: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-accent);
+}
+
+.seen summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-size: var(--text-small);
+  color: var(--color-ink-3);
+  cursor: pointer;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+}
+
+.rule {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.ruleHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.kind {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+}
+
+.toggle {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  font-size: var(--text-small);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+}
+
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .wide {
+    grid-column: 1 / -1;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.label {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.input {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-rule-input);
+  border-radius: var(--radius-2);
+  background: var(--color-surface);
+  font-size: var(--text-body);
+  color: var(--color-ink);
+}
+.input:hover {
+  border-color: var(--color-ink-2);
+}
+.input:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 0;
+}
+
+.fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
+  margin-top: var(--space-1);
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  font-size: var(--text-small);
+}
+
+.check input,
+.toggle input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-accent);
+}
+
+.scope summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-size: var(--text-small);
+  color: var(--color-ink-2);
+  cursor: pointer;
+}
+
+.error {
+  margin-top: var(--space-2);
+  font-size: var(--text-small);
+  color: var(--color-error);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.add {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) 0;
+}

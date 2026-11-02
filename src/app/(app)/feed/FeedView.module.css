@@ -1,0 +1,314 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ---------- filters ---------- */
+
+.desktopFilters {
+  display: none;
+}
+
+.mobileBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+@media (min-width: 720px) {
+  .desktopFilters {
+    display: block;
+    padding: var(--space-2) 0 var(--space-3);
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .mobileBar {
+    display: none;
+  }
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-3) var(--space-4);
+}
+
+@media (max-width: 719px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 10rem;
+}
+
+.label {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.select {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-rule-input);
+  border-radius: var(--radius-2);
+  background: var(--color-surface);
+  font-size: var(--text-small);
+  color: var(--color-ink);
+}
+.select:hover {
+  border-color: var(--color-ink-2);
+}
+
+.toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-rule-input);
+  border-radius: var(--radius-2);
+  background: transparent;
+  font-size: var(--text-small);
+  color: var(--color-ink-3);
+}
+.toggle:hover {
+  background: var(--color-hover);
+  color: var(--color-ink);
+}
+.toggle[aria-pressed='true'] {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  background: var(--color-accent-soft);
+}
+
+.showing {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+}
+
+/* ---------- lead (mobile only) ---------- */
+
+.lead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4) 0;
+  border-top: 3px solid var(--color-rule-strong);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.leadKicker {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.leadButton {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  cursor: pointer;
+}
+.leadButton:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.leadMeta {
+  font-size: var(--text-small);
+  font-weight: 600;
+}
+
+/* Filed subjects can run to 40+ words; clamp so the reason and evidence stay above the fold.
+   The full subject is in the detail sheet. */
+.leadHeadline {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  font-weight: var(--weight-serif);
+  line-height: var(--leading-snug);
+}
+
+.leadWhy {
+  font-size: var(--text-small);
+  color: var(--color-ink-2);
+}
+
+.leadEvidence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+
+@media (min-width: 720px) {
+  .lead {
+    display: none;
+  }
+}
+
+/* On mobile the lead already shows the first item. */
+@media (max-width: 719px) {
+  .firstItem {
+    display: none;
+  }
+}
+
+/* ---------- list / detail ---------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+}
+
+@media (min-width: 1080px) {
+  .layout {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: start;
+  }
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailPane {
+  position: sticky;
+  top: var(--space-4);
+  max-height: calc(100dvh - var(--space-7));
+  overflow-y: auto;
+  padding: var(--space-4) var(--space-5);
+  border-left: 1px solid var(--color-rule);
+  background: var(--color-surface);
+}
+
+.routine summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-size: var(--text-small);
+  color: var(--color-ink-3);
+  cursor: pointer;
+}
+
+/* ---------- row extras ---------- */
+
+.multiple,
+.figure {
+  font-family: var(--font-sans);
+  font-size: var(--value-sm);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sourceTags {
+  display: inline-flex;
+  gap: var(--space-1);
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 5px;
+  border: 1px solid var(--color-rule-input);
+  border-radius: var(--radius-1);
+  color: var(--color-ink-3);
+}
+
+.tagWarn {
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+  border-style: dashed;
+}
+
+.alerted {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0 5px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-1);
+  color: var(--color-accent);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+}
+
+/* ---------- sheets ---------- */
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+}
+
+.sheetHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-5);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.sheetTitle {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+}
+
+.sheetBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5) var(--space-6);
+  overflow-y: auto;
+}
+
+.close {
+  display: grid;
+  place-items: center;
+  width: var(--touch-target);
+  height: var(--touch-target);
+  border: 0;
+  border-radius: var(--radius-2);
+  background: transparent;
+  color: var(--color-ink-2);
+}
+.close:hover {
+  background: var(--color-hover);
+}

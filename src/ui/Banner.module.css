@@ -1,0 +1,81 @@
+/* A tinted strip with a heavy leading rule; reads as an annotation on the page. */
+.root {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-3);
+  border-left: 3px solid currentColor;
+  background: var(--tone-soft);
+  color: var(--tone);
+}
+
+.error {
+  --tone: var(--color-error);
+  --tone-soft: var(--color-error-soft);
+}
+.stale {
+  --tone: var(--color-stale);
+  --tone-soft: var(--color-stale-soft);
+}
+.warning {
+  --tone: var(--color-warning);
+  --tone-soft: var(--color-warning-soft);
+}
+.info {
+  --tone: var(--color-signal-info);
+  --tone-soft: var(--color-signal-info-soft);
+}
+.demo {
+  --tone: var(--color-demo);
+  --tone-soft: var(--color-demo-soft);
+}
+
+.icon {
+  display: inline-flex;
+  padding-top: 2px;
+}
+
+.text {
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: var(--leading-snug);
+}
+
+.tone {
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--tone);
+}
+
+.sep {
+  margin: 0 var(--space-2);
+  color: var(--color-ink-3);
+}
+
+.body {
+  margin-top: 2px;
+  font-size: var(--text-small);
+  color: var(--color-ink-2);
+  line-height: var(--leading-body);
+}
+
+.action {
+  align-self: center;
+}
+
+@media (max-width: 719px) {
+  .root {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .action {
+    grid-column: 2;
+  }
+}

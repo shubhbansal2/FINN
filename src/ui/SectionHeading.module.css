@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 2px solid var(--color-rule-strong);
+  margin-bottom: var(--space-2);
+}
+
+.heading {
+  font-family: var(--font-sans);
+  font-size: var(--text-kicker);
+  font-weight: 600;
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.aside {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+}

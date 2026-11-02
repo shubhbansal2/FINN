@@ -1,0 +1,101 @@
+.dialog {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+}
+
+.dialog::backdrop {
+  background: var(--color-scrim);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-overlay);
+  overflow: hidden;
+}
+
+/* Centered modal */
+.center {
+  margin: auto;
+  width: min(28rem, calc(100vw - 2 * var(--gutter)));
+}
+.center .panel {
+  border-radius: var(--radius-2);
+  border-top: 3px solid var(--color-rule-strong);
+}
+
+/* Command palette: anchored near the top so results grow downward */
+.palette {
+  margin: 10vh auto auto;
+  width: min(36rem, calc(100vw - 2 * var(--gutter)));
+}
+.palette .panel {
+  border-radius: var(--radius-2);
+  max-height: 70vh;
+}
+
+/* Drawer: bottom sheet on compact screens */
+.drawer {
+  margin: auto 0 0;
+  width: 100vw;
+  max-width: 100vw;
+}
+.drawer .panel {
+  max-height: 85dvh;
+  border-top: 3px solid var(--color-rule-strong);
+  border-radius: var(--radius-2) var(--radius-2) 0 0;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (min-width: 720px) {
+  .drawer {
+    margin: 0 0 0 auto;
+    width: min(32rem, 92vw);
+    height: 100dvh;
+  }
+  .drawer .panel {
+    height: 100%;
+    max-height: none;
+    border-top: 0;
+    border-left: 1px solid var(--color-rule);
+    border-radius: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dialog[open] .panel {
+    animation: fade var(--duration-base) var(--ease-out);
+  }
+  .drawer[open] .panel {
+    animation: rise var(--duration-base) var(--ease-out);
+  }
+  @media (min-width: 720px) {
+    .drawer[open] .panel {
+      animation: slide var(--duration-base) var(--ease-out);
+    }
+  }
+}
+
+/* Transform only: if an animation stalls (background tab, throttled frame), the
+   panel is merely offset by a few pixels, never invisible. */
+@keyframes fade {
+  from {
+    transform: scale(0.985);
+  }
+}
+@keyframes rise {
+  from {
+    transform: translateY(16px);
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(16px);
+  }
+}

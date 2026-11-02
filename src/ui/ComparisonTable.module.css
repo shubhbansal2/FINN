@@ -1,0 +1,176 @@
+.figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.captionText {
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.unit {
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink-3);
+}
+
+.scroller {
+  /* Containing block for absolutely positioned descendants (visually-hidden
+     labels in cells). Without it they escape this scroller's clipping and
+     widen the whole page on narrow screens. */
+  position: relative;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid var(--color-rule-strong);
+  /* Scroll shadows: show an edge only where more content is hidden. */
+  background:
+    linear-gradient(to right, var(--color-paper) 30%, transparent) left / 2rem 100% no-repeat local,
+    linear-gradient(to left, var(--color-paper) 30%, transparent) right / 2rem 100% no-repeat local,
+    linear-gradient(to right, rgb(0 0 0 / 0.08), transparent) left / 0.75rem 100% no-repeat scroll,
+    linear-gradient(to left, rgb(0 0 0 / 0.08), transparent) right / 0.75rem 100% no-repeat scroll;
+}
+
+.scroller:focus-visible {
+  outline-offset: 0;
+}
+
+.table {
+  width: 100%;
+  min-width: max-content;
+  font-size: var(--text-small);
+}
+
+.table th,
+.table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-rule);
+  vertical-align: baseline;
+}
+
+.table thead th {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  font-weight: 500;
+  color: var(--color-ink-2);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.rowHead {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--color-paper);
+  text-align: left !important;
+  padding-left: 0 !important;
+  min-width: 8.5rem;
+  max-width: 12rem;
+}
+
+/* Hairline that separates the pinned column once the body scrolls under it. */
+.rowHead::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-rule);
+}
+
+tbody .rowHead {
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.rowLabel {
+  display: block;
+}
+
+.rowNote {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  font-weight: 400;
+  color: var(--color-ink-3);
+  line-height: 1.4;
+}
+
+.colLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-meta);
+  color: var(--color-ink);
+}
+
+.colSub {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  color: var(--color-ink-3);
+  font-weight: 400;
+}
+
+.num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.valueWrap {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.marker {
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  color: var(--color-ink-3);
+  border-bottom: 1px dashed currentColor;
+  line-height: 1;
+}
+
+.missing {
+  color: var(--color-ink-3);
+}
+
+.emphasis th,
+.emphasis td {
+  font-weight: 600;
+}
+
+.sourceHead {
+  text-align: left !important;
+}
+
+.sourceCell {
+  white-space: nowrap;
+}
+
+.table tbody tr:hover th,
+.table tbody tr:hover td {
+  background-color: var(--color-hover);
+}
+.table tbody tr:hover .rowHead {
+  background: linear-gradient(var(--color-hover), var(--color-hover)), var(--color-paper);
+}
+
+@media (min-width: 1080px) {
+  .table th,
+  .table td {
+    padding-inline: var(--space-4);
+  }
+}

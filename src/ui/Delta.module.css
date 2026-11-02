@@ -1,0 +1,39 @@
+.root {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  font-family: var(--font-sans);
+  font-size: var(--value-sm);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.glyph {
+  display: inline-flex;
+  align-self: center;
+}
+.glyph svg {
+  stroke-width: 2;
+}
+
+.positive {
+  color: var(--color-positive);
+}
+.negative {
+  color: var(--color-negative);
+}
+.neutral {
+  color: var(--color-neutral);
+}
+.unavailable {
+  color: var(--color-ink-3);
+}
+
+.basis {
+  margin-left: 2px;
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  font-weight: 400;
+  color: var(--color-ink-3);
+  letter-spacing: var(--tracking-ticker);
+}
