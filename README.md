@@ -154,6 +154,8 @@ Steps on the host:
 5. Build and start: `npm run build`, then `npm start -- -p $PORT`.
 6. Put HTTPS in front with a reverse proxy or the platform's router, and run a single instance.
 
+**Oracle Cloud Always Free:** [docs/DEPLOY-ORACLE.md](docs/DEPLOY-ORACLE.md) walks through a free Arm VM. `deploy/oracle/` holds the setup script, the systemd services (the app, plus a weekday data refresh for live mode), the Caddy HTTPS config and an update script. These are written but not yet run on a real Oracle VM.
+
 **Not done:** FINN has not been deployed. No hosting credentials were available while it was being built, and no container image was built or tested (Docker was not installed). A production build was verified locally (`next build`, then `next start`), including on a 375px mobile viewport. That is the extent of what can be claimed.
 
 ## Architecture in brief

@@ -1,0 +1,25 @@
+[Unit]
+Description=FINN investment intelligence (Next.js)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=finn
+Group=finn
+WorkingDirectory=/opt/finn
+EnvironmentFile=/etc/finn/finn.env
+# Listens on localhost only; Caddy serves it publicly over HTTPS.
+ExecStart=/usr/bin/npm start -- -p 3000 -H 127.0.0.1
+Restart=on-failure
+RestartSec=5
+
+# Hardening: the app writes only to its data directory and its build cache.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/var/lib/finn /opt/finn/.next
+
+[Install]
+WantedBy=multi-user.target

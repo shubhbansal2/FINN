@@ -1,0 +1,11 @@
+[Unit]
+Description=Refresh FINN live data on weekdays (10:00 and 17:00 IST)
+
+[Timer]
+# Times are UTC: 04:30 UTC = 10:00 IST (filings during the session), 11:30 UTC = 17:00 IST (after the close).
+OnCalendar=Mon..Fri 04:30
+OnCalendar=Mon..Fri 11:30
+Persistent=true
+
+[Install]
+WantedBy=timers.target
