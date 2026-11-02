@@ -14,5 +14,10 @@ as_finn "npm ci --include=dev --no-audit --no-fund"
 as_finn "npm run build"
 # Applies any new database migrations before the app restarts.
 as_finn "npm run finn -- migrate"
+# Picks up changes to the service and timer definitions (e.g. a new refresh step).
+for unit in finn.service finn-refresh.service finn-refresh.timer; do
+  install -m 644 "$APP_DIR/deploy/oracle/$unit" "/etc/systemd/system/$unit"
+done
+systemctl daemon-reload
 systemctl restart finn
 echo "Updated to $(sudo -u finn git -C "$APP_DIR" log -1 --format='%h %s')"
