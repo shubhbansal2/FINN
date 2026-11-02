@@ -180,3 +180,9 @@
   color: var(--color-accent-hover);
   text-decoration-thickness: 2px;
 }
+
+/* The first-cut table scrolls sideways inside the sheet on phones, with line labels pinned. */
+.facts .firstCut {
+  min-width: 0;
+  gap: var(--space-2);
+}

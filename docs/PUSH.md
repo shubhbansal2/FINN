@@ -5,7 +5,7 @@ The Brief and Alerts screens are driven by deterministic, testable rules in `src
 ## What it does, and what it does not do
 
 - **Evaluated on demand.** Rules run when the Brief or Alerts screen loads, when "Evaluate now" is pressed, or via `npm run finn -- alerts:evaluate`.
-- **No background watching.** FINN does not watch markets continuously or send push notifications. On the live deployment, a timer refreshes prices and filings on weekdays at 10:00 and 17:00 IST (see the README's "When data updates"). The rules then run against that data the next time a screen loads.
+- **No background watching.** FINN does not watch markets continuously or send push notifications. On the live deployment, a timer refreshes prices, filings and results figures on weekdays at 10:00 and 17:00 IST (see the README's "When data updates"). The rules then run against that data the next time a screen loads.
 - **In-app delivery only.** An alert sits in the Alerts inbox as *new* until it is marked *seen*.
 - **End-of-day data only.** Price and volume signals use completed sessions; the intraday path is never known.
 
@@ -18,6 +18,20 @@ The Brief and Alerts screens are driven by deterministic, testable rules in `src
 | `price_move` | Daily change on the adjusted close | Session close, 15:30 IST |
 | `volume_spike` | Session volume against the mean of prior sessions | Session close, 15:30 IST |
 | `combination` | Signals from one company close in time, per the policy's combination rules | Latest component |
+
+**Results first cut.** A results signal shows the headline numbers from the filing itself:
+- **Lines:** Revenue, EBITDA, PBT and PAT for the quarter, against the previous quarter (QoQ) and the same quarter a year earlier (YoY).
+  - A results statement prints all three quarters side by side, so every number comes from the one filing.
+  - EBITDA is derived as PBT + finance costs + depreciation & amortisation, and is marked as derived.
+- **How it is read:** the same deterministic parser research uses (`src/research/results-parser.ts`), with the filing's own arithmetic checked (PBT − tax = PAT).
+  - Figures that fail a check are never shown.
+  - Figures that could not be checked are marked.
+  - Growth from a zero or negative base is shown as "n.m.", not as a percentage.
+- **Where it comes from:** `ingest:results` downloads results filings from the last 60 days and parses them. It runs in the weekday refresh, so the numbers are usually there before anyone opens the app.
+  - Consolidated figures are used when the filing has them, standalone otherwise.
+  - A meeting notice or newspaper copy yields no figures and is left as a plain filing.
+- **On screen:** the row shows revenue YoY (or PAT YoY) and a one-line summary. The detail shows the full table, linked to the statement's page.
+- **Demo mode:** shows no first cut, because results PDFs are not downloaded in demo mode. The detail says the figures are not extracted.
 
 **Every signal keeps both timestamps:**
 - **Occurred:** when the event happened (filing publication time, or session close).

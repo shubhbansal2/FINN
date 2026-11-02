@@ -1,10 +1,10 @@
 import { randomUUID } from 'node:crypto';
 
 import type { Db } from '@/db/connection';
-import { ensureWatchlist, getBars, listCompanies, listListings, pagesOfVersion, latestVersion } from '@/db/repositories';
+import { ensureWatchlist, factsForDocument, getBars, listCompanies, listListings, pagesOfVersion, latestVersion } from '@/db/repositories';
 import { safeDocumentUrl } from '@/ui/evidence';
-import { formatInr } from '@/ui/format';
 
+import { buildFirstCut } from './first-cut';
 import { DEFAULT_RULES, RuleInputSchema, type AlertCandidate, type AlertRule, type RuleInput } from './rules';
 import type { AnnouncementInputRow, BarSeries, Signal } from './types';
 
@@ -145,11 +145,6 @@ export function alertedSignalIds(db: Db): Set<string> {
 
 // ------------------------------------------------------------------ digest inputs
 
-const HEADLINE_METRICS: [string, string][] = [
-  ['revenue_from_operations', 'Revenue from operations'],
-  ['profit_after_tax', 'Profit after tax'],
-];
-
 /** Announcements and price series for the watchlist, shaped for the pure engine. */
 export function loadSignalInputs(db: Db, opts: { since: string; until: string; dataMode: 'live' | 'fixture' }): { announcements: AnnouncementInputRow[]; series: BarSeries[]; watchlist: Set<string> } {
   ensureWatchlist(db, opts.until);
@@ -189,19 +184,12 @@ export function loadSignalInputs(db: Db, opts: { since: string; until: string; d
       const company = byId.get(r.company_id);
       const version = r.doc_id ? latestVersion(db, r.doc_id) : null;
       const text = version && (version.extraction_status === 'extracted' || version.extraction_status === 'partial') ? pagesOfVersion(db, version.id).slice(0, 2).map((p) => p.text).join('\n').slice(0, 4_000) : null;
-      const figures = r.doc_id
-        ? HEADLINE_METRICS.flatMap(([metric, label]) => {
-            const f = db
-              .prepare(
-                `SELECT period_label, value, source_location FROM financial_fact WHERE source_document_id = ? AND metric = ? AND basis = 'consolidated' AND period_type = 'quarter'
-                 AND verification_status IN ('checks_passed', 'human_verified') ORDER BY period_end DESC LIMIT 1`,
-              )
-              .get(r.doc_id, metric) as { period_label: string; value: number; source_location: string } | undefined;
-            if (!f) return [];
-            const page = (JSON.parse(f.source_location) as { page?: number }).page ?? null;
-            return [{ label, detail: `${formatInr(f.value)} in ${f.period_label} (consolidated, as filed)`, page, url: r.document_url ? safeDocumentUrl(r.document_url, page ?? undefined) : null }];
-          })
-        : [];
+      const documentUrl = r.document_url;
+      // Only the filing's own facts: the first cut never mixes in figures from another document.
+      const firstCut =
+        r.doc_id && r.category === 'results' && !r.duplicate_of
+          ? buildFirstCut(factsForDocument(db, r.doc_id), (page) => (documentUrl ? safeDocumentUrl(documentUrl, page ?? undefined) : null))
+          : null;
       return {
         id: r.id,
         documentId: r.doc_id,
@@ -218,7 +206,7 @@ export function loadSignalInputs(db: Db, opts: { since: string; until: string; d
         documentOrigin: r.origin,
         duplicateOfDocument: r.duplicate_of,
         attachmentText: text,
-        figures,
+        firstCut,
         dataMode: opts.dataMode,
       };
     });

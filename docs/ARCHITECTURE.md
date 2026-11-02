@@ -82,6 +82,7 @@ The sections below are the original design. Where implementation changed a decis
       - `next start` runs behind Caddy, which provides automatic HTTPS.
       - SQLite lives on the boot volume.
       - A systemd timer refreshes prices and filings on weekdays at 10:00 and 17:00 IST, in place of the worker in §1.2.
+    - **Results first cut on the push side:** `ingest:results` parses new results filings with the research parser (shared via `storeResultsFacts`). A results signal then carries Revenue, EBITDA, PBT and PAT with QoQ and YoY, built only from that filing's facts (`src/push/first-cut.ts`).
 
 ## 1. System boundaries
 

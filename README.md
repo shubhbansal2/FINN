@@ -89,6 +89,10 @@ FINN_DATA_MODE=live npm run finn -- ingest:filings
 ```
 
 ```bash
+FINN_DATA_MODE=live npm run finn -- ingest:results
+```
+
+```bash
 FINN_DATA_MODE=live npm run finn -- ingest:documents --limit 25
 ```
 
@@ -112,6 +116,7 @@ The providers and what was verified against them are listed in [docs/PROVIDERS.m
 |---|---|
 | End-of-day prices and volume | Weekdays at **10:00 IST** and **17:00 IST**, from Yahoo. The 17:00 run picks up that day's closing session. Never intraday. |
 | Exchange filings (latest ~5 per company) | The same runs: weekdays at 10:00 and 17:00 IST, discovered via screener.in. |
+| Results first cut (Revenue, EBITDA, PBT, PAT, QoQ and YoY on a results signal) | The same runs: new results filings from the last 60 days are downloaded and parsed right after the filings refresh. |
 | Filing documents for research | On demand, whenever someone runs research on a company: the latest results filing, call transcripts, annual report and presentation are downloaded then. |
 | Signals and alerts | Recomputed from the stored data each time Signals or Alert settings is opened, or when "Evaluate now" is pressed. |
 | Demo mode | Never. It replays data recorded on 1 Nov 2026 against a fixed demo clock. |

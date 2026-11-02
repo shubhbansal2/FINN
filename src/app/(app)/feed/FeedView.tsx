@@ -15,6 +15,7 @@ import { SignalRow } from '@/ui/SignalRow';
 import { Timestamp } from '@/ui/Timestamp';
 
 import { activeFilterCount, applyFilters, DEFAULT_FILTERS, type FeedFilters } from './filters';
+import { firstCutSummary, headlineChange } from './FirstCut';
 import styles from './FeedView.module.css';
 import { kindLabel, SignalDetailContent } from './SignalDetailContent';
 
@@ -35,8 +36,8 @@ function useWide(query = '(min-width: 1080px)') {
 function Measure({ signal }: { signal: Signal }) {
   if (signal.measure?.kind === 'change') return <Delta delta={{ kind: 'ratio', value: signal.measure.value }} basis="1D" />;
   if (signal.measure?.kind === 'multiple') return <span className={`${styles.multiple} num`}>{signal.measure.value.toFixed(1)}× vol</span>;
-  const fig = signal.explanation.evidence.find((e) => e.kind === 'figure');
-  if (fig && fig.kind === 'figure') return <span className={`${styles.figure} num`}>{fig.detail.split(' (')[0]}</span>;
+  const headline = signal.firstCut ? headlineChange(signal.firstCut) : null;
+  if (headline) return <Delta delta={headline.change} basis={headline.label} />;
   return null;
 }
 
@@ -62,7 +63,7 @@ function Row({ item, selected, onSelect }: { item: FeedItem; selected: boolean; 
       company={{ name: s.companyName, symbol: s.symbol }}
       category={kindLabel(s)}
       headline={s.headline}
-      summary={s.explanation.why[s.explanation.why.length - 1]}
+      summary={s.firstCut ? firstCutSummary(s.firstCut) : s.explanation.why[s.explanation.why.length - 1]}
       occurredAtIso={s.occurredAt}
       timePrecision={s.tradeDate ? 'date' : 'datetime'}
       figure={<Measure signal={s} />}

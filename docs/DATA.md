@@ -73,6 +73,7 @@ npm run finn -- status
 - **`universe:verify`** checks that each NSE and BSE listing resolves at Yahoo, and records `resolved` or `unresolved` on the listing.
 - **`ingest:prices`** fetches one year of daily bars, pausing 1.2 s between symbols. It stores only completed sessions. Re-running is idempotent: revisions update the row in place, and `first_ingested_at` is kept.
 - **`ingest:filings`** pauses 1.2 s between companies. Announcements are deduplicated by BSE filing GUID or NSE archive filename, and are classified on insert.
+- **`ingest:results`** (live mode) downloads results filings attached to the last 60 days of announcements and parses their headline figures for the Signals first cut. Filings already downloaded are re-parsed from stored text, with no network.
 - **`ingest:documents`** downloads pending documents, plus earlier failures for another attempt, one at a time. Only exchange-filed and company-issued documents are ever fetched.
 - **`reclassify`** re-runs the rule classifier after a rule change. It writes a new version row and keeps the old ones.
 - **`capture:fixtures`** (live mode) re-records demo fixtures from the current provider responses.
@@ -128,5 +129,5 @@ The universe lives in [`config/universe.json`](../config/universe.json): 18 port
 | Document fetch in fixture mode | Not supported. Fixture mode covers prices and filings only. |
 | Transcript dating | screener labels transcripts by call month ("Jul 2026"); no fiscal quarter is inferred. |
 | Exchange holiday calendar | Not included; see freshness note above. |
-| Scheduling | Locally, commands are run by hand. On the Oracle deployment, a systemd timer runs `ingest:prices` and `ingest:filings` on weekdays at 10:00 and 17:00 IST. There is no worker process. |
+| Scheduling | Locally, commands are run by hand. On the Oracle deployment, a systemd timer runs `ingest:prices`, `ingest:filings` and `ingest:results` on weekdays at 10:00 and 17:00 IST. There is no worker process. |
 | Fixture licensing | `fixtures/` contains raw Yahoo responses. Check the provider's terms before publishing the repository with them. |

@@ -10,6 +10,7 @@
  *   reclassify         Re-run the current rule classifier over stored announcements (new version row; old rows kept).
  *   reextract          Re-extract stored PDFs whose text came from an older extractor version (no network; re-indexed on next use).
  *   ingest:documents   Live only. Download pending primary documents and extract text.
+ *   ingest:results     Live only. Download recent results filings and extract their headline figures (results first cut).
  *   capture:fixtures   Live only. Record current provider responses into fixtures/ for offline demos.
  *   status             Freshness and coverage report.
  *   brief              Print the ranked digest: [--window 24h|3d|7d|30d|YYYY-MM-DD..YYYY-MM-DD].
@@ -45,6 +46,7 @@ import { CLASSIFIER_VERSION, classifyAnnouncement } from '@/domain/taxonomy';
 import { ingestFilings, filingsRequestKey } from '@/ingest/filings';
 import { processDocument } from '@/ingest/documents';
 import { ingestPrices, priceRequestKey } from '@/ingest/prices';
+import { ingestResultsFilings } from '@/ingest/results';
 import { createLlmClient } from '@/llm/client';
 import { evaluateAlerts, getDigest } from '@/push/service';
 import { runResearch } from '@/research/engine';
@@ -56,6 +58,8 @@ const PRICE_FIXTURES = path.join(FIXTURES, 'prices', 'yahoo');
 const RESEARCH_FIXTURES = path.join(FIXTURES, 'research');
 const FILINGS_FIXTURES = path.join(FIXTURES, 'filings');
 const POLITE_PAUSE_MS = 1_200;
+/** How far back ingest:results looks for results filings to download and parse. */
+const RESULTS_LOOKBACK_DAYS = 60;
 
 type Args = { command: string; symbols: string[] | null; role: 'portfolio' | 'research' | null; kinds: string[] | null; limit: number; question?: string; period?: string; window?: string; record: boolean };
 
@@ -225,6 +229,25 @@ async function main() {
       break;
     }
 
+    case 'ingest:results': {
+      requireLive(mode, args.command);
+      const since = new Date(now().getTime() - RESULTS_LOOKBACK_DAYS * 86_400_000).toISOString();
+      const results = await ingestResultsFilings(db, {
+        since,
+        companyIds: new Set(selectCompanies(db, args).map((c) => c.id)),
+        blobDir: paths.blobs,
+        now,
+        limit: args.limit,
+        pauseMs: POLITE_PAUSE_MS,
+        sleep,
+      });
+      console.log(`Results filings from the last ${RESULTS_LOOKBACK_DAYS} days: ${results.length}`);
+      for (const r of results) {
+        console.log(`  ${r.companyId.padEnd(18)} ${r.outcome.padEnd(15)} facts:${String(r.stored).padEnd(3)} ${r.quarterEnd ?? '-'}  ${r.title.slice(0, 60)}${r.message ? `\n      ${r.message.slice(0, 160)}` : ''}`);
+      }
+      break;
+    }
+
     case 'capture:fixtures': {
       requireLive(mode, args.command);
       await mkdir(PRICE_FIXTURES, { recursive: true });
@@ -342,7 +365,7 @@ ${report.company.name} — ${report.status}${cached ? ' (cached report)' : ''}`)
     }
 
     default:
-      console.log('Commands: migrate, universe:sync, universe:verify, ingest:prices, ingest:filings, reclassify, reextract, ingest:documents, capture:fixtures, status, brief, alerts:evaluate, research');
+      console.log('Commands: migrate, universe:sync, universe:verify, ingest:prices, ingest:filings, reclassify, reextract, ingest:documents, ingest:results, capture:fixtures, status, brief, alerts:evaluate, research');
   }
   db.close();
 }

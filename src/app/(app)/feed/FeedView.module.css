@@ -221,13 +221,6 @@
 /* ---------- row extras ---------- */
 
 .multiple,
-.figure {
-  font-family: var(--font-sans);
-  font-size: var(--value-sm);
-  font-weight: 500;
-  white-space: nowrap;
-}
-
 .sourceTags {
   display: inline-flex;
   gap: var(--space-1);

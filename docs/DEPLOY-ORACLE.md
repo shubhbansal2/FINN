@@ -82,7 +82,7 @@ Set `GEMINI_API_KEY=` to your key from [aistudio.google.com/apikey](https://aist
 sudo systemctl restart finn
 ```
 
-In live mode, a timer refreshes prices and filings on weekdays at 10:00 and 17:00 IST. Research downloads filings on demand.
+In live mode, a timer refreshes prices and filings, and reads the headline numbers from new results filings, on weekdays at 10:00 and 17:00 IST. Research downloads filings on demand.
 
 ## Day-to-day
 

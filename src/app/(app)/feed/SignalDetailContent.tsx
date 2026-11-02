@@ -8,6 +8,7 @@ import { PriorityIndicator } from '@/ui/PriorityIndicator';
 import { Provenance } from '@/ui/Provenance';
 import { Timestamp } from '@/ui/Timestamp';
 
+import { FirstCutTable } from './FirstCut';
 import styles from './SignalDetailContent.module.css';
 
 export function kindLabel(s: Signal): string {
@@ -24,7 +25,6 @@ function Reported({ signal }: { signal: Signal }) {
   const filing = filingOf(signal);
   // Links come from stored filings; only https URLs are rendered as links.
   const filingUrl = filing ? safeDocumentUrl(filing.url) : null;
-  const figures = signal.explanation.evidence.filter((e): e is Extract<EvidenceRef, { kind: 'figure' }> => e.kind === 'figure');
   const series = signal.explanation.evidence.filter((e): e is Extract<EvidenceRef, { kind: 'price_series' }> => e.kind === 'price_series');
   const isFiling = signal.kind === 'announcement' || signal.kind === 'results';
   return (
@@ -55,26 +55,11 @@ function Reported({ signal }: { signal: Signal }) {
           </dd>
         </div>
       ) : null}
-      {figures.length ? (
+      {signal.firstCut ? (
         <div>
-          <dt>Reported figures</dt>
-          <dd>
-            <ul>
-              {figures.map((f, i) => (
-                <li key={i}>
-                  {f.label}: <span className="num">{f.detail}</span>
-                  {f.url && safeDocumentUrl(f.url) ? (
-                    <>
-                      {' '}
-                      <a href={safeDocumentUrl(f.url) ?? undefined} target="_blank" rel="noopener noreferrer" className={styles.source}>
-                        p. {f.page}
-                      </a>
-                    </>
-                  ) : null}
-                  <span className={styles.meta}> · arithmetic checks passed</span>
-                </li>
-              ))}
-            </ul>
+          <dt>Headline numbers</dt>
+          <dd className={styles.firstCut}>
+            <FirstCutTable cut={signal.firstCut} />
           </dd>
         </div>
       ) : signal.kind === 'results' ? (

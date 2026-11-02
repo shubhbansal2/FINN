@@ -17,8 +17,43 @@ export type SignalKind = 'announcement' | 'results' | 'price_move' | 'volume_spi
 
 export type EvidenceRef =
   | { kind: 'filing'; label: string; url: string; origin: 'exchange_filed' | 'company_issued' | 'unknown' }
-  | { kind: 'price_series'; label: string; detail: string }
-  | { kind: 'figure'; label: string; detail: string; page: number | null; url: string | null };
+  | { kind: 'price_series'; label: string; detail: string };
+
+/** A change between two periods. Growth from a zero or negative base is not meaningful. */
+export type Change = { kind: 'ratio'; value: number } | { kind: 'not_meaningful' } | { kind: 'missing' };
+
+export type FirstCutLine = {
+  metric: 'revenue' | 'ebitda' | 'pbt' | 'pat';
+  label: string;
+  /** ₹ for the quarter, the previous quarter and the same quarter a year earlier; null when not available. */
+  current: number | null;
+  previous: number | null;
+  yearAgo: number | null;
+  qoq: Change;
+  yoy: Change;
+  /** Computed from other lines (EBITDA), not printed in the filing. */
+  derived: boolean;
+  /** All inputs passed the filing's own arithmetic checks. */
+  verified: boolean;
+  /** Why the line or a column is empty, when it is. */
+  note: string | null;
+};
+
+/**
+ * Headline numbers from one results filing: this quarter against the previous
+ * quarter (QoQ) and the same quarter a year earlier (YoY). A results filing
+ * prints all three columns, so nothing here comes from another document.
+ */
+export type ResultsFirstCut = {
+  basis: 'consolidated' | 'standalone';
+  quarter: { end: string; label: string };
+  previousLabel: string;
+  yearAgoLabel: string;
+  lines: FirstCutLine[];
+  /** Page of the filing the figures were read from, and a link straight to it. */
+  page: number | null;
+  url: string | null;
+};
 
 /** The explanation every signal carries. Each field is built from the rule and data that produced it. */
 export type Explanation = {
@@ -58,6 +93,8 @@ export type Signal = {
   stale: boolean;
   /** The headline measurement for market signals: daily change (ratio) or volume multiple. */
   measure: { kind: 'change'; value: number } | { kind: 'multiple'; value: number } | null;
+  /** Results signals: the headline numbers read from the filing, when FINN has parsed it. */
+  firstCut: ResultsFirstCut | null;
   dataMode: 'live' | 'fixture';
 };
 
@@ -81,7 +118,7 @@ export type AnnouncementInputRow = {
   /** Extracted text of the attachment's first pages, when FINN has downloaded it. */
   attachmentText: string | null;
   /** Headline figures already extracted from this filing, if any. */
-  figures: { label: string; detail: string; page: number | null; url: string | null }[];
+  firstCut: ResultsFirstCut | null;
   dataMode: 'live' | 'fixture';
 };
 

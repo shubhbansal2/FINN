@@ -1,5 +1,5 @@
 [Unit]
-Description=FINN live data refresh (end-of-day prices and exchange filings)
+Description=FINN live data refresh (end-of-day prices, exchange filings and results figures)
 After=network-online.target
 Wants=network-online.target
 
@@ -11,6 +11,7 @@ WorkingDirectory=/opt/finn
 EnvironmentFile=/etc/finn/finn.env
 ExecStart=/usr/bin/npm run finn -- ingest:prices
 ExecStart=/usr/bin/npm run finn -- ingest:filings
+ExecStart=/usr/bin/npm run finn -- ingest:results
 NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=full

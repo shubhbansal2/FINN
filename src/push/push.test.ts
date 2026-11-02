@@ -65,7 +65,7 @@ function announcement(over: Partial<AnnouncementInputRow> = {}): AnnouncementInp
     documentOrigin: 'exchange_filed',
     duplicateOfDocument: null,
     attachmentText: null,
-    figures: [],
+    firstCut: null,
     dataMode: 'fixture',
     ...over,
   };

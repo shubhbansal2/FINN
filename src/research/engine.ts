@@ -4,10 +4,8 @@ import type { FilingsAdapter } from '@/data/filings/types';
 import type { HttpDeps } from '@/data/http';
 import type { Db } from '@/db/connection';
 import {
-  deleteFactsForDocument,
   factsForCompany,
   getDocument,
-  insertFact,
   lastFetch,
   latestVersion,
   listDocuments,
@@ -20,6 +18,7 @@ import { isPrimarySource } from '@/domain/documents';
 import { formatSignedPercent } from '@/ui/format';
 import { ingestFilings, filingsRequestKey } from '@/ingest/filings';
 import { processDocument } from '@/ingest/documents';
+import { storeResultsFacts } from '@/ingest/results';
 import type { LlmClient } from '@/llm/client';
 
 import { FactsView, type DerivedCell, type FactCell } from './facts-view';
@@ -27,7 +26,7 @@ import { extractStatements, figuresAppearInQuote, GUIDANCE_EXTRACTOR_VERSION, ty
 import { chunksOfDocument, indexVersion, searchChunks, type ChunkRow } from './index';
 import { ANSWER, BULL_BEAR, figuresSupported, quoteInPassage, REFINE_STATEMENTS, SNAPSHOT } from './prompts';
 import { ENGINE_VERSION, ResearchReportSchema, type Claim, type EvidenceItem, type ReportCell, type ResearchReport, type ResearchRequest, type StatementView } from './report';
-import { parseResultsPages, RESULTS_PARSER_VERSION } from './results-parser';
+import { RESULTS_PARSER_VERSION } from './results-parser';
 import { evaluateStatement } from './scorecard';
 import { periodEnding, type FinancialFact, type PeriodType, type StatementBasis } from '@/domain/facts';
 
@@ -423,18 +422,8 @@ export async function runResearch(company: CompanyRow, request: ResearchRequest,
   for (const doc of selected.results) {
     const version = ready.get(doc.id);
     if (!version) continue;
-    const parsed = parseResultsPages(pagesOfVersion(db, version.id), { companyId: company.id, documentId: doc.id, ingestedAt: deps.now().toISOString() });
-    db.transaction(() => {
-      deleteFactsForDocument(db, doc.id);
-      for (const f of parsed.facts) {
-        try {
-          insertFact(db, f);
-        } catch (e) {
-          ctx.diagnostics.push(`fact not stored (${f.metric} ${f.period.label}): ${e instanceof Error ? e.message.slice(0, 120) : String(e)}`);
-        }
-      }
-    })();
-    for (const d of parsed.diagnostics) ctx.diagnostics.push(`${doc.title.slice(0, 50)}: ${d}`);
+    const parsed = storeResultsFacts(db, { id: doc.id, company_id: company.id }, version.id, deps.now().toISOString());
+    for (const d of parsed.diagnostics) ctx.diagnostics.push(d.startsWith('fact not stored') ? d : `${doc.title.slice(0, 50)}: ${d}`);
   }
   // Facts from byte-identical duplicate documents are excluded; the original carries the same figures.
   const view = new FactsView(factsForCompany(db, company.id).filter((f) => !docById.get(f.sourceDocumentId)?.duplicate_of && !getDocument(db, f.sourceDocumentId)?.duplicate_of));

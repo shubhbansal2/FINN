@@ -171,6 +171,8 @@ export function combineSignals(signals: Signal[], policy: SignalPolicy): Signal[
           measure: components.find((c) => c.kind === 'price_move')?.measure ?? components.find((c) => c.measure)?.measure ?? null,
           duplicates: [],
           stale: components.every((c) => c.stale),
+          // A combination that includes a results filing keeps its headline numbers.
+          firstCut: components.find((c) => c.firstCut)?.firstCut ?? null,
           dataMode: first.dataMode,
         });
       }

@@ -549,6 +549,12 @@ export function factsForCompany(db: Db, companyId: string): FinancialFact[] {
   return rows.map((r) => rowToFact(r));
 }
 
+/** The facts read from one document (every basis and period). */
+export function factsForDocument(db: Db, documentId: string): FinancialFact[] {
+  const rows = db.prepare(`SELECT * FROM financial_fact WHERE source_document_id = ? ORDER BY period_end DESC, ingested_at`).all(documentId) as FactRow[];
+  return rows.map((r) => rowToFact(r));
+}
+
 /** Removes a document's facts before re-extraction, so re-runs never duplicate or leave stale figures. */
 export function deleteFactsForDocument(db: Db, documentId: string): void {
   db.prepare(`DELETE FROM financial_fact WHERE source_document_id = ?`).run(documentId);

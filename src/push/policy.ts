@@ -138,10 +138,12 @@ export function rankAnnouncement(a: AnnouncementInputRow, policy: SignalPolicy, 
     why.push('No primary-source document is linked, so it ranks one level lower.');
     rules.push('evidence:missing');
   }
-  for (const f of a.figures) evidence.push({ kind: 'figure', label: f.label, detail: f.detail, page: f.page, url: f.url });
-
   if (!a.attachmentText) unknowns.push('FINN ranked this from the filed subject only; the attachment has not been read.');
-  if (category === 'results' && a.figures.length === 0 && TIERS.indexOf(tier) <= 1) unknowns.push('Headline figures have not been extracted from this filing yet.');
+  if (category === 'results' && !a.firstCut && TIERS.indexOf(tier) <= 1) unknowns.push('Headline figures have not been extracted from this filing yet.');
+  if (a.firstCut) {
+    if (a.firstCut.lines.some((l) => !l.verified)) unknowns.push('Some headline figures did not pass the filing’s own arithmetic checks; they are marked.');
+    unknowns.push('The first cut is read from the results statement only: segment detail, one-off items and management commentary are not in it.');
+  }
 
   const stale = now.getTime() - Date.parse(a.publishedAt) > policy.staleAfterHours * 3_600_000;
   const isResults = category === 'results' && rules.every((r) => !r.startsWith('content:results.'));
@@ -169,6 +171,7 @@ export function rankAnnouncement(a: AnnouncementInputRow, policy: SignalPolicy, 
     measure: null,
     duplicates: [],
     stale,
+    firstCut: a.firstCut,
     dataMode: a.dataMode,
   };
 }
