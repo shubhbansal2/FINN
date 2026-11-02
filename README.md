@@ -5,7 +5,9 @@ A mobile-first investment intelligence prototype for an Indian equity portfolio,
 - **Signals (push):** a ranked digest of watchlist filings, end-of-day price moves and volume spikes, with alert rules.
 - **Research (pull):** company research built only from primary documents, with a financial table, a guidance-versus-actuals scorecard and a passage behind every figure and quote.
 
-FINN is a prototype. It has not been deployed to a public URL, it has no user accounts, and its data sources are limited (see [Known limitations](#known-limitations)).
+**Live:** https://129-154-248-25.sslip.io, in live mode on an Oracle Cloud Always Free VM (Mumbai).
+
+FINN is a prototype. It has no user accounts, and its data sources are limited (see [Known limitations](#known-limitations)).
 
 ## Requirements
 
@@ -154,9 +156,9 @@ Steps on the host:
 5. Build and start: `npm run build`, then `npm start -- -p $PORT`.
 6. Put HTTPS in front with a reverse proxy or the platform's router, and run a single instance.
 
-**Oracle Cloud Always Free:** [docs/DEPLOY-ORACLE.md](docs/DEPLOY-ORACLE.md) walks through a free Arm VM. `deploy/oracle/` holds the setup script, the systemd services (the app, plus a weekday data refresh for live mode), the Caddy HTTPS config and an update script. These are written but not yet run on a real Oracle VM.
+**Oracle Cloud Always Free:** [docs/DEPLOY-ORACLE.md](docs/DEPLOY-ORACLE.md) walks through a free Arm VM. `deploy/oracle/` holds the setup script, the systemd services (the app, plus a weekday data refresh for live mode), the Caddy HTTPS config and an update script. The live deployment above was set up with them on 3 Nov 2026: a 2 OCPU / 12 GB Arm VM running Ubuntu 24.04, with HTTPS from Let's Encrypt via Caddy.
 
-**Not done:** FINN has not been deployed. No hosting credentials were available while it was being built, and no container image was built or tested (Docker was not installed). A production build was verified locally (`next build`, then `next start`), including on a 375px mobile viewport. That is the extent of what can be claimed.
+No container image was built or tested (Docker was not installed).
 
 ## Architecture in brief
 

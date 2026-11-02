@@ -2,7 +2,7 @@
 
 This guide runs FINN as one always-on server on an Oracle Cloud Always Free VM. It serves HTTPS at a public address and keeps its database on the VM's disk. It works in demo mode and in live mode, with a free Gemini key.
 
-Everything here was written for, but **not yet tested on**, a real Oracle VM. The scripts were syntax-checked and follow the setup in the README. If a step fails, `journalctl -u finn -n 50` shows why.
+This guide was used for the live deployment on 3 Nov 2026 (Mumbai, 2 OCPU / 12 GB, Ubuntu 24.04, live mode). If a step fails, `journalctl -u finn -n 50` shows why.
 
 ## What you get, and the catches
 
@@ -21,8 +21,8 @@ From Oracle's [Always Free resources page](https://docs.oracle.com/en-us/iaas/Co
    - **Image:** Canonical **Ubuntu 24.04** (or 22.04).
    - **Shape:** **Ampere → VM.Standard.A1.Flex**, with **2 OCPUs** and **12 GB** of memory.
    - **SSH keys:** download the generated private key, or upload your own public key.
-   - Keep "Assign a public IPv4 address" switched on.
-3. Click **Create** and note the instance's **public IP address**.
+   - Keep "Assign a public IPv4 address" switched on. If the form greys it out (it does when it is also creating a new network), add the address after creation: open the instance → **Networking** → the primary VNIC → **IP administration** → the private IP's **⋯** menu → **Edit** → **Ephemeral public IP**.
+3. Click **Create** and note the instance's **public IP address**. "Out of capacity" is common for free Arm VMs. Retrying later, sometimes several times, eventually succeeds.
 
 ## 2. Open ports 80 and 443 in Oracle's network
 
@@ -117,6 +117,7 @@ systemctl status finn caddy finn-refresh.timer
   - Check the Oracle security list (step 2).
   - Check that `sudo iptables -L INPUT -n` shows ACCEPT rules for 80 and 443 above any REJECT.
 - **Certificate errors on the first visit:** Caddy needs ports 80 and 443 reachable to get a certificate. See `journalctl -u caddy -n 50`.
+- **Works elsewhere, but not on one network:** some office and campus web filters (for example Fortinet) block `sslip.io` names, showing a block page or a certificate error. Use your own domain, or open the site on another network such as mobile data.
 - **FINN didn't start:** see `journalctl -u finn -n 50`.
 - **Research says the model is unavailable:**
   - Check the key in `/etc/finn/finn.env`.
