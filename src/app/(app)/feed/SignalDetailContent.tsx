@@ -65,7 +65,9 @@ function Reported({ signal }: { signal: Signal }) {
       ) : signal.kind === 'results' ? (
         <div>
           <dt>Reported figures</dt>
-          <dd className={styles.muted}>Not extracted yet. Open the filing, or run Research on this company to extract and check its figures.</dd>
+          <dd className={styles.muted}>
+            No checked figures yet: the filing has not been read, or its figures could not be checked against its own arithmetic. Open the filing, or run Research on this company.
+          </dd>
         </div>
       ) : null}
       {series.length ? (

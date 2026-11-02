@@ -45,7 +45,7 @@ To reset the demo database to its initial state (watchlist, rules and preference
      - **Reported:** the filed subject, publication time, and a link to the BSE PDF.
      - **FINN's assessment:** the ranking rules that fired, as codes.
      - **Not known:** what FINN cannot tell from the data.
-   - Then select Reliance's results signal. Demo mode does not download documents, so it says the figures are "Not extracted yet" and points to Research, where the recorded report has them. In live mode, once documents are ingested, the signal shows the figures, each with its page and "arithmetic checks passed".
+   - Then select Reliance's results signal. Demo mode does not download documents, so it says there are no checked figures yet and points to Research, where the recorded report has them. On the live site, the weekday refresh reads each new results filing, and the signal shows a results first cut: Revenue, EBITDA, PBT and PAT with QoQ and YoY, linked to the statement's page.
 4. **Filter.** Choose a company, a category or a minimum priority, or switch off price moves or volume. An impossible combination explains itself and offers "Clear filters".
 
 ## Workflow 2: research a company

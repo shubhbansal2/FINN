@@ -20,7 +20,7 @@ import {
  * `check_failed` if any fails; `unverified` if no check could run.
  */
 
-export const RESULTS_PARSER_VERSION = 'results-rows.v1';
+export const RESULTS_PARSER_VERSION = 'results-rows.v2';
 
 export type ParsedMetric =
   | 'revenue_from_operations'
@@ -70,7 +70,8 @@ export function repairNumericText(line: string): string {
   return s;
 }
 
-const NUMBER = /\(?-?\d{1,3}(?:,\d{2,3})*(?:\.\d+)?\)?|\(?-?\d+(?:\.\d+)?\)?/g;
+// The grouped form needs at least one comma; otherwise "3994.57" (printed without separators) would split into "399" and "4.57".
+const NUMBER = /\(?-?\d{1,3}(?:,\d{2,3})+(?:\.\d+)?\)?|\(?-?\d+(?:\.\d+)?\)?/g;
 
 export type ParsedRow = { label: string; key: string; numbers: string[] };
 

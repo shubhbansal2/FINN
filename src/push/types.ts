@@ -33,9 +33,7 @@ export type FirstCutLine = {
   yoy: Change;
   /** Computed from other lines (EBITDA), not printed in the filing. */
   derived: boolean;
-  /** All inputs passed the filing's own arithmetic checks. */
-  verified: boolean;
-  /** Why the line or a column is empty, when it is. */
+  /** Why the quarter's figure is empty, when it is. Only figures that passed the filing's arithmetic checks are shown. */
   note: string | null;
 };
 

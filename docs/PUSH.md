@@ -24,8 +24,8 @@ The Brief and Alerts screens are driven by deterministic, testable rules in `src
   - A results statement prints all three quarters side by side, so every number comes from the one filing.
   - EBITDA is derived as PBT + finance costs + depreciation & amortisation, and is marked as derived.
 - **How it is read:** the same deterministic parser research uses (`src/research/results-parser.ts`), with the filing's own arithmetic checked (PBT − tax = PAT).
-  - Figures that fail a check are never shown.
-  - Figures that could not be checked are marked.
+  - Only figures that **passed** a check are shown.
+  - A figure that failed, or could not be checked, is left out with the reason. A headline in the feed is a stronger claim than a flagged cell in research.
   - Growth from a zero or negative base is shown as "n.m.", not as a percentage.
 - **Where it comes from:** `ingest:results` downloads results filings from the last 60 days and parses them. It runs in the weekday refresh, so the numbers are usually there before anyone opens the app.
   - Consolidated figures are used when the filing has them, standalone otherwise.

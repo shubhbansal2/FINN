@@ -10,7 +10,6 @@ const valueCell = (line: FirstCutLine, value: number | null): ComparisonCell => 
   kind: 'value',
   value: value === null ? { kind: 'missing', reason: line.derived ? 'not_computable' : 'not_reported' } : { kind: 'currency', valueInr: value },
   derived: line.derived,
-  unverified: value !== null && !line.verified,
 });
 
 /**

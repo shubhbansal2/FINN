@@ -17,17 +17,25 @@ export function change(current: number | null, base: number | null): Change {
   return { kind: 'ratio', value: (current - base) / base };
 }
 
-type Read = { value: number | null; verified: boolean; reason: string | null; page: number | null };
+type Read = { value: number | null; reason: string | null; page: number | null };
 
+/**
+ * One figure, only if it passed the filing's own arithmetic checks. A headline
+ * in the feed is a stronger claim than a flagged cell in research, so an
+ * unchecked figure is left out with its reason rather than shown.
+ */
 function read(view: FactsView, basis: StatementBasis, source: string, end: string): Read {
   const cell: FactCell | DerivedCell = source === 'ebitda' ? view.ebitda(basis, 'quarter', end) : view.get(basis, source, 'quarter', end);
   if (cell.kind === 'value') {
+    if (!cell.verified) return { value: null, reason: UNCHECKED, page: null };
     const fact = 'fact' in cell ? cell.fact : cell.inputs[0];
-    return { value: cell.value, verified: cell.verified, reason: null, page: fact?.sourceLocation.page ?? null };
+    return { value: cell.value, reason: null, page: fact?.sourceLocation.page ?? null };
   }
-  if (cell.kind === 'conflict') return { value: null, verified: false, reason: 'the filing gives conflicting figures', page: null };
-  return { value: null, verified: false, reason: cell.reason, page: null };
+  if (cell.kind === 'conflict') return { value: null, reason: 'the filing gives conflicting figures', page: null };
+  return { value: null, reason: cell.reason, page: null };
 }
+
+export const UNCHECKED = 'could not be checked against the filing’s own arithmetic';
 
 const previousQuarterEnd = (end: string) => new Date(Date.UTC(Number(end.slice(0, 4)), Number(end.slice(5, 7)) - 3, 0)).toISOString().slice(0, 10);
 const yearAgoEnd = (end: string) => `${Number(end.slice(0, 4)) - 1}${end.slice(4)}`;
@@ -65,7 +73,6 @@ export function buildFirstCut(facts: FinancialFact[], linkFor: (page: number | n
       qoq: change(cur.value, prev.value),
       yoy: change(cur.value, ago.value),
       derived: source === 'ebitda',
-      verified: [cur, prev, ago].every((r) => r.value === null || r.verified),
       note: cur.reason,
     };
   });

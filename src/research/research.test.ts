@@ -16,7 +16,7 @@ import { indexVersion, searchChunks, toFtsQuery } from './index';
 import { figuresSupported, quoteInPassage } from './prompts';
 import { ResearchReportSchema } from './report';
 import { resolveCompany } from './resolve';
-import { detectPeriodEnd, parseResultsPages, repairNumericText, repairSplitTokens, standardColumns } from './results-parser';
+import { detectPeriodEnd, parseResultsPages, parseRow, repairNumericText, repairSplitTokens, standardColumns } from './results-parser';
 import { evaluateStatement } from './scorecard';
 
 // ---------------------------------------------------------------- fixtures
@@ -148,6 +148,12 @@ describe('results parser', () => {
     expect(detectPeriodEnd('RESULTS FOR THE QUARTER ENDED JQTH SEPTEMBER, 2026')).toBe('2026-09-30');
     expect(standardColumns('2026-09-30').map((p) => p?.label)).toEqual(['Q2 FY27', 'Q1 FY27', 'Q2 FY26', 'H1 FY27', 'H1 FY26', 'FY26']);
     expect(standardColumns('2027-03-31').map((p) => p?.label)).toEqual(['Q4 FY27', 'Q3 FY27', 'Q4 FY26', 'FY27', 'FY26']);
+  });
+
+  it('reads figures printed without thousands separators as one number each', () => {
+    // Pidilite prints "3994.57"; an earlier tokenizer read it as "399" and "4.57".
+    expect(parseRow('a) Revenue from Operations 3994.57 4249.38 3287.31 8243.95 6766.61 13487.59')?.numbers).toEqual(['3994.57', '4249.38', '3287.31', '8243.95', '6766.61', '13487.59']);
+    expect(parseRow('Revenue from Operations 1,24,000.50 (9.60) 131')?.numbers).toEqual(['1,24,000.50', '(9.60)', '131']);
   });
 
   it('repairs OCR spacing inside figures', () => {

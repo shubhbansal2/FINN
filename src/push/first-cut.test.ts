@@ -8,7 +8,7 @@ import { classifyAnnouncement } from '@/domain/taxonomy';
 import { ingestResultsFilings } from '@/ingest/results';
 import { fakeHttp, seededDb, T0 } from '@/test/helpers';
 
-import { buildFirstCut, change } from './first-cut';
+import { buildFirstCut, change, UNCHECKED } from './first-cut';
 import { getDigest } from './service';
 import type { Change, ResultsFirstCut } from './types';
 
@@ -66,7 +66,7 @@ describe('results first cut from a filing', () => {
     expect(cut).toMatchObject({ basis: 'consolidated', quarter: { end: '2026-09-30', label: 'Q2 FY27' }, previousLabel: 'Q1 FY27', yearAgoLabel: 'Q2 FY26', page: 1 });
 
     // Hand-worked from the page: current, previous quarter, year-ago quarter.
-    expect(line(cut, 'revenue')).toMatchObject({ current: 1240 * CRORE, previous: 1180 * CRORE, yearAgo: 1050 * CRORE, verified: true, derived: false });
+    expect(line(cut, 'revenue')).toMatchObject({ current: 1240 * CRORE, previous: 1180 * CRORE, yearAgo: 1050 * CRORE, derived: false, note: null });
     expect(ratio(line(cut, 'revenue')!.qoq)).toBeCloseTo(60 / 1180, 10);
     expect(ratio(line(cut, 'revenue')!.yoy)).toBeCloseTo(190 / 1050, 10);
 
@@ -91,7 +91,7 @@ describe('results first cut from a filing', () => {
     const signal = digest.value.groups.flatMap((g) => g.items).map((i) => i.signal).find((s) => s.category === 'results');
     expect(signal?.firstCut?.quarter.label).toBe('Q2 FY27');
     expect(signal?.firstCut?.url).toContain('bseindia.com/r1.pdf');
-    expect(signal?.explanation.unknowns.join(' ')).not.toContain('have not been extracted');
+    expect(signal?.explanation.unknowns.join(' ')).not.toContain('No headline figures');
   });
 
   it('leaves a board-meeting intimation without figures, and reports a failed download', async () => {
@@ -121,9 +121,11 @@ describe('first cut arithmetic', () => {
     expect(line(cut, 'ebitda')).toMatchObject({ current: null, note: expect.stringContaining('not available') });
   });
 
-  it('marks figures that did not pass the arithmetic checks, and returns nothing without a quarter', () => {
-    const cut = buildFirstCut([fact('revenue_from_operations', '500', '2026-09-30', 'unverified')], () => null);
-    expect(line(cut, 'revenue')?.verified).toBe(false);
+  it('leaves out figures that were not checked, and returns nothing when no checked figure remains', () => {
+    const mixed = buildFirstCut([fact('revenue_from_operations', '500', '2026-09-30'), fact('profit_after_tax', '40', '2026-09-30', 'unverified')], () => null);
+    expect(line(mixed, 'revenue')?.current).toBe(500 * CRORE);
+    expect(line(mixed, 'pat')).toMatchObject({ current: null, note: UNCHECKED });
+    expect(buildFirstCut([fact('revenue_from_operations', '500', '2026-09-30', 'unverified')], () => null)).toBeNull();
     expect(buildFirstCut([], () => null)).toBeNull();
     expect(change(10, 0)).toEqual({ kind: 'not_meaningful' });
   });
